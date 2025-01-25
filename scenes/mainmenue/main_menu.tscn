@@ -1,11 +1,48 @@
-[gd_scene load_steps=4 format=3 uid="uid://btlnrnt8tpns1"]
+[gd_scene load_steps=8 format=3 uid="uid://btlnrnt8tpns1"]
 
 [ext_resource type="Script" path="res://scenes/mainmenue/main_menu.gd" id="1_3cofa"]
 [ext_resource type="Texture2D" uid="uid://jodkoy0q3to6" path="res://assets/art/backgrounds/tx_bg_room01.png" id="2_rck5r"]
+[ext_resource type="Texture2D" uid="uid://busub1w3bcq3j" path="res://assets/art/userInterface/tx_logo.png" id="3_dpvu5"]
 
 [sub_resource type="SystemFont" id="SystemFont_okf44"]
 font_names = PackedStringArray("Impact")
 subpixel_positioning = 0
+
+[sub_resource type="Animation" id="Animation_0vsmn"]
+resource_name = "logo_wiggle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.466667, 0.866667),
+"transitions": PackedFloat32Array(1, 0.435275, 1),
+"update": 0,
+"values": [-0.0698132, 0.0872665, -0.0698132]
+}
+
+[sub_resource type="Animation" id="Animation_5anp8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u66sr"]
+_data = {
+"RESET": SubResource("Animation_5anp8"),
+"logo_wiggle": SubResource("Animation_0vsmn")
+}
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -24,6 +61,24 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_rck5r")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 55.19
+offset_top = -614.29
+offset_right = 55.1899
+offset_bottom = -614.29
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2, 0.2)
+pivot_offset = Vector2(905, 1032.61)
+texture = ExtResource("3_dpvu5")
+expand_mode = 1
+stretch_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -45,6 +100,7 @@ theme_override_constants/separation = 60
 layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_constants/outline_size = 12
 theme_override_fonts/font = SubResource("SystemFont_okf44")
@@ -80,6 +136,12 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Exit
 "
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_u66sr")
+}
+autoplay = "logo_wiggle"
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
