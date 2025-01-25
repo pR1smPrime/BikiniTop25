@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4unfi"]
 size = Vector2(244, 244)
 
-[node name="MoveableBox" type="Node2D"]
+[node name="staticBox" type="Node2D"]
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 
