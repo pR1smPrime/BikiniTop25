@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://cuquxv7d5wirf"]
+
+[ext_resource type="Texture2D" uid="uid://bbxov0wtae6fc" path="res://assets/art/spritesFX/blub_01.png" id="1_nk2ls"]
+[ext_resource type="Texture2D" uid="uid://x671mjaho4x6" path="res://assets/art/spritesFX/blub_02.png" id="2_eiker"]
+[ext_resource type="Texture2D" uid="uid://2r3fvm6y8qx7" path="res://assets/art/spritesFX/blub_03.png" id="3_cuuu7"]
+[ext_resource type="Texture2D" uid="uid://dce5wj6gnflwn" path="res://assets/art/spritesFX/blub_04.png" id="4_4ngcj"]
+[ext_resource type="Texture2D" uid="uid://cl31e2oxmjr7u" path="res://assets/art/spritesFX/blub_05.png" id="5_m27m3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8xmtc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nk2ls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_eiker")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cuuu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4ngcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_m27m3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_8xmtc")
+frame_progress = 0.946611
