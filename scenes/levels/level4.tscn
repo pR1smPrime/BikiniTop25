@@ -28,7 +28,8 @@ collision_mask = 3
 script = ExtResource("5_xi65j")
 
 [node name="TargetTruck" parent="." instance=ExtResource("6_qxn3g")]
-position = Vector2(1514, -866)
+position = Vector2(1511, -842)
+rotation = 0.120428
 scale = Vector2(0.5, 0.5)
 
 [node name="waves" parent="." instance=ExtResource("7_ijvl3")]
@@ -67,4 +68,4 @@ position = Vector2(977, -284)
 scale = Vector2(0.1, 0.1)
 
 [node name="StaticColumn" parent="." instance=ExtResource("1_se72r")]
-position = Vector2(1476, -519)
+position = Vector2(1443, -511)
