@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://hph0vdl7puii"]
+[gd_scene load_steps=5 format=3 uid="uid://hph0vdl7puii"]
 
 [ext_resource type="Script" path="res://scenes/player/character_body_2d.gd" id="1_7055o"]
 [ext_resource type="Texture2D" uid="uid://dxtnjbsugbqj3" path="res://icon.svg" id="1_ghb6s"]
-
+[ext_resource type="PackedScene" uid="uid://p3rbvt1dap4d" path="res://scenes/bubble_beam/bubble_beamer.tscn" id="3_q75h1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpo5k"]
 size = Vector2(69, 69)
@@ -13,10 +13,13 @@ size = Vector2(69, 69)
 script = ExtResource("1_7055o")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(376, -480)
+position = Vector2(-2, -6)
 scale = Vector2(0.5625, 0.53125)
 texture = ExtResource("1_ghb6s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(376, -480)
+position = Vector2(-2, -6)
 shape = SubResource("RectangleShape2D_rpo5k")
+
+[node name="BubbleBeamer" parent="CharacterBody2D" instance=ExtResource("3_q75h1")]
+position = Vector2(38, -8)
