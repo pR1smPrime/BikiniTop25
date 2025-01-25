@@ -196,7 +196,6 @@ animations = [{
 size = Vector2(69, 69)
 
 [node name="Player" type="Node2D"]
-position = Vector2(-4, -1)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_7055o")
@@ -214,4 +213,4 @@ position = Vector2(-2, -6)
 shape = SubResource("RectangleShape2D_rpo5k")
 
 [node name="BubbleBeamer" parent="CharacterBody2D" instance=ExtResource("3_q75h1")]
-position = Vector2(38, -8)
+position = Vector2(30, -6)
