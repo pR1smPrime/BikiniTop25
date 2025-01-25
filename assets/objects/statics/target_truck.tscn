@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://gh6vpad0gqj7" path="res://assets/art/spritesObjects/tx_goal_truck.png" id="1_4xrvs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dsbib"]
-size = Vector2(212.5, 131)
+size = Vector2(227, 20)
 
 [node name="TargetTruck" type="Node2D"]
 
@@ -12,7 +12,7 @@ size = Vector2(212.5, 131)
 script = ExtResource("1_0uf55")
 
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-9.75, 89.5)
+position = Vector2(5.5, 32)
 shape = SubResource("RectangleShape2D_dsbib")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
