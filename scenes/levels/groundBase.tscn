@@ -13,14 +13,11 @@ size = Vector2(1.5, 45.85)
 [node name="groundBase" type="Node2D"]
 position = Vector2(-1, 0)
 
-[node name="background" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(961, -536)
-texture = ExtResource("3_qpgkj")
-
 [node name="aquarium" type="Node" parent="."]
 
 [node name="ground" type="StaticBody2D" parent="aquarium"]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="aquarium/ground"]
 position = Vector2(304, -352)
@@ -31,6 +28,8 @@ position = Vector2(960, -540)
 texture = ExtResource("3_u5h5d")
 
 [node name="glassWalls" type="StaticBody2D" parent="aquarium"]
+collision_layer = 3
+collision_mask = 3
 
 [node name="glassWall" type="Sprite2D" parent="aquarium/glassWalls"]
 position = Vector2(960, -540)
@@ -44,3 +43,10 @@ shape = SubResource("RectangleShape2D_dhkxt")
 position = Vector2(1635, -608.5)
 scale = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_00bqv")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+
+[node name="background" type="Sprite2D" parent="Parallax2D"]
+z_index = -1
+position = Vector2(961, -536)
+texture = ExtResource("3_qpgkj")

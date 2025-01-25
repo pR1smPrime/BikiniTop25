@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1k68xp6vdvd3"]
+
+[ext_resource type="Texture2D" uid="uid://cij2oalv8eh5w" path="res://assets/art/spritesEnvironment/tx_obstacle_column.png" id="1_dohl0"]
+
+[node name="StaticColumn" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(0, 333)
+polygon = PackedVector2Array(-37, -28, -125, -31, -131, -105, -82, -134, -75, -480, -116, -546, -114, -602, 135, -603, 133, -558, 98, -490, 96, -123, 145, -117, 133, -34)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_dohl0")

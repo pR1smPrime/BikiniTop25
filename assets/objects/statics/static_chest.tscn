@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg2i0m2yle8i1"]
+
+[ext_resource type="Texture2D" uid="uid://cb45sx3622me" path="res://assets/art/spritesEnvironment/tx_obstacle_chest.png" id="1_vbpb8"]
+
+[node name="StaticChest" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_vbpb8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-295, 272)
+polygon = PackedVector2Array(23, -18, 20, -307, 138, -335, 128, -467, 158, -518, 505, -528, 553, -463, 576, -403, 513, -286, 495, -279, 491, -106, 478, -104, 441, -19)

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cf618ai8wa2sn"]
+
+[ext_resource type="Texture2D" uid="uid://by6wqsr7c6si" path="res://assets/art/spritesEnvironment/tx_obstacle_skull.png" id="1_ar1yg"]
+
+[node name="StaticSkull" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_ar1yg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(0, 343)
+polygon = PackedVector2Array(35, -31, 161, -77, 215, -181, 252, -226, 291, -437, 230, -595, 111, -696, 32, -700, -97, -653, -191, -574, -278, -424, -257, -285, -286, -242, -283, -201, -239, -186, -225, -158, -259, -133, -262, -95, -250, -72, -220, -17, -39, -12)

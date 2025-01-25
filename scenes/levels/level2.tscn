@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cj3cua1qlwawx"]
+[gd_scene load_steps=10 format=3 uid="uid://cj3cua1qlwawx"]
 
 [ext_resource type="PackedScene" uid="uid://bb7t2rtlp7sku" path="res://scenes/levels/groundBase.tscn" id="1_ugtyb"]
 [ext_resource type="PackedScene" uid="uid://hph0vdl7puii" path="res://scenes/player/player.tscn" id="2_edvee"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://21vivdhncimr" path="res://assets/objects/statics/static_algae_1.tscn" id="5_al51t"]
 [ext_resource type="PackedScene" uid="uid://bofqt6oyryhyo" path="res://assets/objects/statics/target_truck.tscn" id="6_hvh3e"]
 [ext_resource type="PackedScene" uid="uid://cibr5e7jyyld6" path="res://assets/art/spritesAquarium/waves.tscn" id="7_0uyk1"]
+[ext_resource type="PackedScene" uid="uid://cf618ai8wa2sn" path="res://assets/objects/statics/static_skull.tscn" id="7_o6xxm"]
+[ext_resource type="PackedScene" uid="uid://b1k68xp6vdvd3" path="res://assets/objects/statics/static_column.tscn" id="8_r7dsu"]
 
 [node name="Level1" type="Node2D"]
 
@@ -20,16 +22,25 @@ position = Vector2(418, -428)
 position = Vector2(952, -524)
 
 [node name="MovableObj" parent="." instance=ExtResource("3_uadwk")]
-position = Vector2(676, -413)
+position = Vector2(401, -532)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("4_jfwhh")
 
-[node name="algae1" parent="." instance=ExtResource("5_al51t")]
-position = Vector2(980, -339)
-scale = Vector2(0.15, 0.15)
-
 [node name="TargetTruck" parent="." instance=ExtResource("6_hvh3e")]
-position = Vector2(1378, -438)
+position = Vector2(1500, -353)
+rotation = -0.179769
+scale = Vector2(0.5, 0.5)
 
 [node name="waves" parent="." instance=ExtResource("7_0uyk1")]
+
+[node name="StaticSkull" parent="." instance=ExtResource("7_o6xxm")]
+position = Vector2(685, -433)
+scale = Vector2(0.5, 0.5)
+
+[node name="StaticColumn" parent="." instance=ExtResource("8_r7dsu")]
+position = Vector2(1232, -548)
+
+[node name="StaticAlgae1" parent="." instance=ExtResource("5_al51t")]
+position = Vector2(485, -377)
+scale = Vector2(0.15, 0.15)
