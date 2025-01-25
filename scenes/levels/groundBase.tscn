@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bb7t2rtlp7sku"]
+[gd_scene load_steps=5 format=3 uid="uid://bb7t2rtlp7sku"]
 
 [ext_resource type="PackedScene" uid="uid://73ok78tix061" path="res://camera.tscn" id="1_ar75t"]
 [ext_resource type="Texture2D" uid="uid://dxtnjbsugbqj3" path="res://icon.svg" id="1_x8l8d"]
-[ext_resource type="PackedScene" uid="uid://hph0vdl7puii" path="res://player.tscn" id="3_kkhlj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tytti"]
 size = Vector2(1920, 20)
@@ -49,6 +48,3 @@ shape = SubResource("RectangleShape2D_2ii0i")
 position = Vector2(5, -512)
 scale = Vector2(0.0625, 8)
 texture = ExtResource("1_x8l8d")
-
-[node name="Player" parent="." instance=ExtResource("3_kkhlj")]
-position = Vector2(-247, 272)
