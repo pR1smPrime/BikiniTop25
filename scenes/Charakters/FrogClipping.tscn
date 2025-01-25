@@ -151,7 +151,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"eyes_angry",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -191,7 +191,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"eyes_idle",
-"speed": 5.0
+"speed": 2.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yk5yb"]
@@ -263,16 +263,20 @@ autoplay = "default"
 frame_progress = 0.429041
 
 [node name="customer_base" type="AnimatedSprite2D" parent="."]
+position = Vector2(217, 292)
 sprite_frames = SubResource("SpriteFrames_2hyio")
 animation = &"idle"
-frame_progress = 0.913883
+autoplay = "idle"
+frame_progress = 0.805803
 
 [node name="customer_eyes" type="AnimatedSprite2D" parent="customer_base"]
 sprite_frames = SubResource("SpriteFrames_tj8ds")
 animation = &"eyes_angry"
-frame_progress = 0.0767613
+autoplay = "eyes_idle"
+frame_progress = 0.685217
 
 [node name="customer_mouth" type="AnimatedSprite2D" parent="customer_base"]
 sprite_frames = SubResource("SpriteFrames_yk5yb")
 animation = &"customer_mouthAngry"
-frame_progress = 0.0959294
+autoplay = "customer_mouthIdle"
+frame_progress = 0.355866
