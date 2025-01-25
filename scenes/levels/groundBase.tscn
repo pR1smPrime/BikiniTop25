@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bb7t2rtlp7sku"]
+[gd_scene load_steps=6 format=3 uid="uid://bb7t2rtlp7sku"]
 
 [ext_resource type="PackedScene" uid="uid://73ok78tix061" path="res://scenes/player/camera.tscn" id="1_ar75t"]
 [ext_resource type="Texture2D" uid="uid://dxtnjbsugbqj3" path="res://icon.svg" id="1_x8l8d"]
+[ext_resource type="Texture2D" uid="uid://jodkoy0q3to6" path="res://assets/art/backgrounds/tx_bg_room01.png" id="3_qpgkj"]
 
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tytti"]
@@ -49,3 +50,8 @@ shape = SubResource("RectangleShape2D_2ii0i")
 position = Vector2(5, -512)
 scale = Vector2(0.0625, 8)
 texture = ExtResource("1_x8l8d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(961, -536)
+texture = ExtResource("3_qpgkj")
