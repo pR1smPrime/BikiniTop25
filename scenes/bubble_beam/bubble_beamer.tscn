@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://scenes/bubble_beam/bubble_beamer.gd" id="1_3gvbx"]
 
 [node name="BubbleBeamer" type="Node2D"]
-position = Vector2(299, 707)
 script = ExtResource("1_3gvbx")
 
 [node name="ShootFrequence" type="Timer" parent="."]
