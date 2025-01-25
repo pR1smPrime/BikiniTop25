@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bb7t2rtlp7sku"]
+[gd_scene load_steps=7 format=3 uid="uid://bb7t2rtlp7sku"]
 
 [ext_resource type="Texture2D" uid="uid://cfij0t8fhkfab" path="res://assets/art/spritesAquarium/tx_Aquarium01_Overlay.png" id="2_ae7t6"]
 [ext_resource type="Texture2D" uid="uid://jodkoy0q3to6" path="res://assets/art/backgrounds/tx_bg_room01.png" id="3_qpgkj"]
@@ -9,6 +9,9 @@ size = Vector2(23, 944)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_00bqv"]
 size = Vector2(1.5, 45.85)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlpmb"]
+size = Vector2(276.5, 217.5)
 
 [node name="groundBase" type="Node2D"]
 position = Vector2(-1, 0)
@@ -50,3 +53,15 @@ shape = SubResource("RectangleShape2D_00bqv")
 z_index = -1
 position = Vector2(961, -536)
 texture = ExtResource("3_qpgkj")
+
+[node name="OutOfBoundsLeft" type="StaticBody2D" parent="."]
+position = Vector2(143.25, -106.75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OutOfBoundsLeft"]
+shape = SubResource("RectangleShape2D_mlpmb")
+
+[node name="OutOfBoundsRight" type="StaticBody2D" parent="."]
+position = Vector2(1783, -107)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="OutOfBoundsRight"]
+shape = SubResource("RectangleShape2D_mlpmb")
