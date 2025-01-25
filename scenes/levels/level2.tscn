@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cj3cua1qlwawx"]
+[gd_scene load_steps=13 format=3 uid="uid://cj3cua1qlwawx"]
 
 [ext_resource type="PackedScene" uid="uid://bb7t2rtlp7sku" path="res://scenes/levels/groundBase.tscn" id="1_ugtyb"]
 [ext_resource type="PackedScene" uid="uid://hph0vdl7puii" path="res://scenes/player/player.tscn" id="2_edvee"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dg2i0m2yle8i1" path="res://assets/objects/statics/static_chest.tscn" id="9_nqrt1"]
 [ext_resource type="PackedScene" uid="uid://t1qapbdlfqnh" path="res://assets/objects/staticNoCollision/staNoCo_algae2.tscn" id="10_xry4m"]
 [ext_resource type="PackedScene" uid="uid://d2xyedecm45dw" path="res://scenes/pausemenue/pause_menu.tscn" id="11_hknvm"]
+[ext_resource type="PackedScene" uid="uid://ctdlmu4udssmc" path="res://scenes/bubble_beam/bubble_oyster.tscn" id="12_5ifl5"]
 
 [node name="Level2" type="Node2D"]
 
@@ -67,3 +68,6 @@ position = Vector2(807, -325)
 scale = Vector2(-0.2, 0.2)
 
 [node name="Pause_Menu" parent="." instance=ExtResource("11_hknvm")]
+
+[node name="BubbleOyster" parent="." instance=ExtResource("12_5ifl5")]
+position = Vector2(322, 114)
