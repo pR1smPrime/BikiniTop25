@@ -2,7 +2,7 @@ extends Node2D
 class_name BubbleBeamer
 
 @export var force := 1000.0
-@export var bubble_node := preload("res://bubble/bubble.tscn")
+@export var bubble_node := preload("res://scenes/bubble_projectile/bubble.tscn")
 @export var shoot_frequence := 0.1
 
 @onready var shoot_timer := $ShootFrequence
