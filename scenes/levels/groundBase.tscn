@@ -11,7 +11,7 @@ size = Vector2(23, 944)
 size = Vector2(1.5, 45.85)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mlpmb"]
-size = Vector2(276.5, 217.5)
+size = Vector2(8820, 22.375)
 
 [node name="groundBase" type="Node2D"]
 position = Vector2(-1, 0)
@@ -58,10 +58,5 @@ texture = ExtResource("3_qpgkj")
 position = Vector2(143.25, -106.75)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OutOfBoundsLeft"]
-shape = SubResource("RectangleShape2D_mlpmb")
-
-[node name="OutOfBoundsRight" type="StaticBody2D" parent="."]
-position = Vector2(1783, -107)
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="OutOfBoundsRight"]
+position = Vector2(770.75, -26.4375)
 shape = SubResource("RectangleShape2D_mlpmb")
