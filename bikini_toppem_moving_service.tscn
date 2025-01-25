@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dpuohwofrk2kg"]
+
+[node name="BikiniToppemMovingService" type="Node"]
+
+[node name="ActiveLevel" type="Node2D" parent="."]
+
+[node name="Menu" type="CanvasLayer" parent="."]
