@@ -1,14 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://bf4s865kp8ukp"]
+[gd_scene load_steps=3 format=3 uid="uid://bf4s865kp8ukp"]
 
 [ext_resource type="PackedScene" uid="uid://bb7t2rtlp7sku" path="res://scenes/levels/groundBase.tscn" id="1_vw74y"]
-[ext_resource type="PackedScene" uid="uid://hph0vdl7puii" path="res://player.tscn" id="3_anpl5"]
-[ext_resource type="PackedScene" uid="uid://dibia8lpenyj1" path="res://assets/objects/palmtree.tscn" id="3_raw81"]
+[ext_resource type="PackedScene" uid="uid://hph0vdl7puii" path="res://scenes/player/player.tscn" id="3_anpl5"]
 
 [node name="Level1" type="Node2D"]
 
 [node name="groundBase" parent="." instance=ExtResource("1_vw74y")]
 
 [node name="Player" parent="." instance=ExtResource("3_anpl5")]
-position = Vector2(-297, 384)
+z_index = 1
+position = Vector2(0, -400)
 
-[node name="Palmtree" parent="." instance=ExtResource("3_raw81")]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(952, -524)
