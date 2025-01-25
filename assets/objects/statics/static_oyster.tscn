@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtoh8s6t2s5xi"]
+
+[ext_resource type="Texture2D" uid="uid://hve608cft84n" path="res://assets/art/spritesEnvironment/tx_obstacle_shell.png" id="1_wwlbs"]
+
+[node name="StaticOyster" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-214, 394)
+polygon = PackedVector2Array(90, -36, -53, -131, -57, -205, 35, -291, 168, -325, 78, -391, 37, -531, 68, -656, 204, -741, 327, -763, 398, -735, 455, -650, 498, -482, 474, -394, 328, -313, 474, -253, 477, -215, 363, -105, 237, -51)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_wwlbs")
