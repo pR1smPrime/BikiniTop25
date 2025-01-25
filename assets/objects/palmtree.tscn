@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dibia8lpenyj1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sjlb8"]
+load_path = "res://.godot/imported/Palm-Tree.webp-162b9e0b6a7d9d78e9171d11326a27d7.ctex"
+
+[node name="Palmtree" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(1261, -22)
+scale = Vector2(0.986873, 0.966627)
+polygon = PackedVector2Array(-69, -47, -226, -17, -335, -91, -249, -65, -247, -88, -295, -139, -219, -109, -259, -333, -269, -572, -247, -671, -285, -701, -498, -589, -494, -707, -351, -786, -385, -845, -507, -901, -415, -960, -235, -974, -167, -953, -86, -834, 92, -799, 131, -690, -57, -746, 31, -628, 35, -537, -19, -488, -146, -676, -205, -640, -151.995, -532.78, -195, -324, -156, -148, -37, -116, -7, -59)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1105, -492)
+texture = SubResource("CompressedTexture2D_sjlb8")
