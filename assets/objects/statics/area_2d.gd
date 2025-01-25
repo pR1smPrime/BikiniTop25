@@ -13,4 +13,5 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Moveable:
-		print("object place in target area")  # Replace with function body.
+		get_tree().change_scene_to_file("res://scenes/victory_screen/victory_screen.tscn")
+	
