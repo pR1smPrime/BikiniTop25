@@ -10,9 +10,10 @@ func pause():
 	$AnimationPlayer.play("blur")
 	
 func testEsc():
-	if Input.is_action_just_pressed("BTN_Esc") and !get_tree().paused:
+	if Input.is_action_just_pressed("esc"): #and !get_tree().paused:
+		print("debug")
 		pause()
-	elif Input.is_action_just_pressed("BTN_Esc") and get_tree().paused:
+	elif Input.is_action_just_pressed("esc") and get_tree().paused:
 		resume()
 
 func _on_resume_pressed() -> void:
@@ -24,7 +25,7 @@ func _on_restart_pressed() -> void:
 
 
 func _on_exit_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/mainmenue/main_menu.tscn")
+	get_tree().change_scene_to_file("res://bikini_toppem_moving_service.tscn")
 
 func _process(_delta):
 	testEsc()
