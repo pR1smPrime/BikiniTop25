@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://scenes/bubble_projectile/bubble.gd" id="1_8t61x"]
 [ext_resource type="Texture2D" uid="uid://dm0n2be4vhfgg" path="res://assets/art/spritesFX/tx_fx_bubbles_5f.png" id="1_ltcru"]
-[ext_resource type="AudioStream" uid="uid://uwelgehyyjo4" path="res://assets/sounds/SFX/Flup1.wav" id="3_8ky5m"]
-[ext_resource type="AudioStream" uid="uid://jro0tubw2mdf" path="res://assets/sounds/SFX/Flup2.wav" id="4_8y8fe"]
-[ext_resource type="AudioStream" uid="uid://cmlbmfcihpd1d" path="res://assets/sounds/SFX/Flup3.wav" id="5_oaoie"]
-[ext_resource type="AudioStream" uid="uid://lc01nsj1blxm" path="res://assets/sounds/SFX/Plop1.wav" id="6_3dq6m"]
-[ext_resource type="AudioStream" uid="uid://bhsu1ikybbidd" path="res://assets/sounds/SFX/Flup4.wav" id="6_4g0sv"]
-[ext_resource type="AudioStream" uid="uid://bouwmmv8phgnn" path="res://assets/sounds/SFX/Plop2.wav" id="7_6tq13"]
+[ext_resource type="AudioStream" uid="uid://ey2kqbuefmfn" path="res://assets/sounds/SFX/Flup1.wav" id="3_8ky5m"]
+[ext_resource type="AudioStream" uid="uid://b4y27hmupm4ib" path="res://assets/sounds/SFX/Flup2.wav" id="4_8y8fe"]
+[ext_resource type="AudioStream" uid="uid://g0wehxoylmwe" path="res://assets/sounds/SFX/Flup3.wav" id="5_oaoie"]
+[ext_resource type="AudioStream" uid="uid://i86f405w6n80" path="res://assets/sounds/SFX/Plop1.wav" id="6_3dq6m"]
+[ext_resource type="AudioStream" uid="uid://beyuwx5jfvi2u" path="res://assets/sounds/SFX/Flup4.wav" id="6_4g0sv"]
+[ext_resource type="AudioStream" uid="uid://d3yo6h5tg5he2" path="res://assets/sounds/SFX/Plop2.wav" id="7_6tq13"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5r884"]
 

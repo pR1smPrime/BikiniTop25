@@ -1,15 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bf4s865kp8ukp"]
+[gd_scene load_steps=7 format=3 uid="uid://bf4s865kp8ukp"]
 
 [ext_resource type="PackedScene" uid="uid://bb7t2rtlp7sku" path="res://scenes/levels/groundBase.tscn" id="1_vw74y"]
 [ext_resource type="PackedScene" uid="uid://hph0vdl7puii" path="res://scenes/player/player.tscn" id="3_anpl5"]
-[ext_resource type="Script" path="res://scenes/levels/area_2d.gd" id="3_ltqbu"]
-[ext_resource type="Texture2D" uid="uid://dox3lojsuus8g" path="res://assets/art/spritesObjects/texture_object_box.png" id="4_tpavk"]
 [ext_resource type="PackedScene" uid="uid://wio4kqqfaasv" path="res://scenes/movable/movable.tscn" id="5_hip1h"]
 [ext_resource type="Script" path="res://scenes/movable/movable.gd" id="6_n7tj6"]
 [ext_resource type="PackedScene" uid="uid://21vivdhncimr" path="res://assets/objects/statics/static_algae_1.tscn" id="7_d5j2w"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0x54r"]
-size = Vector2(70, 69)
+[ext_resource type="PackedScene" uid="uid://bofqt6oyryhyo" path="res://assets/objects/statics/target_truck.tscn" id="8_b5tf8"]
 
 [node name="Level1" type="Node2D"]
 
@@ -22,24 +18,15 @@ position = Vector2(418, -428)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(952, -524)
 
-[node name="targetArea" type="Area2D" parent="."]
-script = ExtResource("3_ltqbu")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="targetArea"]
-position = Vector2(1485, -328.5)
-shape = SubResource("RectangleShape2D_0x54r")
-
-[node name="Sprite2D" type="Sprite2D" parent="targetArea"]
-position = Vector2(1485.75, -333.5)
-scale = Vector2(0.535156, 0.492187)
-texture = ExtResource("4_tpavk")
-
 [node name="MovableObj" parent="." instance=ExtResource("5_hip1h")]
 position = Vector2(676, -413)
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("6_n7tj6")
 
 [node name="algae1" parent="." instance=ExtResource("7_d5j2w")]
-position = Vector2(1022, -360)
-scale = Vector2(0.3, 0.3)
+position = Vector2(980, -360)
+scale = Vector2(0.15, 0.15)
 
-[connection signal="body_entered" from="targetArea" to="targetArea" method="_on_body_entered"]
+[node name="TargetTruck" parent="." instance=ExtResource("8_b5tf8")]
+position = Vector2(1378, -438)

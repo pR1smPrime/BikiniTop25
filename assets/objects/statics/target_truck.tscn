@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bofqt6oyryhyo"]
+
+[ext_resource type="Script" path="res://assets/objects/statics/area_2d.gd" id="1_0uf55"]
+[ext_resource type="Texture2D" uid="uid://gh6vpad0gqj7" path="res://assets/art/spritesObjects/tx_goal_truck.png" id="1_4xrvs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dsbib"]
+size = Vector2(212.5, 131)
+
+[node name="TargetTruck" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_0uf55")
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-9.75, 89.5)
+shape = SubResource("RectangleShape2D_dsbib")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-260, 160)
+polygon = PackedVector2Array(15, -12, 86, -69, 82, -75, 135, -115, 133, -118, 145, -120, 144, -129, 354, -146, 348, -247, 358, -249, 361, -214, 377, -214, 371, -292, 380, -292, 382, -312, 456, -291, 461, -294, 479, -292, 485, -215, 491, -215, 494, -146, 502, -146, 505, -94, 500, -77, 475, -55, 456, -12, 397, -10, 224, 0, 43, -7, 16, -3, 12, -10)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_4xrvs")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
