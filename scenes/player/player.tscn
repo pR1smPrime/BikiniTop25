@@ -196,7 +196,7 @@ animations = [{
 size = Vector2(69, 69)
 
 [node name="Player" type="Node2D"]
-position = Vector2(403, 111)
+position = Vector2(-4, -1)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_7055o")

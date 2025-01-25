@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://bb7t2rtlp7sku"]
+[gd_scene load_steps=6 format=3 uid="uid://bb7t2rtlp7sku"]
 
 [ext_resource type="Texture2D" uid="uid://cfij0t8fhkfab" path="res://assets/art/spritesAquarium/tx_Aquarium01_Overlay.png" id="2_ae7t6"]
 [ext_resource type="Texture2D" uid="uid://jodkoy0q3to6" path="res://assets/art/backgrounds/tx_bg_room01.png" id="3_qpgkj"]
 [ext_resource type="Texture2D" uid="uid://bjj4gt5w22o8q" path="res://assets/art/spritesAquarium/tx_Aquarium01_Floor.png" id="3_u5h5d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dhkxt"]
+size = Vector2(23, 944)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_00bqv"]
+size = Vector2(1.5, 45.85)
 
 [node name="groundBase" type="Node2D"]
 position = Vector2(-1, 0)
@@ -14,10 +20,6 @@ texture = ExtResource("3_qpgkj")
 
 [node name="aquarium" type="Node" parent="."]
 
-[node name="glassWall" type="Sprite2D" parent="aquarium"]
-position = Vector2(960, -540)
-texture = ExtResource("2_ae7t6")
-
 [node name="ground" type="StaticBody2D" parent="aquarium"]
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="aquarium/ground"]
@@ -27,3 +29,18 @@ polygon = PackedVector2Array(8, 16, 16, 32, 80, 24, 144, 16, 208, 16, 296, 16, 4
 [node name="Sprite2D" type="Sprite2D" parent="aquarium/ground"]
 position = Vector2(960, -540)
 texture = ExtResource("3_u5h5d")
+
+[node name="glassWalls" type="StaticBody2D" parent="aquarium"]
+
+[node name="glassWall" type="Sprite2D" parent="aquarium/glassWalls"]
+position = Vector2(960, -540)
+texture = ExtResource("2_ae7t6")
+
+[node name="glassWallLeft" type="CollisionShape2D" parent="aquarium/glassWalls"]
+position = Vector2(292.5, -607)
+shape = SubResource("RectangleShape2D_dhkxt")
+
+[node name="glassWallRight" type="CollisionShape2D" parent="aquarium/glassWalls"]
+position = Vector2(1635, -608.5)
+scale = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_00bqv")
