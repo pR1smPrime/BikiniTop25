@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://b027ormyckgur"]
+
+[ext_resource type="Texture2D" uid="uid://jodkoy0q3to6" path="res://assets/art/backgrounds/tx_bg_room01.png" id="1_f1gr0"]
+[ext_resource type="Texture2D" uid="uid://cfij0t8fhkfab" path="res://assets/art/spritesAquarium/tx_Aquarium01_Overlay.png" id="2_m7w2o"]
+[ext_resource type="Texture2D" uid="uid://bjj4gt5w22o8q" path="res://assets/art/spritesAquarium/tx_Aquarium01_Floor.png" id="3_2eqx7"]
+[ext_resource type="Texture2D" uid="uid://imotidmhn4jx" path="res://assets/art/spritesEnvironment/tx_environment_plant02_2.png" id="5_cs1qn"]
+
+[sub_resource type="Shader" id="Shader_eh8hc"]
+code = "shader_type canvas_item;
+
+uniform sampler2D noise_texture;
+uniform float speed = 1.0;
+uniform float strength = 0.02;
+
+void fragment() {
+    vec2 noise_uv = UV + TIME * speed * 0.1;
+    vec2 noise = texture(noise_texture, noise_uv).rg * 2.0 - 1.0;
+
+    vec2 uv = UV + noise * strength;
+    COLOR = texture(TEXTURE, uv);
+}
+"
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_f4t5j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_321hb"]
+shader = SubResource("Shader_eh8hc")
+shader_parameter/speed = 40.0
+shader_parameter/strength = 0.2
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_f4t5j")
+
+[node name="groundBase" type="Node2D"]
+position = Vector2(-1, 0)
+
+[node name="background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(961, -536)
+texture = ExtResource("1_f1gr0")
+
+[node name="aquarium" type="Node" parent="."]
+
+[node name="glassWall" type="Sprite2D" parent="aquarium"]
+position = Vector2(960, -540)
+texture = ExtResource("2_m7w2o")
+
+[node name="ground" type="StaticBody2D" parent="aquarium"]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="aquarium/ground"]
+position = Vector2(304, -352)
+polygon = PackedVector2Array(8, 16, 16, 32, 80, 24, 144, 16, 208, 16, 296, 16, 400, 40, 464, 48, 592, 72, 720, 80, 976, 72, 1168, 56, 1241, 34, 1300, 11, 1313, -2, 1320, 69, 912, 99, 223, 105, -1, 119, -1, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="aquarium/ground"]
+position = Vector2(960, -540)
+texture = ExtResource("3_2eqx7")
+
+[node name="Env_plant01" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_321hb")
+position = Vector2(618, -540)
+scale = Vector2(0.474684, 0.48435)
+texture = ExtResource("5_cs1qn")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(957, -532)
+scale = Vector2(0.474684, 0.48435)
