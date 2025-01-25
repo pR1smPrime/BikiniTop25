@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://wio4kqqfaasv" path="res://scenes/movable/movable.tscn" id="3_5mwjg"]
 [ext_resource type="Script" path="res://scenes/movable/movable.gd" id="4_fxkph"]
 [ext_resource type="PackedScene" uid="uid://bofqt6oyryhyo" path="res://assets/objects/statics/target_truck.tscn" id="5_wjn4s"]
-[ext_resource type="PackedScene" path="res://assets/art/spritesAquarium/waves.tscn" id="6_unfmm"]
+[ext_resource type="PackedScene" uid="uid://cibr5e7jyyld6" path="res://assets/art/spritesAquarium/waves.tscn" id="6_unfmm"]
 [ext_resource type="PackedScene" uid="uid://cf618ai8wa2sn" path="res://assets/objects/statics/static_skull.tscn" id="7_0ui3r"]
 [ext_resource type="PackedScene" uid="uid://b1k68xp6vdvd3" path="res://assets/objects/statics/static_column.tscn" id="8_q0sij"]
 [ext_resource type="PackedScene" uid="uid://t1qapbdlfqnh" path="res://assets/objects/staticNoCollision/staNoCo_algae2.tscn" id="9_fax4x"]
@@ -16,12 +16,12 @@
 [node name="Level3" type="Node2D"]
 
 [node name="StaticColumn" parent="." instance=ExtResource("8_q0sij")]
-position = Vector2(690, -530)
+position = Vector2(716, -512)
 scale = Vector2(0.5, 1)
 
 [node name="StaticColumn3" parent="." instance=ExtResource("8_q0sij")]
-position = Vector2(1003, -520)
-scale = Vector2(0.5, 1)
+position = Vector2(978, -485)
+scale = Vector2(0.4, 1)
 
 [node name="StaticColumn4" parent="." instance=ExtResource("8_q0sij")]
 position = Vector2(1407, -399)
@@ -43,7 +43,7 @@ collision_mask = 3
 script = ExtResource("4_fxkph")
 
 [node name="TargetTruck" parent="." instance=ExtResource("5_wjn4s")]
-position = Vector2(1216, -327)
+position = Vector2(1245, -324)
 scale = Vector2(0.5, 0.5)
 
 [node name="waves" parent="." instance=ExtResource("6_unfmm")]
