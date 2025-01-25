@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://uwv874ruxu87"]
+[gd_scene load_steps=3 format=3 uid="uid://uwv874ruxu87"]
 
 [ext_resource type="Script" path="res://scenes/bubble_projectile/bubble.gd" id="1_ifilg"]
 [ext_resource type="Texture2D" uid="uid://dm0n2be4vhfgg" path="res://assets/art/spritesFX/tx_fx_bubbles_5f.png" id="2_8f3k8"]
@@ -8,10 +8,9 @@
 [node name="Bubble" type="RigidBody2D"]
 mass = 0.4
 gravity_scale = -0.2
-script = ExtResource("1_ifilg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_5r884")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_8f3k8")
+texture = ExtResource("1_ltcru")
