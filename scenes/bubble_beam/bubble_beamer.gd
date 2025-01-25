@@ -15,6 +15,6 @@ func spawn_bubble():
 		bubble.init(direction*force)
 		shoot_timer.start(shoot_frequence)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_pressed("LeftMouse"):
 		spawn_bubble()
