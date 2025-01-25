@@ -160,14 +160,14 @@ libraries = {
 autoplay = "logo_wiggle"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_vdexq")
+stream = ExtResource("4_acq2j")
+
+[node name="BubblemanFinal" type="AudioStreamPlayer" parent="AudioStreamPlayer2D"]
+stream = ExtResource("4_acq2j")
+autoplay = true
 
 [node name="BayerischFluchend" type="AudioStreamPlayer" parent="AudioStreamPlayer2D"]
 stream = ExtResource("4_vdexq")
-autoplay = true
-
-[node name="BubblemanFinal" type="AudioStreamPlayer" parent="AudioStreamPlayer2D/BayerischFluchend"]
-stream = ExtResource("4_acq2j")
 autoplay = true
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
