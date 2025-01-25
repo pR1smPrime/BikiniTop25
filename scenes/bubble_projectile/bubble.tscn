@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://uwv874ruxu87"]
 
-[ext_resource type="Texture2D" uid="uid://dm0n2be4vhfgg" path="res://assets/art/spritesFX/tx_fx_bubbles_5f.png" id="1_ltcru"]
+[ext_resource type="Script" path="res://scenes/bubble_projectile/bubble.gd" id="1_ifilg"]
+[ext_resource type="Texture2D" uid="uid://dm0n2be4vhfgg" path="res://assets/art/spritesFX/tx_fx_bubbles_5f.png" id="2_8f3k8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5r884"]
 
