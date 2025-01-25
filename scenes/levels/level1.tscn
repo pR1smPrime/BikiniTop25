@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bf4s865kp8ukp"]
+[gd_scene load_steps=13 format=3 uid="uid://bf4s865kp8ukp"]
 
 [ext_resource type="PackedScene" uid="uid://bb7t2rtlp7sku" path="res://scenes/levels/groundBase.tscn" id="1_vw74y"]
 [ext_resource type="PackedScene" uid="uid://hph0vdl7puii" path="res://scenes/player/player.tscn" id="3_anpl5"]
@@ -12,11 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://d2xyedecm45dw" path="res://scenes/pausemenue/pause_menu.tscn" id="12_e5w1w"]
 [ext_resource type="PackedScene" path="res://assets/objects/moveables/moveable_vase.tscn" id="12_qo4ie"]
 [ext_resource type="PackedScene" uid="uid://dtoh8s6t2s5xi" path="res://assets/objects/statics/static_oyster.tscn" id="13_sjx7y"]
-[ext_resource type="PackedScene" uid="uid://4h0ltwgm81fw" path="res://assets/objects/interactive/interactive_oyster.tscn" id="13_x4887"]
 
 [node name="Level1" type="Node2D"]
-
-[node name="InteractiveOyster" parent="." instance=ExtResource("13_x4887")]
 
 [node name="groundBase" parent="." instance=ExtResource("1_vw74y")]
 
