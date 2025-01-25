@@ -7,6 +7,7 @@ process_mode = 3
 script = ExtResource("1_h7r06")
 
 [node name="PausePanel" type="Panel" parent="."]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
