@@ -29,8 +29,7 @@ collision_mask = 3
 script = ExtResource("4_jfwhh")
 
 [node name="TargetTruck" parent="." instance=ExtResource("6_hvh3e")]
-position = Vector2(1500, -353)
-rotation = -0.179769
+position = Vector2(1442, -333)
 scale = Vector2(0.5, 0.5)
 
 [node name="waves" parent="." instance=ExtResource("7_0uyk1")]
@@ -40,7 +39,8 @@ position = Vector2(685, -433)
 scale = Vector2(0.5, 0.5)
 
 [node name="StaticColumn" parent="." instance=ExtResource("8_r7dsu")]
-position = Vector2(1232, -548)
+position = Vector2(1204, -524)
+scale = Vector2(0.5, 1)
 
 [node name="StaticChest" parent="." instance=ExtResource("9_nqrt1")]
 position = Vector2(509, -368)
@@ -60,3 +60,7 @@ scale = Vector2(0.7, 0.7)
 z_index = -1
 position = Vector2(937, -529)
 scale = Vector2(0.5, 0.5)
+
+[node name="StaticChest2" parent="." instance=ExtResource("9_nqrt1")]
+position = Vector2(807, -325)
+scale = Vector2(-0.2, 0.2)

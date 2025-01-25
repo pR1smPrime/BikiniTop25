@@ -39,7 +39,7 @@ position = Vector2(418, -428)
 position = Vector2(952, -524)
 
 [node name="MovableObj" parent="." instance=ExtResource("4_jfw20")]
-position = Vector2(789, -727)
+position = Vector2(497, -879)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("5_xi65j")
