@@ -28,18 +28,20 @@ stream_1/stream = ExtResource("7_6tq13")
 [node name="Bubble" type="RigidBody2D"]
 collision_layer = 2
 collision_mask = 2
-mass = 0.4
+mass = 0.1
 gravity_scale = -0.2
 script = ExtResource("1_8t61x")
+time_to_pop = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_5r884")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.52, 0.44)
 texture = ExtResource("1_ltcru")
 
 [node name="TimeToPop" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 2.277
 one_shot = true
 autostart = true
 
@@ -49,6 +51,6 @@ volume_db = 3.0
 
 [node name="Pop" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_av2m5")
-volume_db = 4.0
+volume_db = 9.622
 
 [connection signal="timeout" from="TimeToPop" to="." method="_on_time_to_pop_timeout"]

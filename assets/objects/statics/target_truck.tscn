@@ -16,6 +16,8 @@ position = Vector2(-9.75, 89.5)
 shape = SubResource("RectangleShape2D_dsbib")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(-260, 160)

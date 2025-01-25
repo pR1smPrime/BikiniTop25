@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://crxb0iuw721ke"]
+[gd_scene load_steps=12 format=3 uid="uid://crxb0iuw721ke"]
 
 [ext_resource type="PackedScene" uid="uid://bb7t2rtlp7sku" path="res://scenes/levels/groundBase.tscn" id="1_hc18r"]
 [ext_resource type="PackedScene" uid="uid://hph0vdl7puii" path="res://scenes/player/player.tscn" id="2_1jxtb"]
@@ -8,8 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://cibr5e7jyyld6" path="res://assets/art/spritesAquarium/waves.tscn" id="6_unfmm"]
 [ext_resource type="PackedScene" uid="uid://cf618ai8wa2sn" path="res://assets/objects/statics/static_skull.tscn" id="7_0ui3r"]
 [ext_resource type="PackedScene" uid="uid://b1k68xp6vdvd3" path="res://assets/objects/statics/static_column.tscn" id="8_q0sij"]
+[ext_resource type="PackedScene" uid="uid://t1qapbdlfqnh" path="res://assets/objects/staticNoCollision/staNoCo_algae2.tscn" id="9_fax4x"]
+[ext_resource type="PackedScene" uid="uid://bj253dgyyi6n" path="res://assets/objects/staticNoCollision/staNoCo_algae3.tscn" id="10_vvm2v"]
+[ext_resource type="PackedScene" uid="uid://dbba0xayt6m1u" path="res://assets/objects/staticNoCollision/staNoCo_algae1.tscn" id="11_a7gad"]
 
-[node name="Level1" type="Node2D"]
+[node name="Level3" type="Node2D"]
 
 [node name="StaticColumn" parent="." instance=ExtResource("8_q0sij")]
 position = Vector2(690, -530)
@@ -46,4 +49,28 @@ scale = Vector2(0.5, 0.5)
 
 [node name="StaticSkull" parent="." instance=ExtResource("7_0ui3r")]
 position = Vector2(1397, -610)
+scale = Vector2(0.2, 0.2)
+
+[node name="staNoCo_algae2" parent="." instance=ExtResource("9_fax4x")]
+position = Vector2(1562, -542)
+scale = Vector2(0.4, 0.4)
+
+[node name="StaNoCo_algae3" parent="." instance=ExtResource("10_vvm2v")]
+position = Vector2(757, -386)
+scale = Vector2(0.15, 0.15)
+
+[node name="StaNoCo_algae4" parent="." instance=ExtResource("10_vvm2v")]
+position = Vector2(875, -342)
+scale = Vector2(0.15, 0.15)
+
+[node name="StaNoCo_algae5" parent="." instance=ExtResource("10_vvm2v")]
+position = Vector2(757, -386)
+scale = Vector2(0.15, 0.15)
+
+[node name="StaNoCo_algae6" parent="." instance=ExtResource("10_vvm2v")]
+position = Vector2(815, -361)
+scale = Vector2(0.15, 0.15)
+
+[node name="staNoCo_algae1" parent="." instance=ExtResource("11_a7gad")]
+position = Vector2(494, -421)
 scale = Vector2(0.2, 0.2)
