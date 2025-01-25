@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://btlnrnt8tpns1"]
+[gd_scene load_steps=10 format=3 uid="uid://btlnrnt8tpns1"]
 
 [ext_resource type="Script" path="res://scenes/mainmenue/main_menu.gd" id="1_3cofa"]
 [ext_resource type="Texture2D" uid="uid://jodkoy0q3to6" path="res://assets/art/backgrounds/tx_bg_room01.png" id="2_rck5r"]
 [ext_resource type="Texture2D" uid="uid://busub1w3bcq3j" path="res://assets/art/userInterface/tx_logo.png" id="3_dpvu5"]
 [ext_resource type="AudioStream" uid="uid://dn87jmownj1qt" path="res://assets/sounds/Voice/BUBBLEMAN_Final.mp3" id="4_acq2j"]
+[ext_resource type="AudioStream" uid="uid://jm0nskd33x83" path="res://assets/sounds/Voice/BayerischFluchend.wav" id="4_vdexq"]
 
 [sub_resource type="SystemFont" id="SystemFont_okf44"]
 font_names = PackedStringArray("Impact")
@@ -159,10 +160,15 @@ libraries = {
 autoplay = "logo_wiggle"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_acq2j")
+stream = ExtResource("4_vdexq")
 
-[node name="BubblemanFinal" type="AudioStreamPlayer" parent="AudioStreamPlayer2D"]
+[node name="BayerischFluchend" type="AudioStreamPlayer" parent="AudioStreamPlayer2D"]
+stream = ExtResource("4_vdexq")
+autoplay = true
+
+[node name="BubblemanFinal" type="AudioStreamPlayer" parent="AudioStreamPlayer2D/BayerischFluchend"]
 stream = ExtResource("4_acq2j")
+autoplay = true
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/LevelSelect" to="." method="_on_level_select_pressed"]
