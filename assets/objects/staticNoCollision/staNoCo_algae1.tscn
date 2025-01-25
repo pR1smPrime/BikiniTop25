@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbba0xayt6m1u"]
+
+[ext_resource type="Texture2D" uid="uid://cjml0tka5cqct" path="res://assets/art/spritesEnvironment/tx_environment_plant01.png" id="1_eqqwx"]
+
+[node name="staNoCo_algae1" type="Node2D"]
+
+[node name="RigidBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+texture = ExtResource("1_eqqwx")
