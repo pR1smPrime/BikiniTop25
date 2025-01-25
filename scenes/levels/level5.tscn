@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=3 uid="uid://diud7kw0rfwfc"]
+
+[ext_resource type="PackedScene" uid="uid://t1qapbdlfqnh" path="res://assets/objects/staticNoCollision/staNoCo_algae2.tscn" id="1_byvas"]
+[ext_resource type="PackedScene" uid="uid://bb7t2rtlp7sku" path="res://scenes/levels/groundBase.tscn" id="1_ow8i4"]
+[ext_resource type="PackedScene" uid="uid://hph0vdl7puii" path="res://scenes/player/player.tscn" id="3_jqsr4"]
+[ext_resource type="PackedScene" uid="uid://wio4kqqfaasv" path="res://scenes/movable/movable.tscn" id="4_bk8s2"]
+[ext_resource type="Script" path="res://scenes/movable/movable.gd" id="5_85kg1"]
+[ext_resource type="PackedScene" uid="uid://bofqt6oyryhyo" path="res://assets/objects/statics/target_truck.tscn" id="6_5hbby"]
+[ext_resource type="PackedScene" uid="uid://cibr5e7jyyld6" path="res://assets/art/spritesAquarium/waves.tscn" id="7_42tgh"]
+[ext_resource type="PackedScene" uid="uid://cf618ai8wa2sn" path="res://assets/objects/statics/static_skull.tscn" id="8_rna0v"]
+[ext_resource type="PackedScene" uid="uid://b1k68xp6vdvd3" path="res://assets/objects/statics/static_column.tscn" id="9_0fgv0"]
+[ext_resource type="PackedScene" uid="uid://dbba0xayt6m1u" path="res://assets/objects/staticNoCollision/staNoCo_algae1.tscn" id="9_xjbni"]
+
+[node name="Level5" type="Node2D"]
+
+[node name="staNoCo_algae4" parent="." instance=ExtResource("1_byvas")]
+position = Vector2(1567, -501)
+scale = Vector2(0.5, 0.5)
+
+[node name="groundBase" parent="." instance=ExtResource("1_ow8i4")]
+
+[node name="Player" parent="." instance=ExtResource("3_jqsr4")]
+z_index = 1
+position = Vector2(418, -428)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(952, -524)
+
+[node name="MovableObj" parent="." instance=ExtResource("4_bk8s2")]
+position = Vector2(497, -879)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("5_85kg1")
+
+[node name="TargetTruck" parent="." instance=ExtResource("6_5hbby")]
+position = Vector2(1521, -901)
+scale = Vector2(0.5, 0.5)
+
+[node name="waves" parent="." instance=ExtResource("7_42tgh")]
+position = Vector2(0, -2)
+
+[node name="StaticColumn" parent="." instance=ExtResource("9_0fgv0")]
+position = Vector2(597, -324)
+scale = Vector2(0.5, 0.5)
+
+[node name="StaticColumn2" parent="." instance=ExtResource("9_0fgv0")]
+position = Vector2(792, -369)
+scale = Vector2(0.5, 0.7)
+
+[node name="StaticColumn4" parent="." instance=ExtResource("9_0fgv0")]
+position = Vector2(988, -376)
+scale = Vector2(0.5, 0.45)
+
+[node name="StaticColumn3" parent="." instance=ExtResource("9_0fgv0")]
+position = Vector2(1108, -1106)
+scale = Vector2(0.5, -1)
+
+[node name="StaticColumn5" parent="." instance=ExtResource("9_0fgv0")]
+position = Vector2(630, -1205)
+scale = Vector2(0.5, -1)
+
+[node name="StaticSkull" parent="." instance=ExtResource("8_rna0v")]
+position = Vector2(1490, -334)
+scale = Vector2(0.3, 0.3)
+
+[node name="staNoCo_algae1" parent="." instance=ExtResource("9_xjbni")]
+z_index = -1
+position = Vector2(1194, -377)
+scale = Vector2(0.5, 0.3)
+
+[node name="staNoCo_algae2" parent="." instance=ExtResource("9_xjbni")]
+position = Vector2(715, -382)
+scale = Vector2(0.5, 0.3)
+
+[node name="staNoCo_algae3" parent="." instance=ExtResource("9_xjbni")]
+position = Vector2(1329, -311)
+scale = Vector2(0.5, 0.3)
