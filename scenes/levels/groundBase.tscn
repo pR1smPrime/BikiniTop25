@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://bb7t2rtlp7sku"]
+
+[ext_resource type="PackedScene" uid="uid://73ok78tix061" path="res://camera.tscn" id="1_ar75t"]
+[ext_resource type="Texture2D" uid="uid://dxtnjbsugbqj3" path="res://icon.svg" id="1_x8l8d"]
+[ext_resource type="PackedScene" uid="uid://hph0vdl7puii" path="res://player.tscn" id="3_kkhlj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tytti"]
+size = Vector2(1920, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ii0i"]
+size = Vector2(8, 1084)
+
+[node name="groundBase" type="Node2D"]
+position = Vector2(-1, 0)
+
+[node name="level1Ground" type="StaticBody2D" parent="."]
+position = Vector2(10, -10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="level1Ground"]
+position = Vector2(953, 0)
+shape = SubResource("RectangleShape2D_tytti")
+
+[node name="Sprite2D" type="Sprite2D" parent="level1Ground"]
+position = Vector2(952, -5)
+scale = Vector2(15, 0.22925)
+texture = ExtResource("1_x8l8d")
+
+[node name="Camera" parent="." instance=ExtResource("1_ar75t")]
+
+[node name="wallLeft" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wallLeft"]
+position = Vector2(5, -542)
+shape = SubResource("RectangleShape2D_2ii0i")
+
+[node name="Sprite2D" type="Sprite2D" parent="wallLeft"]
+position = Vector2(5, -512)
+scale = Vector2(0.0625, 8)
+texture = ExtResource("1_x8l8d")
+
+[node name="wallLeft2" type="StaticBody2D" parent="."]
+position = Vector2(1913, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wallLeft2"]
+position = Vector2(5, -542)
+shape = SubResource("RectangleShape2D_2ii0i")
+
+[node name="Sprite2D" type="Sprite2D" parent="wallLeft2"]
+position = Vector2(5, -512)
+scale = Vector2(0.0625, 8)
+texture = ExtResource("1_x8l8d")
+
+[node name="Player" parent="." instance=ExtResource("3_kkhlj")]
+position = Vector2(-247, 272)
