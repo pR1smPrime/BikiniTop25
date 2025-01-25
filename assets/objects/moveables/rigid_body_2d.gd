@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends Moveable
 
 @export var max_health = 4
 var current_health = max_health
@@ -26,7 +26,9 @@ func breakMoveable() -> void:
 		
 
 func _on_body_entered(body: Node) -> void:
-	print("angular velocity", angular_velocity)
-	if(angular_velocity > 1):
+	print(body.get_class())
+	if(body is Bubble):
+		return
+	if(abs(angular_velocity) > 1):
 		current_health -= 1
 	breakMoveable()
