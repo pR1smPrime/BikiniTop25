@@ -21,6 +21,10 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="viewport"
 
+[dotnet]
+
+project/assembly_name="Bikini Toppom Moving Service"
+
 [input]
 
 ui_text_caret_left={
