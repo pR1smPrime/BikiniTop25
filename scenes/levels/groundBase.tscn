@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bb7t2rtlp7sku"]
+[gd_scene load_steps=5 format=3 uid="uid://bb7t2rtlp7sku"]
 
 [ext_resource type="Texture2D" uid="uid://cfij0t8fhkfab" path="res://assets/art/spritesAquarium/tx_Aquarium01_Overlay.png" id="2_ae7t6"]
 [ext_resource type="Texture2D" uid="uid://jodkoy0q3to6" path="res://assets/art/backgrounds/tx_bg_room01.png" id="3_qpgkj"]
 [ext_resource type="Texture2D" uid="uid://bjj4gt5w22o8q" path="res://assets/art/spritesAquarium/tx_Aquarium01_Floor.png" id="3_u5h5d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1wcm"]
+size = Vector2(5, 759)
 
 [node name="groundBase" type="Node2D"]
 position = Vector2(-1, 0)
@@ -20,10 +23,18 @@ texture = ExtResource("2_ae7t6")
 
 [node name="ground" type="StaticBody2D" parent="aquarium"]
 
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="aquarium/ground"]
-position = Vector2(304, -352)
-polygon = PackedVector2Array(8, 16, 16, 32, 80, 24, 144, 16, 208, 16, 296, 16, 400, 40, 464, 48, 592, 72, 720, 80, 976, 72, 1168, 56, 1241, 34, 1300, 11, 1313, -2, 1320, 69, 912, 99, 223, 105, -1, 119, -1, 12)
-
 [node name="Sprite2D" type="Sprite2D" parent="aquarium/ground"]
 position = Vector2(960, -540)
 texture = ExtResource("3_u5h5d")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="aquarium/ground"]
+position = Vector2(307, -313)
+polygon = PackedVector2Array(-3, -4, 7, 0, 9, 16, 27, 15, 68, 7, 94, 2, 116, -2, 139, -3, 173, -5, 190, -5, 231, -6, 262, -3, 292, 1, 325, 6, 356, 12, 396, 21, 439, 30, 463, 35, 491, 40, 522, 45, 550, 49, 590, 53, 629, 57, 654, 59, 683, 61, 722, 62, 748, 63, 771, 63, 801, 63, 829, 63, 861, 62, 900, 60, 943, 57, 975, 55, 1023, 52, 1070, 47, 1112, 44, 1163, 36, 1202, 31, 1225, 25, 1239, 18, 1266, 9, 1298, -5, 1299, -12, 1307, -16, 1315, -16, 1316, 51, 1113, 72, -4, 72, -6, -5)
+
+[node name="collisionLeft" type="CollisionShape2D" parent="aquarium/ground"]
+position = Vector2(301.5, -697.5)
+shape = SubResource("RectangleShape2D_w1wcm")
+
+[node name="collisionRight" type="CollisionShape2D" parent="aquarium/ground"]
+position = Vector2(1624, -671)
+shape = SubResource("RectangleShape2D_w1wcm")
