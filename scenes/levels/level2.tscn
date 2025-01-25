@@ -1,16 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://cj3cua1qlwawx"]
+[gd_scene load_steps=11 format=3 uid="uid://cj3cua1qlwawx"]
 
 [ext_resource type="PackedScene" uid="uid://bb7t2rtlp7sku" path="res://scenes/levels/groundBase.tscn" id="1_ugtyb"]
 [ext_resource type="PackedScene" uid="uid://hph0vdl7puii" path="res://scenes/player/player.tscn" id="2_edvee"]
 [ext_resource type="PackedScene" uid="uid://wio4kqqfaasv" path="res://scenes/movable/movable.tscn" id="3_uadwk"]
 [ext_resource type="Script" path="res://scenes/movable/movable.gd" id="4_jfwhh"]
-[ext_resource type="PackedScene" uid="uid://21vivdhncimr" path="res://assets/objects/statics/static_algae_1.tscn" id="5_al51t"]
 [ext_resource type="PackedScene" uid="uid://bofqt6oyryhyo" path="res://assets/objects/statics/target_truck.tscn" id="6_hvh3e"]
 [ext_resource type="PackedScene" uid="uid://cibr5e7jyyld6" path="res://assets/art/spritesAquarium/waves.tscn" id="7_0uyk1"]
 [ext_resource type="PackedScene" uid="uid://cf618ai8wa2sn" path="res://assets/objects/statics/static_skull.tscn" id="7_o6xxm"]
 [ext_resource type="PackedScene" uid="uid://b1k68xp6vdvd3" path="res://assets/objects/statics/static_column.tscn" id="8_r7dsu"]
+[ext_resource type="PackedScene" uid="uid://dg2i0m2yle8i1" path="res://assets/objects/statics/static_chest.tscn" id="9_nqrt1"]
+[ext_resource type="PackedScene" uid="uid://t1qapbdlfqnh" path="res://assets/objects/staticNoCollision/staNoCo_algae2.tscn" id="10_xry4m"]
 
-[node name="Level1" type="Node2D"]
+[node name="Level2" type="Node2D"]
 
 [node name="groundBase" parent="." instance=ExtResource("1_ugtyb")]
 
@@ -41,6 +42,21 @@ scale = Vector2(0.5, 0.5)
 [node name="StaticColumn" parent="." instance=ExtResource("8_r7dsu")]
 position = Vector2(1232, -548)
 
-[node name="StaticAlgae1" parent="." instance=ExtResource("5_al51t")]
-position = Vector2(485, -377)
-scale = Vector2(0.15, 0.15)
+[node name="StaticChest" parent="." instance=ExtResource("9_nqrt1")]
+position = Vector2(509, -368)
+scale = Vector2(0.2, 0.2)
+
+[node name="staNoCo_algae2" parent="." instance=ExtResource("10_xry4m")]
+z_index = -1
+position = Vector2(501, -612)
+scale = Vector2(0.7, 0.7)
+
+[node name="staNoCo_algae3" parent="." instance=ExtResource("10_xry4m")]
+z_index = -1
+position = Vector2(1337, -600)
+scale = Vector2(0.7, 0.7)
+
+[node name="staNoCo_algae4" parent="." instance=ExtResource("10_xry4m")]
+z_index = -1
+position = Vector2(937, -529)
+scale = Vector2(0.5, 0.5)
