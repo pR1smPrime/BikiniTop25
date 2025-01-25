@@ -1,16 +1,17 @@
-[gd_scene load_steps=12 format=3 uid="uid://bf4s865kp8ukp"]
+[gd_scene load_steps=13 format=3 uid="uid://bf4s865kp8ukp"]
 
 [ext_resource type="PackedScene" uid="uid://bb7t2rtlp7sku" path="res://scenes/levels/groundBase.tscn" id="1_vw74y"]
 [ext_resource type="PackedScene" uid="uid://hph0vdl7puii" path="res://scenes/player/player.tscn" id="3_anpl5"]
 [ext_resource type="PackedScene" uid="uid://wio4kqqfaasv" path="res://scenes/movable/movable.tscn" id="5_hip1h"]
 [ext_resource type="Script" path="res://scenes/movable/movable.gd" id="6_n7tj6"]
-[ext_resource type="PackedScene" uid="uid://cibr5e7jyyld6" path="res://assets/art/spritesAquarium/waves.tscn" id="7_2e5qh"]
+[ext_resource type="PackedScene" path="res://assets/art/spritesAquarium/waves.tscn" id="7_2e5qh"]
 [ext_resource type="PackedScene" uid="uid://b1k68xp6vdvd3" path="res://assets/objects/statics/static_column.tscn" id="7_3gybj"]
 [ext_resource type="PackedScene" uid="uid://bofqt6oyryhyo" path="res://assets/objects/statics/target_truck.tscn" id="8_b5tf8"]
 [ext_resource type="PackedScene" uid="uid://dbba0xayt6m1u" path="res://assets/objects/staticNoCollision/staNoCo_algae1.tscn" id="8_gk1iv"]
 [ext_resource type="PackedScene" uid="uid://bj253dgyyi6n" path="res://assets/objects/staticNoCollision/staNoCo_algae3.tscn" id="9_375lw"]
 [ext_resource type="PackedScene" uid="uid://t1qapbdlfqnh" path="res://assets/objects/staticNoCollision/staNoCo_algae2.tscn" id="10_ue1s2"]
 [ext_resource type="PackedScene" uid="uid://cf618ai8wa2sn" path="res://assets/objects/statics/static_skull.tscn" id="11_fmbsn"]
+[ext_resource type="PackedScene" uid="uid://d2xyedecm45dw" path="res://scenes/pausemenue/pause_menu.tscn" id="12_e5w1w"]
 
 [node name="Level1" type="Node2D"]
 
@@ -59,3 +60,5 @@ scale = Vector2(0.5, 0.5)
 [node name="StaticSkull" parent="." instance=ExtResource("11_fmbsn")]
 position = Vector2(1008, -315)
 scale = Vector2(0.2, 0.2)
+
+[node name="Pause_Menu" parent="." instance=ExtResource("12_e5w1w")]
