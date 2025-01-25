@@ -6,3 +6,8 @@ func init(bubble_velocity : Vector2) -> void:
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
+
+
+func _on_time_to_pop_timeout() -> void:
+	# pop animation
+	queue_free()
