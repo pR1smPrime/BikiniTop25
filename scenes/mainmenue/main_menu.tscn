@@ -84,8 +84,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -18.0
+offset_top = -155.0
+offset_right = -18.0
+offset_bottom = -155.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.04706, 1.15588)
 texture = ExtResource("2_e18te")
 
 [node name="Logo" type="TextureRect" parent="."]
@@ -112,6 +117,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 63.0
+offset_right = 4.0
+offset_bottom = 63.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 12
