@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bf4s865kp8ukp"]
+[gd_scene load_steps=14 format=3 uid="uid://bf4s865kp8ukp"]
 
 [ext_resource type="PackedScene" uid="uid://bb7t2rtlp7sku" path="res://scenes/levels/groundBase.tscn" id="1_vw74y"]
 [ext_resource type="PackedScene" uid="uid://hph0vdl7puii" path="res://scenes/player/player.tscn" id="3_anpl5"]
@@ -13,7 +13,20 @@
 [ext_resource type="PackedScene" path="res://assets/objects/moveables/moveable_vase.tscn" id="12_qo4ie"]
 [ext_resource type="PackedScene" uid="uid://dtoh8s6t2s5xi" path="res://assets/objects/statics/static_oyster.tscn" id="13_sjx7y"]
 
+[sub_resource type="SystemFont" id="SystemFont_0pfif"]
+font_names = PackedStringArray("Frank Ruehl CLM")
+
 [node name="Level1" type="Node2D"]
+
+[node name="LabelLevel" type="Label" parent="."]
+z_index = 1
+offset_left = 32.0
+offset_top = -994.0
+offset_right = 299.0
+offset_bottom = -884.0
+theme_override_fonts/font = SubResource("SystemFont_0pfif")
+theme_override_font_sizes/font_size = 80
+text = "\"EZPZ\""
 
 [node name="groundBase" parent="." instance=ExtResource("1_vw74y")]
 
