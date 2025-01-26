@@ -1,3 +1,333 @@
-[gd_scene format=3 uid="uid://b4k1q71s86tai"]
+[gd_scene load_steps=46 format=3 uid="uid://lpgeumd6pekw"]
 
-[node name="Credits" type="Node2D"]
+[ext_resource type="Script" path="res://scenes/victory_screen/victory_screen.gd" id="1_xqqhp"]
+[ext_resource type="Texture2D" uid="uid://rumnfmm4o0m5" path="res://assets/art/backgrounds/tx_bg_winscreen.png" id="2_2xqbr"]
+[ext_resource type="FontFile" uid="uid://dhw7s5vf2kb6b" path="res://assets/art/fonts/Atma-SemiBold.ttf" id="3_jvm1u"]
+[ext_resource type="Theme" uid="uid://d2egigf8uvin0" path="res://scenes/mainmenue/main_menu.tres" id="4_c5bdq"]
+[ext_resource type="AudioStream" uid="uid://dn87jmownj1qt" path="res://assets/sounds/Voice/BUBBLEMAN_Final.mp3" id="5_1davf"]
+[ext_resource type="Texture2D" uid="uid://edhyfvfkurm8" path="res://assets/art/Customer/body Idle/Kunde_Idle-1.png" id="6_5f8xv"]
+[ext_resource type="Texture2D" uid="uid://cqww4m3xh2wtk" path="res://assets/art/Customer/body Idle/Kunde_Idle-2.png" id="7_4rcte"]
+[ext_resource type="Texture2D" uid="uid://dupew6it7ug6h" path="res://assets/art/Customer/body Idle/Kunde_Idle-3.png" id="8_mrahf"]
+[ext_resource type="Texture2D" uid="uid://du2d1y0parg6b" path="res://assets/art/Customer/body Idle/Kunde_Idle-4.png" id="9_q5pj1"]
+[ext_resource type="Texture2D" uid="uid://d1x3hpe6mml31" path="res://assets/art/Customer/Eyes angery/Kunde_augen_wuetend-1.png" id="10_ul7ka"]
+[ext_resource type="Texture2D" uid="uid://bljog600yfh3k" path="res://assets/art/Customer/Eyes angery/Kunde_augen_wuetend-2.png" id="11_vkcp4"]
+[ext_resource type="Texture2D" uid="uid://bxjjarkn6tk3v" path="res://assets/art/Customer/Eyes angery/Kunde_augen_wuetend-3.png" id="12_w6vh4"]
+[ext_resource type="Texture2D" uid="uid://cy4hthquu0m4q" path="res://assets/art/Customer/Eyes happy/Kunde_augen_happy-1.png" id="13_pomhk"]
+[ext_resource type="Texture2D" uid="uid://urudx56sdfxj" path="res://assets/art/Customer/Eyes happy/Kunde_augen_happy-2.png" id="14_ww5fs"]
+[ext_resource type="Texture2D" uid="uid://c3vwwybg16hej" path="res://assets/art/Customer/Eyes happy/Kunde_augen_happy-3.png" id="15_2p7ou"]
+[ext_resource type="Texture2D" uid="uid://3jgvsa8j7yki" path="res://assets/art/Customer/Eyes happy/Kunde_augen_happy-4.png" id="16_mpctg"]
+[ext_resource type="Texture2D" uid="uid://bse8mk0w4hpla" path="res://assets/art/Customer/Eyes blink/kunde_blinzelt-1.png" id="17_qsmyq"]
+[ext_resource type="Texture2D" uid="uid://biuc1rt7e27wh" path="res://assets/art/Customer/Eyes blink/kunde_blinzelt-2.png" id="18_lnc7x"]
+[ext_resource type="Texture2D" uid="uid://bur5kh04koo3g" path="res://assets/art/Customer/Eyes blink/kunde_blinzelt-3.png" id="19_8mqrm"]
+[ext_resource type="Texture2D" uid="uid://cg30dfveb0527" path="res://assets/art/Customer/Eyes blink/kunde_blinzelt-4.png" id="20_0325p"]
+[ext_resource type="Texture2D" uid="uid://cr0j1cjutq8p7" path="res://assets/art/Customer/Eyes blink/kunde_blinzelt-5.png" id="21_tantg"]
+[ext_resource type="Texture2D" uid="uid://c4jyf1g3ms8so" path="res://assets/art/Customer/Eyes blink/kunde_blinzelt-6.png" id="22_ie02g"]
+[ext_resource type="Texture2D" uid="uid://culec1vkhgafp" path="res://assets/art/Customer/Mouth angry/Kunde_Spricht-1.png" id="23_321io"]
+[ext_resource type="Texture2D" uid="uid://d3628ra1c75fv" path="res://assets/art/Customer/Mouth angry/Kunde_Spricht-2.png" id="24_llfbv"]
+[ext_resource type="Texture2D" uid="uid://cjehs18y8st6r" path="res://assets/art/Customer/Mouth idle/Kunde_Idle-1.png" id="25_dj2ih"]
+[ext_resource type="Texture2D" uid="uid://dp31022yup0fk" path="res://assets/art/Customer/Mouth idle/Kunde_Idle-2.png" id="26_y041j"]
+[ext_resource type="Texture2D" uid="uid://bj3nu7h8cx16w" path="res://assets/art/Customer/Mouth idle/Kunde_Idle-3.png" id="27_n38np"]
+[ext_resource type="Texture2D" uid="uid://rep4uckf1cjc" path="res://assets/art/Customer/Mouth idle/Kunde_Idle-4.png" id="28_h3pdc"]
+[ext_resource type="Texture2D" uid="uid://beo2332cwt2s7" path="res://assets/art/Customer/Mouth idle/Kunde_Idle-5.png" id="29_pi4lc"]
+[ext_resource type="Texture2D" uid="uid://b6hok2b8cv7vn" path="res://assets/art/Customer/Mouth talking/Kunde_Spricht-1.png" id="30_bxxl2"]
+[ext_resource type="Texture2D" uid="uid://bdteq5katv0cg" path="res://assets/art/Customer/Mouth talking/Kunde_Spricht-2.png" id="31_s216g"]
+[ext_resource type="Texture2D" uid="uid://ccn1htvgegmxi" path="res://assets/art/Customer/Mouth talking/Kunde_Spricht-3.png" id="32_6tfgf"]
+[ext_resource type="Texture2D" uid="uid://18x2lchr4wnu" path="res://assets/art/Customer/Mouth talking/Kunde_Spricht-4.png" id="33_p3s53"]
+[ext_resource type="Texture2D" uid="uid://ccbiqtv6b7t4p" path="res://assets/art/Customer/Mouth talking/Kunde_Spricht-5.png" id="34_ci6kc"]
+[ext_resource type="Texture2D" uid="uid://v2u5kkqigypy" path="res://assets/art/userInterface/tx_logo01.png" id="35_7btoy"]
+[ext_resource type="Texture2D" uid="uid://bn45cwn33nr4a" path="res://assets/art/userInterface/tx_logo02.png" id="36_rbdua"]
+[ext_resource type="Texture2D" uid="uid://bf4j5m7yrgv0" path="res://assets/art/userInterface/tx_logo03.png" id="37_3l2o3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rsrbb"]
+font_size = 32
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nmjcu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_5f8xv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4rcte")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mrahf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_q5pj1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6iugo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ul7ka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vkcp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_w6vh4")
+}],
+"loop": true,
+"name": &"eyes_angry",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_pomhk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ww5fs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2p7ou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_mpctg")
+}],
+"loop": true,
+"name": &"eyes_happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_qsmyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_lnc7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_8mqrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0325p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_tantg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ie02g")
+}],
+"loop": true,
+"name": &"eyes_idle",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fjj15"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_321io")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_llfbv")
+}],
+"loop": true,
+"name": &"customer_mouthAngry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_dj2ih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_y041j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_n38np")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_h3pdc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_pi4lc")
+}],
+"loop": true,
+"name": &"customer_mouthIdle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_bxxl2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_s216g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_6tfgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_p3s53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_ci6kc")
+}],
+"loop": true,
+"name": &"customer_talking",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_l5t5u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("truck wobble:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1245, 384)]
+}
+
+[sub_resource type="Animation" id="Animation_k2f4k"]
+resource_name = "truck drive"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("truck wobble:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1200, 384), Vector2(1300, 384)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iuj2a"]
+_data = {
+"RESET": SubResource("Animation_l5t5u"),
+"truck drive": SubResource("Animation_k2f4k")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ne5ww"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_7btoy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_rbdua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_3l2o3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 924.0
+offset_top = 488.0
+offset_right = 924.0
+offset_bottom = 488.0
+script = ExtResource("1_xqqhp")
+
+[node name="TxBgWinscreen" type="Sprite2D" parent="."]
+position = Vector2(26, 38)
+texture = ExtResource("2_2xqbr")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -216.0
+offset_top = -254.0
+offset_right = 214.0
+offset_bottom = 264.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Art" type="Label" parent="CenterContainer/VBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_jvm1u")
+theme_override_font_sizes/font_size = 351
+text = "Art by: 
+Robin"
+label_settings = SubResource("LabelSettings_rsrbb")
+horizontal_alignment = 1
+
+[node name="Sound" type="Label" parent="CenterContainer/VBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_jvm1u")
+theme_override_font_sizes/font_size = 351
+text = "Sounds by:
+Florian & Jürgen & GGJ25choir"
+label_settings = SubResource("LabelSettings_rsrbb")
+horizontal_alignment = 1
+
+[node name="Code" type="Label" parent="CenterContainer/VBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_jvm1u")
+theme_override_font_sizes/font_size = 351
+text = "Code by:
+Niklas & Thilo & Bastian "
+label_settings = SubResource("LabelSettings_rsrbb")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="CenterContainer/VBox"]
+custom_minimum_size = Vector2(250, 71.16)
+layout_mode = 2
+theme = ExtResource("4_c5bdq")
+text = "Go back to main menu"
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_1davf")
+
+[node name="BubblemanFinal" type="AudioStreamPlayer" parent="AudioStreamPlayer2D2"]
+stream = ExtResource("5_1davf")
+autoplay = true
+
+[node name="customer_base" type="AnimatedSprite2D" parent="."]
+position = Vector2(755, 159)
+sprite_frames = SubResource("SpriteFrames_nmjcu")
+animation = &"idle"
+autoplay = "idle"
+flip_h = true
+
+[node name="customer_eyes" type="AnimatedSprite2D" parent="customer_base"]
+sprite_frames = SubResource("SpriteFrames_6iugo")
+animation = &"eyes_happy"
+autoplay = "eyes_happy"
+flip_h = true
+
+[node name="customer_mouth" type="AnimatedSprite2D" parent="customer_base"]
+sprite_frames = SubResource("SpriteFrames_fjj15")
+animation = &"customer_talking"
+autoplay = "customer_talking"
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_iuj2a")
+}
+autoplay = "truck drive"
+
+[node name="truck wobble" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1245, 384)
+scale = Vector2(0.337391, 0.337391)
+sprite_frames = SubResource("SpriteFrames_ne5ww")
+autoplay = "default"
+frame_progress = 0.895099
+
+[connection signal="pressed" from="CenterContainer/VBox/Button" to="." method="_on_button_pressed"]
