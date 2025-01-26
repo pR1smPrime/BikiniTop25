@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bsmwax7td4mle"]
+[gd_scene load_steps=8 format=3 uid="uid://bsmwax7td4mle"]
 
 [ext_resource type="Script" path="res://scenes/fail_screen/fail_screen.gd" id="1_85bjp"]
-[ext_resource type="AudioStream" uid="uid://bwjbhvadalfi0" path="res://assets/sounds/Voice/OutroErfreut.wav" id="1_ci3xr"]
-[ext_resource type="AudioStream" uid="uid://c4ixd06mplnxs" path="res://assets/sounds/Voice/OutroTraurig.wav" id="2_e5l0x"]
+[ext_resource type="Texture2D" uid="uid://cgaiycj7cjis8" path="res://assets/art/backgrounds/tx_bg_room4.png" id="2_ijgmb"]
+[ext_resource type="Theme" uid="uid://d2egigf8uvin0" path="res://scenes/mainmenue/main_menu.tres" id="2_m6e3b"]
+[ext_resource type="AudioStream" uid="uid://dey55r530na2k" path="res://assets/sounds/Voice/Wuetend2.wav" id="2_w14f1"]
+[ext_resource type="FontFile" uid="uid://cxeusgfinjh7w" path="res://assets/art/fonts/Atma-Bold.ttf" id="3_evo7t"]
+[ext_resource type="PackedScene" uid="uid://b5a88lnpme3rm" path="res://scenes/Charakters/customer_angry_circle.tscn" id="3_j4utt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2sv82"]
 font_size = 32
@@ -16,36 +19,62 @@ offset_right = 906.0
 offset_bottom = 483.0
 script = ExtResource("1_85bjp")
 
+[node name="TxBgRoom4" type="Sprite2D" parent="."]
+position = Vector2(55, 46)
+texture = ExtResource("2_ijgmb")
+
 [node name="CenterContainer" type="CenterContainer" parent="."]
-offset_left = -32.0
-offset_top = 40.0
-offset_right = 151.0
-offset_bottom = 120.0
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -306.5
+offset_top = -553.5
+offset_right = 306.5
+offset_bottom = 553.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBox" type="VBoxContainer" parent="CenterContainer"]
 layout_mode = 2
+theme = ExtResource("2_m6e3b")
+theme_override_constants/separation = 800
 alignment = 1
 
 [node name="Label" type="Label" parent="CenterContainer/VBox"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_evo7t")
+theme_override_font_sizes/font_size = 1000
 text = "Fail you lost"
 label_settings = SubResource("LabelSettings_2sv82")
 horizontal_alignment = 1
 
-[node name="BackMainMenu" type="Button" parent="CenterContainer/VBox"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBox"]
 layout_mode = 2
-text = "Go back to main menu"
+theme_override_constants/separation = 200
 
-[node name="BackToLevelSelector" type="Button" parent="CenterContainer/VBox"]
+[node name="BackToLevelSelector" type="Button" parent="CenterContainer/VBox/HBoxContainer"]
 layout_mode = 2
 text = "Back to level selector"
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("1_ci3xr")
+[node name="BackMainMenu" type="Button" parent="CenterContainer/VBox/HBoxContainer"]
+layout_mode = 2
+text = "Go back to main menu"
 
-[node name="OutroErfreut" type="AudioStreamPlayer" parent="AudioStreamPlayer2D"]
-stream = ExtResource("2_e5l0x")
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_w14f1")
 autoplay = true
 
-[connection signal="pressed" from="CenterContainer/VBox/BackMainMenu" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBox/BackToLevelSelector" to="." method="_on_button_2_pressed"]
+[node name="Wuetend2" type="AudioStreamPlayer" parent="AudioStreamPlayer2D"]
+stream = ExtResource("2_w14f1")
+autoplay = true
+
+[node name="CustomerCircle" parent="." instance=ExtResource("3_j4utt")]
+position = Vector2(-1, 13)
+scale = Vector2(2, 2)
+
+[connection signal="pressed" from="CenterContainer/VBox/HBoxContainer/BackToLevelSelector" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CenterContainer/VBox/HBoxContainer/BackMainMenu" to="." method="_on_button_pressed"]
