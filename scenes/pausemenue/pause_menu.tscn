@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://d1k4qcplwgi35" path="res://assets/art/userInterface/Inputs/mouse_left.png" id="8_yxpvb"]
 [ext_resource type="Texture2D" uid="uid://jadpl2lyfe23" path="res://assets/art/userInterface/Inputs/mouse_move.png" id="9_x37ij"]
 [ext_resource type="Texture2D" uid="uid://c3bgw8rpm7dj4" path="res://assets/art/spritesPlayer/ninja_Frog/Run (32x32).png" id="10_bbj7d"]
-[ext_resource type="PackedScene" uid="uid://cuquxv7d5wirf" path="res://assets/art/spritesFX/animated_bubble.tscn" id="11_p6y8d"]
+[ext_resource type="PackedScene" path="res://assets/art/spritesFX/animated_bubble.tscn" id="11_p6y8d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4nbv6"]
 atlas = ExtResource("10_bbj7d")
