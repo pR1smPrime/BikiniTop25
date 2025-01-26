@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxrxdcf5ld0ob"]
+
+[ext_resource type="Texture2D" uid="uid://by6wqsr7c6si" path="res://assets/art/spritesEnvironment/tx_obstacle_skull.png" id="1_bjmrd"]
+[ext_resource type="PackedScene" uid="uid://c0yncexav6sql" path="res://scenes/bubble_beam/bubble_skull.tscn" id="1_e0h8r"]
+
+[node name="InteractiveSkull" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(72, -93)
+texture = ExtResource("1_bjmrd")
+
+[node name="BubbleSkull" parent="StaticBody2D" instance=ExtResource("1_e0h8r")]
+position = Vector2(46, 3)
+
+[node name="BubbleSkull2" parent="StaticBody2D" instance=ExtResource("1_e0h8r")]
+position = Vector2(49, 1)
