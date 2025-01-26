@@ -1,6 +1,6 @@
 extends Moveable
 
-@onready var fail_screen = preload("res://scenes/end_folder/fail_screen.tscn")
+@onready var fail_screen = preload("res://scenes/fail_screen/fail_screen.tscn")
 @export var max_health = 4
 
 
@@ -25,7 +25,7 @@ func breakMoveable() -> void:
 		1:
 			$Sprite2D.texture = load("res://assets/art/spritesObjects/tx_object_vase_dmg3.png")
 		0:
-			get_tree().change_scene_to_file("res://scenes/end_folder/fail_screen.tscn") 
+			get_tree().change_scene_to_file("res://scenes/fail_screen/fail_screen.tscn") 
 
 func _on_body_entered(body: Node) -> void:
 	print(body.get_class())
