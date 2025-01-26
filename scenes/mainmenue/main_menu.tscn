@@ -168,6 +168,12 @@ text = "Select Level
 [node name="Seperator3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
+[node name="Credits" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+theme = ExtResource("4_adjp0")
+text = "Credits"
+
 [node name="Seperator4" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
@@ -204,4 +210,5 @@ autoplay = "default"
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/LevelSelect" to="." method="_on_level_select_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
