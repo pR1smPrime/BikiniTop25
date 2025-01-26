@@ -71,18 +71,20 @@ text = "Go to main menu
 "
 
 [node name="Intro" type="Panel" parent="."]
-visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Scene" parent="Intro" instance=ExtResource("2_utfgo")]
+z_index = 1
 position = Vector2(-499, -1244)
 
 [node name="TxGoalTruck" type="Sprite2D" parent="Intro"]
+z_index = 1
 position = Vector2(1521, -272)
 texture = ExtResource("3_ju436")
 
 [node name="TextureObjectBox" type="Sprite2D" parent="Intro"]
+z_index = 1
 position = Vector2(1461, -403)
 texture = ExtResource("4_mftib")
 
