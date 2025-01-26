@@ -1,10 +1,230 @@
-[gd_scene load_steps=4 format=3 uid="uid://nea3xsnx4ake"]
+[gd_scene load_steps=46 format=3 uid="uid://nea3xsnx4ake"]
 
 [ext_resource type="Script" path="res://scenes/victory_screen/victory_screen.gd" id="1_wqbox"]
 [ext_resource type="AudioStream" uid="uid://bwjbhvadalfi0" path="res://assets/sounds/Voice/OutroErfreut.wav" id="2_kobhw"]
+[ext_resource type="Texture2D" uid="uid://rumnfmm4o0m5" path="res://assets/art/backgrounds/tx_bg_winscreen.png" id="2_m1d87"]
+[ext_resource type="FontFile" uid="uid://dhw7s5vf2kb6b" path="res://assets/art/fonts/Atma-SemiBold.ttf" id="3_3f2ho"]
+[ext_resource type="Theme" uid="uid://d2egigf8uvin0" path="res://scenes/mainmenue/main_menu.tres" id="4_rp3m8"]
+[ext_resource type="Texture2D" uid="uid://edhyfvfkurm8" path="res://assets/art/Customer/body Idle/Kunde_Idle-1.png" id="6_wb8f4"]
+[ext_resource type="Texture2D" uid="uid://cqww4m3xh2wtk" path="res://assets/art/Customer/body Idle/Kunde_Idle-2.png" id="7_p8hl2"]
+[ext_resource type="Texture2D" uid="uid://dupew6it7ug6h" path="res://assets/art/Customer/body Idle/Kunde_Idle-3.png" id="8_0cg0k"]
+[ext_resource type="Texture2D" uid="uid://du2d1y0parg6b" path="res://assets/art/Customer/body Idle/Kunde_Idle-4.png" id="9_7sp87"]
+[ext_resource type="Texture2D" uid="uid://d1x3hpe6mml31" path="res://assets/art/Customer/Eyes angery/Kunde_augen_wuetend-1.png" id="10_l2gpi"]
+[ext_resource type="Texture2D" uid="uid://bljog600yfh3k" path="res://assets/art/Customer/Eyes angery/Kunde_augen_wuetend-2.png" id="11_sk1q6"]
+[ext_resource type="Texture2D" uid="uid://bxjjarkn6tk3v" path="res://assets/art/Customer/Eyes angery/Kunde_augen_wuetend-3.png" id="12_gt82i"]
+[ext_resource type="Texture2D" uid="uid://cy4hthquu0m4q" path="res://assets/art/Customer/Eyes happy/Kunde_augen_happy-1.png" id="13_ug7n6"]
+[ext_resource type="Texture2D" uid="uid://urudx56sdfxj" path="res://assets/art/Customer/Eyes happy/Kunde_augen_happy-2.png" id="14_sy5lo"]
+[ext_resource type="Texture2D" uid="uid://c3vwwybg16hej" path="res://assets/art/Customer/Eyes happy/Kunde_augen_happy-3.png" id="15_dsedq"]
+[ext_resource type="Texture2D" uid="uid://3jgvsa8j7yki" path="res://assets/art/Customer/Eyes happy/Kunde_augen_happy-4.png" id="16_bor26"]
+[ext_resource type="Texture2D" uid="uid://bse8mk0w4hpla" path="res://assets/art/Customer/Eyes blink/kunde_blinzelt-1.png" id="17_xjge3"]
+[ext_resource type="Texture2D" uid="uid://biuc1rt7e27wh" path="res://assets/art/Customer/Eyes blink/kunde_blinzelt-2.png" id="18_s1x40"]
+[ext_resource type="Texture2D" uid="uid://bur5kh04koo3g" path="res://assets/art/Customer/Eyes blink/kunde_blinzelt-3.png" id="19_pfscr"]
+[ext_resource type="Texture2D" uid="uid://cg30dfveb0527" path="res://assets/art/Customer/Eyes blink/kunde_blinzelt-4.png" id="20_cpt6d"]
+[ext_resource type="Texture2D" uid="uid://cr0j1cjutq8p7" path="res://assets/art/Customer/Eyes blink/kunde_blinzelt-5.png" id="21_lc4g8"]
+[ext_resource type="Texture2D" uid="uid://c4jyf1g3ms8so" path="res://assets/art/Customer/Eyes blink/kunde_blinzelt-6.png" id="22_pj5pt"]
+[ext_resource type="Texture2D" uid="uid://culec1vkhgafp" path="res://assets/art/Customer/Mouth angry/Kunde_Spricht-1.png" id="23_wryu4"]
+[ext_resource type="Texture2D" uid="uid://d3628ra1c75fv" path="res://assets/art/Customer/Mouth angry/Kunde_Spricht-2.png" id="24_cyoeg"]
+[ext_resource type="Texture2D" uid="uid://cjehs18y8st6r" path="res://assets/art/Customer/Mouth idle/Kunde_Idle-1.png" id="25_upad0"]
+[ext_resource type="Texture2D" uid="uid://dp31022yup0fk" path="res://assets/art/Customer/Mouth idle/Kunde_Idle-2.png" id="26_ffibr"]
+[ext_resource type="Texture2D" uid="uid://bj3nu7h8cx16w" path="res://assets/art/Customer/Mouth idle/Kunde_Idle-3.png" id="27_olr8o"]
+[ext_resource type="Texture2D" uid="uid://rep4uckf1cjc" path="res://assets/art/Customer/Mouth idle/Kunde_Idle-4.png" id="28_kscro"]
+[ext_resource type="Texture2D" uid="uid://beo2332cwt2s7" path="res://assets/art/Customer/Mouth idle/Kunde_Idle-5.png" id="29_pjdji"]
+[ext_resource type="Texture2D" uid="uid://b6hok2b8cv7vn" path="res://assets/art/Customer/Mouth talking/Kunde_Spricht-1.png" id="30_dwme3"]
+[ext_resource type="Texture2D" uid="uid://bdteq5katv0cg" path="res://assets/art/Customer/Mouth talking/Kunde_Spricht-2.png" id="31_0w5r1"]
+[ext_resource type="Texture2D" uid="uid://ccn1htvgegmxi" path="res://assets/art/Customer/Mouth talking/Kunde_Spricht-3.png" id="32_p44jy"]
+[ext_resource type="Texture2D" uid="uid://18x2lchr4wnu" path="res://assets/art/Customer/Mouth talking/Kunde_Spricht-4.png" id="33_yw18d"]
+[ext_resource type="Texture2D" uid="uid://ccbiqtv6b7t4p" path="res://assets/art/Customer/Mouth talking/Kunde_Spricht-5.png" id="34_2toae"]
+[ext_resource type="Texture2D" uid="uid://v2u5kkqigypy" path="res://assets/art/userInterface/tx_logo01.png" id="35_w6ja5"]
+[ext_resource type="Texture2D" uid="uid://bn45cwn33nr4a" path="res://assets/art/userInterface/tx_logo02.png" id="36_nsva1"]
+[ext_resource type="Texture2D" uid="uid://bf4j5m7yrgv0" path="res://assets/art/userInterface/tx_logo03.png" id="37_l1bpv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_rsrbb"]
 font_size = 32
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nmjcu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_wb8f4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_p8hl2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0cg0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7sp87")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6iugo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_l2gpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_sk1q6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_gt82i")
+}],
+"loop": true,
+"name": &"eyes_angry",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_ug7n6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_sy5lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dsedq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_bor26")
+}],
+"loop": true,
+"name": &"eyes_happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_xjge3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_s1x40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_pfscr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_cpt6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_lc4g8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_pj5pt")
+}],
+"loop": true,
+"name": &"eyes_idle",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fjj15"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_wryu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_cyoeg")
+}],
+"loop": true,
+"name": &"customer_mouthAngry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_upad0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ffibr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_olr8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_kscro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_pjdji")
+}],
+"loop": true,
+"name": &"customer_mouthIdle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_dwme3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_0w5r1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_p44jy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_yw18d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_2toae")
+}],
+"loop": true,
+"name": &"customer_talking",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_l5t5u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("truck wobble:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1245, 384)]
+}
+
+[sub_resource type="Animation" id="Animation_k2f4k"]
+resource_name = "truck drive"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("truck wobble:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1200, 384), Vector2(1300, 384)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iuj2a"]
+_data = {
+"RESET": SubResource("Animation_l5t5u"),
+"truck drive": SubResource("Animation_k2f4k")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ne5ww"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_w6ja5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_nsva1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_l1bpv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="VictoryScreen" type="Control"]
 layout_mode = 3
@@ -15,12 +235,16 @@ offset_right = 924.0
 offset_bottom = 488.0
 script = ExtResource("1_wqbox")
 
+[node name="TxBgWinscreen" type="Sprite2D" parent="."]
+position = Vector2(26, 38)
+texture = ExtResource("2_m1d87")
+
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 0
-offset_left = -32.0
+offset_left = -109.0
 offset_top = 40.0
-offset_right = 151.0
-offset_bottom = 120.0
+offset_right = 224.0
+offset_bottom = 169.0
 
 [node name="VBox" type="VBoxContainer" parent="CenterContainer"]
 layout_mode = 2
@@ -28,12 +252,16 @@ alignment = 1
 
 [node name="Label" type="Label" parent="CenterContainer/VBox"]
 layout_mode = 2
-text = "Victory"
+theme_override_fonts/font = ExtResource("3_3f2ho")
+theme_override_font_sizes/font_size = 351
+text = "Good Job!"
 label_settings = SubResource("LabelSettings_rsrbb")
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="CenterContainer/VBox"]
+custom_minimum_size = Vector2(250, 71.16)
 layout_mode = 2
+theme = ExtResource("4_rp3m8")
 text = "Go back to main menu"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
@@ -42,5 +270,37 @@ stream = ExtResource("2_kobhw")
 [node name="OutroErfreut" type="AudioStreamPlayer" parent="AudioStreamPlayer2D"]
 stream = ExtResource("2_kobhw")
 autoplay = true
+
+[node name="customer_base" type="AnimatedSprite2D" parent="."]
+position = Vector2(62, -138)
+sprite_frames = SubResource("SpriteFrames_nmjcu")
+animation = &"idle"
+autoplay = "idle"
+flip_h = true
+
+[node name="customer_eyes" type="AnimatedSprite2D" parent="customer_base"]
+sprite_frames = SubResource("SpriteFrames_6iugo")
+animation = &"eyes_happy"
+autoplay = "eyes_happy"
+flip_h = true
+
+[node name="customer_mouth" type="AnimatedSprite2D" parent="customer_base"]
+sprite_frames = SubResource("SpriteFrames_fjj15")
+animation = &"customer_talking"
+autoplay = "customer_talking"
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_iuj2a")
+}
+autoplay = "truck drive"
+
+[node name="truck wobble" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1245, 384)
+scale = Vector2(0.337391, 0.337391)
+sprite_frames = SubResource("SpriteFrames_ne5ww")
+autoplay = "default"
+frame_progress = 0.895099
 
 [connection signal="pressed" from="CenterContainer/VBox/Button" to="." method="_on_button_pressed"]
