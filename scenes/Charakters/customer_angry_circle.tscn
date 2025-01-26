@@ -1,0 +1,192 @@
+[gd_scene load_steps=34 format=3 uid="uid://b5a88lnpme3rm"]
+
+[ext_resource type="Texture2D" uid="uid://dklhyranl48uh" path="res://assets/art/circle.png" id="1_c2euy"]
+[ext_resource type="Texture2D" uid="uid://edhyfvfkurm8" path="res://assets/art/Customer/body Idle/Kunde_Idle-1.png" id="2_3lslb"]
+[ext_resource type="Texture2D" uid="uid://cqww4m3xh2wtk" path="res://assets/art/Customer/body Idle/Kunde_Idle-2.png" id="3_p3vwy"]
+[ext_resource type="Texture2D" uid="uid://dupew6it7ug6h" path="res://assets/art/Customer/body Idle/Kunde_Idle-3.png" id="4_0dk8k"]
+[ext_resource type="Texture2D" uid="uid://du2d1y0parg6b" path="res://assets/art/Customer/body Idle/Kunde_Idle-4.png" id="5_76jd7"]
+[ext_resource type="Texture2D" uid="uid://d1x3hpe6mml31" path="res://assets/art/Customer/Eyes angery/Kunde_augen_wuetend-1.png" id="6_jpntp"]
+[ext_resource type="Texture2D" uid="uid://bljog600yfh3k" path="res://assets/art/Customer/Eyes angery/Kunde_augen_wuetend-2.png" id="7_j0a5k"]
+[ext_resource type="Texture2D" uid="uid://bxjjarkn6tk3v" path="res://assets/art/Customer/Eyes angery/Kunde_augen_wuetend-3.png" id="8_rfgjp"]
+[ext_resource type="Texture2D" uid="uid://cy4hthquu0m4q" path="res://assets/art/Customer/Eyes happy/Kunde_augen_happy-1.png" id="9_k05ko"]
+[ext_resource type="Texture2D" uid="uid://urudx56sdfxj" path="res://assets/art/Customer/Eyes happy/Kunde_augen_happy-2.png" id="10_dtd2y"]
+[ext_resource type="Texture2D" uid="uid://c3vwwybg16hej" path="res://assets/art/Customer/Eyes happy/Kunde_augen_happy-3.png" id="11_cdcao"]
+[ext_resource type="Texture2D" uid="uid://3jgvsa8j7yki" path="res://assets/art/Customer/Eyes happy/Kunde_augen_happy-4.png" id="12_nieod"]
+[ext_resource type="Texture2D" uid="uid://bse8mk0w4hpla" path="res://assets/art/Customer/Eyes blink/kunde_blinzelt-1.png" id="13_uprrs"]
+[ext_resource type="Texture2D" uid="uid://biuc1rt7e27wh" path="res://assets/art/Customer/Eyes blink/kunde_blinzelt-2.png" id="14_fehag"]
+[ext_resource type="Texture2D" uid="uid://bur5kh04koo3g" path="res://assets/art/Customer/Eyes blink/kunde_blinzelt-3.png" id="15_4fk1l"]
+[ext_resource type="Texture2D" uid="uid://cg30dfveb0527" path="res://assets/art/Customer/Eyes blink/kunde_blinzelt-4.png" id="16_d0qkm"]
+[ext_resource type="Texture2D" uid="uid://cr0j1cjutq8p7" path="res://assets/art/Customer/Eyes blink/kunde_blinzelt-5.png" id="17_w6stv"]
+[ext_resource type="Texture2D" uid="uid://c4jyf1g3ms8so" path="res://assets/art/Customer/Eyes blink/kunde_blinzelt-6.png" id="18_n0mmu"]
+[ext_resource type="Texture2D" uid="uid://culec1vkhgafp" path="res://assets/art/Customer/Mouth angry/Kunde_Spricht-1.png" id="19_orj68"]
+[ext_resource type="Texture2D" uid="uid://d3628ra1c75fv" path="res://assets/art/Customer/Mouth angry/Kunde_Spricht-2.png" id="20_127at"]
+[ext_resource type="Texture2D" uid="uid://cjehs18y8st6r" path="res://assets/art/Customer/Mouth idle/Kunde_Idle-1.png" id="21_rdbtf"]
+[ext_resource type="Texture2D" uid="uid://dp31022yup0fk" path="res://assets/art/Customer/Mouth idle/Kunde_Idle-2.png" id="22_f0alh"]
+[ext_resource type="Texture2D" uid="uid://bj3nu7h8cx16w" path="res://assets/art/Customer/Mouth idle/Kunde_Idle-3.png" id="23_174bv"]
+[ext_resource type="Texture2D" uid="uid://rep4uckf1cjc" path="res://assets/art/Customer/Mouth idle/Kunde_Idle-4.png" id="24_1leib"]
+[ext_resource type="Texture2D" uid="uid://beo2332cwt2s7" path="res://assets/art/Customer/Mouth idle/Kunde_Idle-5.png" id="25_snfyy"]
+[ext_resource type="Texture2D" uid="uid://b6hok2b8cv7vn" path="res://assets/art/Customer/Mouth talking/Kunde_Spricht-1.png" id="26_4jlxx"]
+[ext_resource type="Texture2D" uid="uid://bdteq5katv0cg" path="res://assets/art/Customer/Mouth talking/Kunde_Spricht-2.png" id="27_hhisw"]
+[ext_resource type="Texture2D" uid="uid://ccn1htvgegmxi" path="res://assets/art/Customer/Mouth talking/Kunde_Spricht-3.png" id="28_r1d77"]
+[ext_resource type="Texture2D" uid="uid://18x2lchr4wnu" path="res://assets/art/Customer/Mouth talking/Kunde_Spricht-4.png" id="29_50jcs"]
+[ext_resource type="Texture2D" uid="uid://ccbiqtv6b7t4p" path="res://assets/art/Customer/Mouth talking/Kunde_Spricht-5.png" id="30_kalld"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2hyio"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3lslb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p3vwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0dk8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_76jd7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tj8ds"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_jpntp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_j0a5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rfgjp")
+}],
+"loop": true,
+"name": &"eyes_angry",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_k05ko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_dtd2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cdcao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nieod")
+}],
+"loop": true,
+"name": &"eyes_happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_uprrs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fehag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4fk1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_d0qkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_w6stv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_n0mmu")
+}],
+"loop": true,
+"name": &"eyes_idle",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yk5yb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_orj68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_127at")
+}],
+"loop": true,
+"name": &"customer_mouthAngry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_rdbtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_f0alh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_174bv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1leib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_snfyy")
+}],
+"loop": true,
+"name": &"customer_mouthIdle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_4jlxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_hhisw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_r1d77")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_50jcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_kalld")
+}],
+"loop": true,
+"name": &"customer_talking",
+"speed": 5.0
+}]
+
+[node name="CustomerCircle" type="Sprite2D"]
+self_modulate = Color(0.831373, 0.419608, 0.247059, 1)
+clip_children = 2
+position = Vector2(299.5, 709.5)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_c2euy")
+
+[node name="customer_base" type="AnimatedSprite2D" parent="."]
+position = Vector2(-10, 30)
+sprite_frames = SubResource("SpriteFrames_2hyio")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.173029
+flip_h = true
+
+[node name="customer_eyes" type="AnimatedSprite2D" parent="customer_base"]
+sprite_frames = SubResource("SpriteFrames_tj8ds")
+animation = &"eyes_angry"
+autoplay = "eyes_angry"
+frame_progress = 0.563226
+flip_h = true
+
+[node name="customer_mouth" type="AnimatedSprite2D" parent="customer_base"]
+sprite_frames = SubResource("SpriteFrames_yk5yb")
+animation = &"customer_mouthAngry"
+autoplay = "customer_mouthAngry"
+frame_progress = 0.0138185
+flip_h = true
