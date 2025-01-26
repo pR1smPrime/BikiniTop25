@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://diud7kw0rfwfc"]
+[gd_scene load_steps=14 format=3 uid="uid://diud7kw0rfwfc"]
 
 [ext_resource type="PackedScene" uid="uid://t1qapbdlfqnh" path="res://assets/objects/staticNoCollision/staNoCo_algae2.tscn" id="1_byvas"]
 [ext_resource type="PackedScene" uid="uid://bb7t2rtlp7sku" path="res://scenes/levels/groundBase.tscn" id="1_ow8i4"]
@@ -6,11 +6,15 @@
 [ext_resource type="PackedScene" uid="uid://wio4kqqfaasv" path="res://scenes/movable/movable.tscn" id="4_bk8s2"]
 [ext_resource type="Script" path="res://scenes/movable/movable.gd" id="5_85kg1"]
 [ext_resource type="PackedScene" uid="uid://bofqt6oyryhyo" path="res://assets/objects/statics/target_truck.tscn" id="6_5hbby"]
-[ext_resource type="PackedScene" uid="uid://cibr5e7jyyld6" path="res://assets/art/spritesAquarium/waves.tscn" id="7_42tgh"]
+[ext_resource type="PackedScene" path="res://assets/art/spritesAquarium/waves.tscn" id="7_42tgh"]
 [ext_resource type="PackedScene" uid="uid://cf618ai8wa2sn" path="res://assets/objects/statics/static_skull.tscn" id="8_rna0v"]
 [ext_resource type="PackedScene" uid="uid://b1k68xp6vdvd3" path="res://assets/objects/statics/static_column.tscn" id="9_0fgv0"]
 [ext_resource type="PackedScene" uid="uid://dbba0xayt6m1u" path="res://assets/objects/staticNoCollision/staNoCo_algae1.tscn" id="9_xjbni"]
 [ext_resource type="PackedScene" uid="uid://d2xyedecm45dw" path="res://scenes/pausemenue/pause_menu.tscn" id="11_6ltb0"]
+[ext_resource type="PackedScene" uid="uid://bjobche7h23v4" path="res://scenes/Charakters/customer_circle.tscn" id="12_x45wr"]
+
+[sub_resource type="SystemFont" id="SystemFont_fmwn4"]
+font_names = PackedStringArray("Frank Ruehl CLM")
 
 [node name="Level5" type="Node2D"]
 
@@ -78,3 +82,17 @@ position = Vector2(1329, -311)
 scale = Vector2(0.5, 0.3)
 
 [node name="Pause_Menu" parent="." instance=ExtResource("11_6ltb0")]
+
+[node name="LabelLevel" type="Label" parent="."]
+z_index = 1
+offset_left = 32.0
+offset_top = -994.0
+offset_right = 266.0
+offset_bottom = -898.0
+theme_override_fonts/font = SubResource("SystemFont_fmwn4")
+theme_override_font_sizes/font_size = 80
+text = "Level 5"
+
+[node name="CustomerCircle" parent="." instance=ExtResource("12_x45wr")]
+z_index = 1
+position = Vector2(1754, -159)
