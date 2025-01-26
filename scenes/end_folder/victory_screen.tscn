@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://nea3xsnx4ake"]
 
-[ext_resource type="Script" path="res://scenes/victory_screen/victory_screen.gd" id="1_wqbox"]
+[ext_resource type="Script" path="res://scenes/end_folder/victory_screen.gd" id="1_wqbox"]
 [ext_resource type="AudioStream" uid="uid://bwjbhvadalfi0" path="res://assets/sounds/Voice/OutroErfreut.wav" id="2_kobhw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_rsrbb"]
