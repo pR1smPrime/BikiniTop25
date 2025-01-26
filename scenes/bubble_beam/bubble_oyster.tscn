@@ -6,3 +6,4 @@
 script = ExtResource("1_2wf32")
 
 [node name="Timer" type="Timer" parent="."]
+one_shot = true

@@ -99,6 +99,13 @@ text = "Level 5"
 [node name="Seperator5" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
+[node name="Level 6" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Level 6"
+
+[node name="Seperator6" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
 [node name="Back to Menu" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Back to Main Menu"
@@ -114,4 +121,5 @@ autoplay = true
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Level 3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Level 4" to="." method="_on_level_4_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Level 5" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Level 6" to="." method="_on_level_6_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Back to Menu" to="." method="_on_back_to_menu_pressed"]

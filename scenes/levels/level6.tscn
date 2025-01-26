@@ -1,0 +1,98 @@
+[gd_scene load_steps=15 format=3 uid="uid://cydsfep7m85ep"]
+
+[ext_resource type="PackedScene" uid="uid://t1qapbdlfqnh" path="res://assets/objects/staticNoCollision/staNoCo_algae2.tscn" id="1_k0mra"]
+[ext_resource type="PackedScene" uid="uid://bb7t2rtlp7sku" path="res://scenes/levels/groundBase.tscn" id="2_hr6dy"]
+[ext_resource type="PackedScene" uid="uid://hph0vdl7puii" path="res://scenes/player/player.tscn" id="3_uksyt"]
+[ext_resource type="PackedScene" uid="uid://wio4kqqfaasv" path="res://scenes/movable/movable.tscn" id="4_cfjbf"]
+[ext_resource type="Script" path="res://scenes/movable/movable.gd" id="5_2q8gs"]
+[ext_resource type="PackedScene" uid="uid://bofqt6oyryhyo" path="res://assets/objects/statics/target_truck.tscn" id="6_ulr5m"]
+[ext_resource type="PackedScene" uid="uid://cibr5e7jyyld6" path="res://assets/art/spritesAquarium/waves.tscn" id="7_7gk6v"]
+[ext_resource type="PackedScene" uid="uid://b1k68xp6vdvd3" path="res://assets/objects/statics/static_column.tscn" id="8_7tmwy"]
+[ext_resource type="PackedScene" uid="uid://d2xyedecm45dw" path="res://scenes/pausemenue/pause_menu.tscn" id="11_hcff7"]
+[ext_resource type="PackedScene" uid="uid://dxrxdcf5ld0ob" path="res://assets/objects/interactive/interactive_skull.tscn" id="11_hqmot"]
+[ext_resource type="PackedScene" path="res://scenes/Charakters/customer_circle.tscn" id="12_ttmu3"]
+[ext_resource type="PackedScene" uid="uid://bj253dgyyi6n" path="res://assets/objects/staticNoCollision/staNoCo_algae3.tscn" id="12_u3mlc"]
+[ext_resource type="PackedScene" uid="uid://4h0ltwgm81fw" path="res://assets/objects/interactive/interactive_oyster.tscn" id="13_xli6j"]
+
+[sub_resource type="SystemFont" id="SystemFont_fmwn4"]
+font_names = PackedStringArray("Frank Ruehl CLM")
+
+[node name="Level6" type="Node2D"]
+
+[node name="groundBase" parent="." instance=ExtResource("2_hr6dy")]
+
+[node name="Player" parent="." instance=ExtResource("3_uksyt")]
+z_index = 1
+position = Vector2(418, -428)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(952, -524)
+
+[node name="MovableObj" parent="." instance=ExtResource("4_cfjbf")]
+position = Vector2(413, -796)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("5_2q8gs")
+
+[node name="TargetTruck" parent="." instance=ExtResource("6_ulr5m")]
+position = Vector2(980, -302)
+scale = Vector2(-0.5, 0.5)
+
+[node name="waves" parent="." instance=ExtResource("7_7gk6v")]
+position = Vector2(0, -2)
+
+[node name="StaticColumn2" parent="." instance=ExtResource("8_7tmwy")]
+position = Vector2(558, -511)
+scale = Vector2(0.5, 0.7)
+
+[node name="StaticColumn5" parent="." instance=ExtResource("8_7tmwy")]
+position = Vector2(1224, -1054)
+scale = Vector2(0.5, 0.7)
+
+[node name="StaticColumn4" parent="." instance=ExtResource("8_7tmwy")]
+position = Vector2(948, -494)
+rotation = -1.494
+scale = Vector2(0.4, -0.56)
+
+[node name="StaticColumn3" parent="." instance=ExtResource("8_7tmwy")]
+position = Vector2(819, -365)
+scale = Vector2(0.5, 0.7)
+
+[node name="Pause_Menu" parent="." instance=ExtResource("11_hcff7")]
+
+[node name="LabelLevel" type="Label" parent="."]
+z_index = 1
+offset_left = 32.0
+offset_top = -994.0
+offset_right = 266.0
+offset_bottom = -898.0
+theme_override_fonts/font = SubResource("SystemFont_fmwn4")
+theme_override_font_sizes/font_size = 80
+text = "Level 6"
+
+[node name="CustomerCircle" parent="." instance=ExtResource("12_ttmu3")]
+z_index = 1
+position = Vector2(1754, -159)
+
+[node name="InteractiveOyster" parent="." instance=ExtResource("13_xli6j")]
+position = Vector2(239, -121)
+scale = Vector2(0.5, 0.5)
+
+[node name="InteractiveSkull" parent="." instance=ExtResource("11_hqmot")]
+position = Vector2(1424, -349)
+scale = Vector2(0.6, 0.6)
+
+[node name="StaNoCo_algae3" parent="." instance=ExtResource("12_u3mlc")]
+z_index = -1
+position = Vector2(664, -525)
+scale = Vector2(0.4, 0.4)
+
+[node name="staNoCo_algae2" parent="." instance=ExtResource("1_k0mra")]
+z_index = -1
+position = Vector2(1360, -630)
+scale = Vector2(0.7, 0.7)
+
+[node name="staNoCo_algae3" parent="." instance=ExtResource("1_k0mra")]
+z_index = -1
+position = Vector2(1546, -448)
+scale = Vector2(0.5, 0.5)
