@@ -5,10 +5,11 @@
 [ext_resource type="Theme" uid="uid://d2egigf8uvin0" path="res://scenes/mainmenue/main_menu.tres" id="2_m6e3b"]
 [ext_resource type="AudioStream" uid="uid://dey55r530na2k" path="res://assets/sounds/Voice/Wuetend2.wav" id="2_w14f1"]
 [ext_resource type="FontFile" uid="uid://cxeusgfinjh7w" path="res://assets/art/fonts/Atma-Bold.ttf" id="3_evo7t"]
-[ext_resource type="PackedScene" uid="uid://b5a88lnpme3rm" path="res://scenes/Charakters/customer_angry_circle.tscn" id="3_j4utt"]
+[ext_resource type="PackedScene" path="res://scenes/Charakters/customer_angry_circle.tscn" id="3_j4utt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2sv82"]
-font_size = 32
+font = ExtResource("3_evo7t")
+font_size = 140
 
 [node name="FailScreen" type="Control"]
 layout_mode = 3
@@ -54,15 +55,21 @@ horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBox"]
 layout_mode = 2
+theme = ExtResource("2_m6e3b")
 theme_override_constants/separation = 200
+alignment = 1
 
 [node name="BackToLevelSelector" type="Button" parent="CenterContainer/VBox/HBoxContainer"]
+custom_minimum_size = Vector2(300, 90)
 layout_mode = 2
-text = "Back to level selector"
+theme_override_font_sizes/font_size = 40
+text = "Level Select"
 
 [node name="BackMainMenu" type="Button" parent="CenterContainer/VBox/HBoxContainer"]
+custom_minimum_size = Vector2(300, 90)
 layout_mode = 2
-text = "Go back to main menu"
+theme_override_font_sizes/font_size = 40
+text = "Main Menu"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_w14f1")

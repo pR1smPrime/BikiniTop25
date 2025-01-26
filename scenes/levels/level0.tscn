@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://no5ysimmt0jw"]
+[gd_scene load_steps=13 format=3 uid="uid://no5ysimmt0jw"]
 
 [ext_resource type="PackedScene" uid="uid://bb7t2rtlp7sku" path="res://scenes/levels/groundBase.tscn" id="1_dcoy7"]
 [ext_resource type="PackedScene" uid="uid://hph0vdl7puii" path="res://scenes/player/player.tscn" id="2_y7ie3"]
@@ -10,6 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://bj253dgyyi6n" path="res://assets/objects/staticNoCollision/staNoCo_algae3.tscn" id="7_kg0t7"]
 [ext_resource type="PackedScene" uid="uid://t1qapbdlfqnh" path="res://assets/objects/staticNoCollision/staNoCo_algae2.tscn" id="8_ipijq"]
 [ext_resource type="PackedScene" uid="uid://d2xyedecm45dw" path="res://scenes/pausemenue/pause_menu.tscn" id="10_43p76"]
+[ext_resource type="AudioStream" uid="uid://bqkiebbykolmd" path="res://assets/sounds/music/BUBBLEMAN_Ukulele.mp3" id="11_f1e1e"]
+
+[sub_resource type="SystemFont" id="SystemFont_d8ud2"]
+font_names = PackedStringArray("Frank Ruehl CLM")
+subpixel_positioning = 0
 
 [node name="Level0" type="Node2D"]
 
@@ -61,3 +66,21 @@ scale = Vector2(0.3, 0.3)
 z_index = -1
 position = Vector2(433, -473)
 scale = Vector2(0.3, 0.3)
+
+[node name="LabelLevel" type="Label" parent="."]
+z_index = 1
+offset_left = -3.0
+offset_top = -994.0
+offset_right = 299.0
+offset_bottom = -884.0
+theme_override_fonts/font = SubResource("SystemFont_d8ud2")
+theme_override_font_sizes/font_size = 80
+text = "Tutorial"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_f1e1e")
+volume_db = -4.0
+autoplay = true
+
+[node name="BubblemanUkulele" type="AudioStreamPlayer" parent="AudioStreamPlayer2D"]
+stream = ExtResource("11_f1e1e")
