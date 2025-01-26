@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cbb2cs4v7f6iq"]
+[gd_scene load_steps=14 format=3 uid="uid://cbb2cs4v7f6iq"]
 
 [ext_resource type="PackedScene" uid="uid://b1k68xp6vdvd3" path="res://assets/objects/statics/static_column.tscn" id="1_se72r"]
 [ext_resource type="PackedScene" uid="uid://bb7t2rtlp7sku" path="res://scenes/levels/groundBase.tscn" id="2_dhxh3"]
@@ -11,6 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://dtoh8s6t2s5xi" path="res://assets/objects/statics/static_oyster.tscn" id="8_g52rs"]
 [ext_resource type="PackedScene" uid="uid://t1qapbdlfqnh" path="res://assets/objects/staticNoCollision/staNoCo_algae2.tscn" id="9_18xhb"]
 [ext_resource type="PackedScene" uid="uid://d2xyedecm45dw" path="res://scenes/pausemenue/pause_menu.tscn" id="11_tuqnh"]
+[ext_resource type="PackedScene" uid="uid://bjobche7h23v4" path="res://scenes/Charakters/customer_circle.tscn" id="12_7ctlb"]
+
+[sub_resource type="SystemFont" id="SystemFont_hdi2w"]
+font_names = PackedStringArray("Frank Ruehl CLM")
 
 [node name="Level4" type="Node2D"]
 
@@ -99,3 +103,17 @@ position = Vector2(897, -633)
 scale = Vector2(0.7, 0.7)
 
 [node name="Pause_Menu" parent="." instance=ExtResource("11_tuqnh")]
+
+[node name="LabelLevel" type="Label" parent="."]
+z_index = 1
+offset_left = 32.0
+offset_top = -994.0
+offset_right = 266.0
+offset_bottom = -898.0
+theme_override_fonts/font = SubResource("SystemFont_hdi2w")
+theme_override_font_sizes/font_size = 80
+text = "Level 4"
+
+[node name="CustomerCircle" parent="." instance=ExtResource("12_7ctlb")]
+z_index = 1
+position = Vector2(1754, -159)
