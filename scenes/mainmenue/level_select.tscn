@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c7kegqgu0ylkc"]
+[gd_scene load_steps=6 format=3 uid="uid://c7kegqgu0ylkc"]
 
 [ext_resource type="Script" path="res://scenes/mainmenue/level_select.gd" id="1_3glp3"]
 [ext_resource type="Texture2D" uid="uid://jodkoy0q3to6" path="res://assets/art/backgrounds/tx_bg_room01.png" id="2_x5hs6"]
 [ext_resource type="AudioStream" uid="uid://b7mm1ovrqgowp" path="res://assets/sounds/music/BUBBLEMAN_Ukulele_3.mp3" id="3_qf6q0"]
+[ext_resource type="Theme" uid="uid://d2egigf8uvin0" path="res://scenes/mainmenue/main_menu.tres" id="3_xsfdl"]
 
 [sub_resource type="SystemFont" id="SystemFont_okf44"]
 font_names = PackedStringArray("Impact")
@@ -60,6 +61,7 @@ alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("3_xsfdl")
 theme_override_constants/separation = 18
 alignment = 1
 
