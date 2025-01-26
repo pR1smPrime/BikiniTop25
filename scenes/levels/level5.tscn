@@ -92,7 +92,7 @@ offset_right = 266.0
 offset_bottom = -898.0
 theme_override_fonts/font = SubResource("SystemFont_fmwn4")
 theme_override_font_sizes/font_size = 80
-text = "Level 5"
+text = "Tricky"
 
 [node name="CustomerCircle" parent="." instance=ExtResource("12_x45wr")]
 z_index = 1

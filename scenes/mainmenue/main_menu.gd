@@ -4,7 +4,7 @@ extends Control
 #signal newgame
 
 func _on_play_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/levels/tutorial.tscn")
+	get_tree().change_scene_to_file("res://scenes/levels/level0.tscn")
 	
 func _on_level_select_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/mainmenue/level_select.tscn") # Replace with function body.
