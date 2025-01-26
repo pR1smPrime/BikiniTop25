@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bsmwax7td4mle"]
 
-[ext_resource type="Script" path="res://scenes/end_folder/fail_screen.gd" id="1_85bjp"]
+[ext_resource type="Script" path="res://scenes/fail_screen/fail_screen.gd" id="1_85bjp"]
 [ext_resource type="AudioStream" uid="uid://bwjbhvadalfi0" path="res://assets/sounds/Voice/OutroErfreut.wav" id="1_ci3xr"]
 [ext_resource type="AudioStream" uid="uid://c4ixd06mplnxs" path="res://assets/sounds/Voice/OutroTraurig.wav" id="2_e5l0x"]
 
