@@ -12,5 +12,5 @@ func _on_level_select_pressed() -> void:
 func _on_exit_pressed() -> void:
 	get_tree().quit()
 	
-func _ready():
-	$AnimationPlayer.play("logo_Wiggle")
+#func _ready():
+#	$AnimationPlayer.play("logo_Wiggle")
