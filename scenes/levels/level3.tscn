@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://crxb0iuw721ke"]
+[gd_scene load_steps=16 format=3 uid="uid://crxb0iuw721ke"]
 
 [ext_resource type="PackedScene" uid="uid://bb7t2rtlp7sku" path="res://scenes/levels/groundBase.tscn" id="1_hc18r"]
 [ext_resource type="PackedScene" uid="uid://hph0vdl7puii" path="res://scenes/player/player.tscn" id="2_1jxtb"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dbba0xayt6m1u" path="res://assets/objects/staticNoCollision/staNoCo_algae1.tscn" id="11_a7gad"]
 [ext_resource type="PackedScene" uid="uid://d2xyedecm45dw" path="res://scenes/pausemenue/pause_menu.tscn" id="12_x5t3h"]
 [ext_resource type="PackedScene" path="res://scenes/Charakters/customer_circle.tscn" id="13_ie7es"]
+[ext_resource type="AudioStream" uid="uid://bqkiebbykolmd" path="res://assets/sounds/music/BUBBLEMAN_Ukulele.mp3" id="14_iv6fb"]
 
 [sub_resource type="SystemFont" id="SystemFont_twkxo"]
 font_names = PackedStringArray("Frank Ruehl CLM")
@@ -95,3 +96,11 @@ text = "Columns"
 [node name="CustomerCircle" parent="." instance=ExtResource("13_ie7es")]
 z_index = 1
 position = Vector2(1754, -159)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_iv6fb")
+volume_db = -4.0
+autoplay = true
+
+[node name="BubblemanUkulele" type="AudioStreamPlayer" parent="AudioStreamPlayer2D"]
+stream = ExtResource("14_iv6fb")
