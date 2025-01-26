@@ -1,7 +1,63 @@
-[gd_scene load_steps=3 format=3 uid="uid://4h0ltwgm81fw"]
+[gd_scene load_steps=16 format=3 uid="uid://4h0ltwgm81fw"]
 
 [ext_resource type="Texture2D" uid="uid://hve608cft84n" path="res://assets/art/spritesEnvironment/tx_obstacle_shell.png" id="1_ucofo"]
-[ext_resource type="PackedScene" uid="uid://ctdlmu4udssmc" path="res://scenes/bubble_beam/bubble_oyster.tscn" id="2_34s0n"]
+[ext_resource type="PackedScene" path="res://scenes/bubble_beam/bubble_oyster.tscn" id="2_34s0n"]
+[ext_resource type="Texture2D" uid="uid://mpnm8gw84xdp" path="res://assets/art/spritesEnvironment/aggro oyster/Untitled_Artwork-1.png" id="2_gwkso"]
+[ext_resource type="Texture2D" uid="uid://lc6tssn2npyj" path="res://assets/art/spritesEnvironment/aggro oyster/Untitled_Artwork-2.png" id="3_qrfcu"]
+[ext_resource type="Texture2D" uid="uid://eu6b4lk2eefa" path="res://assets/art/spritesEnvironment/aggro oyster/Untitled_Artwork-3.png" id="4_t6inv"]
+[ext_resource type="Texture2D" uid="uid://bkrcht6oeudrm" path="res://assets/art/spritesEnvironment/aggro oyster/Untitled_Artwork-4.png" id="5_0x0is"]
+[ext_resource type="Texture2D" uid="uid://cmsdy08sk5pj" path="res://assets/art/spritesEnvironment/aggro oyster/Untitled_Artwork-5.png" id="6_v1m77"]
+[ext_resource type="Texture2D" uid="uid://efbaufxdv6q5" path="res://assets/art/spritesEnvironment/aggro oyster/Untitled_Artwork-6.png" id="7_kklp7"]
+[ext_resource type="Texture2D" uid="uid://ba5uuwa1xex74" path="res://assets/art/spritesEnvironment/aggro oyster/Untitled_Artwork-7.png" id="8_nttqg"]
+[ext_resource type="Texture2D" uid="uid://by4j45p16sgef" path="res://assets/art/spritesEnvironment/aggro oyster/Untitled_Artwork-8.png" id="9_15akj"]
+[ext_resource type="Texture2D" uid="uid://c41kiab7ahhly" path="res://assets/art/spritesEnvironment/aggro oyster/Untitled_Artwork-9.png" id="10_55qdd"]
+[ext_resource type="Texture2D" uid="uid://cwnh04ltpi6hf" path="res://assets/art/spritesEnvironment/aggro oyster/Untitled_Artwork-10.png" id="11_tlhqy"]
+[ext_resource type="Texture2D" uid="uid://b5byt5ci40h2p" path="res://assets/art/spritesEnvironment/aggro oyster/Untitled_Artwork-11.png" id="12_wd332"]
+[ext_resource type="Texture2D" uid="uid://cl4fifqi0uxb6" path="res://assets/art/spritesEnvironment/aggro oyster/Untitled_Artwork-12.png" id="13_vrxnw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_npdqr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gwkso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qrfcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_t6inv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0x0is")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_v1m77")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kklp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nttqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_15akj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_55qdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tlhqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wd332")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vrxnw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="InteractiveOyster" type="Node2D"]
 
@@ -10,7 +66,15 @@ position = Vector2(880, -535)
 scale = Vector2(0.5, 0.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+visible = false
 texture = ExtResource("1_ucofo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D/Sprite2D"]
+position = Vector2(26, 48)
+scale = Vector2(3.03125, 3.03125)
+sprite_frames = SubResource("SpriteFrames_npdqr")
+autoplay = "default"
+frame_progress = 0.221394
 
 [node name="BubbleOyster" parent="StaticBody2D" instance=ExtResource("2_34s0n")]
 position = Vector2(0, 156)
