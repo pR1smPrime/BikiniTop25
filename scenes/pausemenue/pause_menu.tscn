@@ -1,7 +1,8 @@
-[gd_scene load_steps=25 format=3 uid="uid://d2xyedecm45dw"]
+[gd_scene load_steps=27 format=3 uid="uid://d2xyedecm45dw"]
 
 [ext_resource type="Script" path="res://scenes/pausemenue/pause_menu.gd" id="1_h7r06"]
 [ext_resource type="Theme" uid="uid://d2egigf8uvin0" path="res://scenes/mainmenue/main_menu.tres" id="2_jai5y"]
+[ext_resource type="FontFile" uid="uid://cxeusgfinjh7w" path="res://assets/art/fonts/Atma-Bold.ttf" id="2_k4lhb"]
 [ext_resource type="PackedScene" uid="uid://foaofi1p2uax" path="res://scenes/Charakters/FrogClipping.tscn" id="2_utfgo"]
 [ext_resource type="Texture2D" uid="uid://gh6vpad0gqj7" path="res://assets/art/spritesObjects/tx_goal_truck.png" id="3_ju436"]
 [ext_resource type="Texture2D" uid="uid://dox3lojsuus8g" path="res://assets/art/spritesObjects/texture_object_box.png" id="4_mftib"]
@@ -11,7 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://d1k4qcplwgi35" path="res://assets/art/userInterface/Inputs/mouse_left.png" id="8_yxpvb"]
 [ext_resource type="Texture2D" uid="uid://jadpl2lyfe23" path="res://assets/art/userInterface/Inputs/mouse_move.png" id="9_x37ij"]
 [ext_resource type="Texture2D" uid="uid://c3bgw8rpm7dj4" path="res://assets/art/spritesPlayer/ninja_Frog/Run (32x32).png" id="10_bbj7d"]
-[ext_resource type="PackedScene" path="res://assets/art/spritesFX/animated_bubble.tscn" id="11_p6y8d"]
+[ext_resource type="PackedScene" uid="uid://cuquxv7d5wirf" path="res://assets/art/spritesFX/animated_bubble.tscn" id="11_p6y8d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gfy8r"]
+font = ExtResource("2_k4lhb")
+font_size = 24
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4nbv6"]
 atlas = ExtResource("10_bbj7d")
@@ -130,6 +135,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 90
 text = "GAME PAUSED"
+label_settings = SubResource("LabelSettings_gfy8r")
 horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PausePanel"]
