@@ -25,6 +25,9 @@ func _on_level_4_pressed() -> void:
 
 func _on_level_5_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/level5.tscn")
+	
+func _on_level_6_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/levels/level6.tscn")
 
 func _on_back_to_menu_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/mainmenue/main_menu.tscn")
