@@ -1,11 +1,12 @@
-[gd_scene load_steps=24 format=3 uid="uid://d2xyedecm45dw"]
+[gd_scene load_steps=25 format=3 uid="uid://d2xyedecm45dw"]
 
 [ext_resource type="Script" path="res://scenes/pausemenue/pause_menu.gd" id="1_h7r06"]
+[ext_resource type="Theme" uid="uid://d2egigf8uvin0" path="res://scenes/mainmenue/main_menu.tres" id="2_jai5y"]
 [ext_resource type="PackedScene" uid="uid://foaofi1p2uax" path="res://scenes/Charakters/FrogClipping.tscn" id="2_utfgo"]
 [ext_resource type="Texture2D" uid="uid://gh6vpad0gqj7" path="res://assets/art/spritesObjects/tx_goal_truck.png" id="3_ju436"]
 [ext_resource type="Texture2D" uid="uid://dox3lojsuus8g" path="res://assets/art/spritesObjects/texture_object_box.png" id="4_mftib"]
-[ext_resource type="Texture2D" uid="uid://m3o6k00dyr0" path="res://assets/art/userInterface/tx_UserInterface_Arrow.png" id="4_ogjbq"]
-[ext_resource type="PackedScene" uid="uid://bjobche7h23v4" path="res://scenes/Charakters/customer_circle.tscn" id="5_3w8rr"]
+[ext_resource type="Texture2D" uid="uid://c04ls4ykmvj34" path="res://assets/art/userInterface/tx_UserInterface_Arrow.png" id="4_ogjbq"]
+[ext_resource type="PackedScene" path="res://scenes/Charakters/customer_circle.tscn" id="5_3w8rr"]
 [ext_resource type="Texture2D" uid="uid://br0gdcuyiv2uk" path="res://assets/art/userInterface/Inputs/keyboard_arrows.png" id="7_s8p87"]
 [ext_resource type="Texture2D" uid="uid://d1k4qcplwgi35" path="res://assets/art/userInterface/Inputs/mouse_left.png" id="8_yxpvb"]
 [ext_resource type="Texture2D" uid="uid://jadpl2lyfe23" path="res://assets/art/userInterface/Inputs/mouse_move.png" id="9_x37ij"]
@@ -145,6 +146,7 @@ offset_right = 182.0
 offset_bottom = 127.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_jai5y")
 theme_override_constants/separation = 40
 
 [node name="Resume" type="Button" parent="PausePanel/VBoxContainer"]
@@ -164,6 +166,7 @@ text = "Go to main menu
 "
 
 [node name="Intro" type="Panel" parent="."]
+visible = false
 z_index = 2
 offset_top = -1072.0
 offset_right = 1924.0

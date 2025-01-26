@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scenes/mainmenue/level_select.gd" id="1_3glp3"]
 [ext_resource type="Texture2D" uid="uid://jodkoy0q3to6" path="res://assets/art/backgrounds/tx_bg_room01.png" id="2_x5hs6"]
-[ext_resource type="AudioStream" uid="uid://b7mm1ovrqgowp" path="res://assets/sounds/music/BUBBLEMAN_Ukulele_3.mp3" id="3_qf6q0"]
 [ext_resource type="Theme" uid="uid://d2egigf8uvin0" path="res://scenes/mainmenue/main_menu.tres" id="3_xsfdl"]
+[ext_resource type="AudioStream" uid="uid://c3gdgnx1jpq4i" path="res://assets/sounds/music/BUBBLEMAN_Ukulele_3_short.wav" id="4_8yhx0"]
 
 [sub_resource type="SystemFont" id="SystemFont_okf44"]
 font_names = PackedStringArray("Impact")
@@ -117,9 +117,8 @@ text = "Back to Main Menu"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
-[node name="BubblemanUkulele3" type="AudioStreamPlayer" parent="AudioStreamPlayer2D"]
-stream = ExtResource("3_qf6q0")
-autoplay = true
+[node name="BubblemanUkulele3Short" type="AudioStreamPlayer" parent="AudioStreamPlayer2D"]
+stream = ExtResource("4_8yhx0")
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Level 1" to="." method="_on_level_1_pressed"]

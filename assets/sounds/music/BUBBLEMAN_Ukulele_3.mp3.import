@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/BUBBLEMAN_Ukulele_3.mp3-03c622435e7f231866fe7
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=10.0
+bpm=0.0
 beat_count=0
 bar_beats=4

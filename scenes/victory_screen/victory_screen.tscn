@@ -1,10 +1,10 @@
 [gd_scene load_steps=46 format=3 uid="uid://nea3xsnx4ake"]
 
-[ext_resource type="Script" path="res://scenes/victory_screen/victory_screen.gd" id="1_wqbox"]
+[ext_resource type="Script" path="res://scenes/end_folder/victory_screen.gd" id="1_wqbox"]
 [ext_resource type="AudioStream" uid="uid://bwjbhvadalfi0" path="res://assets/sounds/Voice/OutroErfreut.wav" id="2_kobhw"]
 [ext_resource type="Texture2D" uid="uid://rumnfmm4o0m5" path="res://assets/art/backgrounds/tx_bg_winscreen.png" id="2_m1d87"]
 [ext_resource type="FontFile" uid="uid://dhw7s5vf2kb6b" path="res://assets/art/fonts/Atma-SemiBold.ttf" id="3_3f2ho"]
-[ext_resource type="Theme" uid="uid://d2egigf8uvin0" path="res://scenes/mainmenue/main_menu.tres" id="4_rp3m8"]
+[ext_resource type="Theme" uid="uid://bcdyuldgaqcg8" path="res://scenes/mainmenue/main_menu.tres" id="4_rp3m8"]
 [ext_resource type="Texture2D" uid="uid://edhyfvfkurm8" path="res://assets/art/Customer/body Idle/Kunde_Idle-1.png" id="6_wb8f4"]
 [ext_resource type="Texture2D" uid="uid://cqww4m3xh2wtk" path="res://assets/art/Customer/body Idle/Kunde_Idle-2.png" id="7_p8hl2"]
 [ext_resource type="Texture2D" uid="uid://dupew6it7ug6h" path="res://assets/art/Customer/body Idle/Kunde_Idle-3.png" id="8_0cg0k"]
@@ -259,11 +259,17 @@ text = "Good Job!"
 label_settings = SubResource("LabelSettings_rsrbb")
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="CenterContainer/VBox"]
+[node name="MainMenu" type="Button" parent="CenterContainer/VBox"]
 custom_minimum_size = Vector2(250, 71.16)
 layout_mode = 2
 theme = ExtResource("4_rp3m8")
 text = "Go back to main menu"
+
+[node name="NextLevel" type="Button" parent="CenterContainer/VBox"]
+custom_minimum_size = Vector2(250, 71.16)
+layout_mode = 2
+theme = ExtResource("4_rp3m8")
+text = "Next level"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_kobhw")
@@ -304,4 +310,5 @@ sprite_frames = SubResource("SpriteFrames_ne5ww")
 autoplay = "default"
 frame_progress = 0.895099
 
-[connection signal="pressed" from="CenterContainer/VBox/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBox/MainMenu" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBox/NextLevel" to="." method="_on_next_level_pressed"]
