@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2xyedecm45dw"]
+[gd_scene load_steps=6 format=3 uid="uid://d2xyedecm45dw"]
 
 [ext_resource type="Script" path="res://scenes/pausemenue/pause_menu.gd" id="1_h7r06"]
 [ext_resource type="PackedScene" uid="uid://foaofi1p2uax" path="res://scenes/Charakters/FrogClipping.tscn" id="2_utfgo"]
 [ext_resource type="Texture2D" uid="uid://gh6vpad0gqj7" path="res://assets/art/spritesObjects/tx_goal_truck.png" id="3_ju436"]
 [ext_resource type="Texture2D" uid="uid://dox3lojsuus8g" path="res://assets/art/spritesObjects/texture_object_box.png" id="4_mftib"]
+[ext_resource type="PackedScene" uid="uid://bjobche7h23v4" path="res://scenes/Charakters/customer_circle.tscn" id="5_3w8rr"]
 
 [node name="Pause_Menu" type="Node"]
 process_mode = 3
@@ -71,31 +72,45 @@ text = "Go to main menu
 "
 
 [node name="Intro" type="Panel" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_top = -1072.0
+offset_right = 1924.0
+offset_bottom = -2.0
 
 [node name="Scene" parent="Intro" instance=ExtResource("2_utfgo")]
 z_index = 1
-position = Vector2(-499, -1244)
+position = Vector2(-600, -247)
 
 [node name="TxGoalTruck" type="Sprite2D" parent="Intro"]
 z_index = 1
-position = Vector2(1521, -272)
+position = Vector2(1562, 814)
 texture = ExtResource("3_ju436")
 
 [node name="TextureObjectBox" type="Sprite2D" parent="Intro"]
 z_index = 1
-position = Vector2(1461, -403)
+position = Vector2(872, 721)
 texture = ExtResource("4_mftib")
 
 [node name="Button" type="Button" parent="Intro"]
 layout_mode = 2
-offset_left = 11.0
-offset_top = -1069.0
-offset_right = 1911.0
-offset_bottom = 31.0
+offset_left = 87.0
+offset_top = 64.0
+offset_right = 1687.0
+offset_bottom = 964.0
+scale = Vector2(1.10799, 1.04972)
 theme_override_font_sizes/font_size = 60
-text = "I am Ready"
+
+[node name="ColorRect" type="ColorRect" parent="Intro/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.285947, 0.625794, 0.608806, 1)
+
+[node name="CustomerCircle" parent="Intro" instance=ExtResource("5_3w8rr")]
+position = Vector2(1591, 275)
+scale = Vector2(1, 1)
 
 [connection signal="pressed" from="PausePanel/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="PausePanel/VBoxContainer/Retry" to="." method="_on_retry_pressed"]
