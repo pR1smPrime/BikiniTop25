@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://btlnrnt8tpns1"]
 
 [ext_resource type="Script" path="res://scenes/mainmenue/main_menu.gd" id="1_3cofa"]
-[ext_resource type="Texture2D" uid="uid://jodkoy0q3to6" path="res://assets/art/backgrounds/tx_bg_room01.png" id="2_rck5r"]
+[ext_resource type="Texture2D" uid="uid://dpfu6qn0f6g81" path="res://assets/art/backgrounds/tx_bg_klemmbrett.png" id="2_e18te"]
 [ext_resource type="Texture2D" uid="uid://busub1w3bcq3j" path="res://assets/art/userInterface/tx_logo.png" id="3_dpvu5"]
 [ext_resource type="AudioStream" uid="uid://dn87jmownj1qt" path="res://assets/sounds/Voice/BUBBLEMAN_Final.mp3" id="4_acq2j"]
 [ext_resource type="Theme" uid="uid://d2egigf8uvin0" path="res://scenes/mainmenue/main_menu.tres" id="4_adjp0"]
@@ -86,7 +86,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_rck5r")
+texture = ExtResource("2_e18te")
 
 [node name="Logo" type="TextureRect" parent="."]
 visible = false
