@@ -1,10 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://bb7t2rtlp7sku"]
+[gd_scene load_steps=9 format=3 uid="uid://bb7t2rtlp7sku"]
 
 [ext_resource type="Texture2D" uid="uid://cfij0t8fhkfab" path="res://assets/art/spritesAquarium/tx_Aquarium01_Overlay.png" id="2_ae7t6"]
 [ext_resource type="Texture2D" uid="uid://jodkoy0q3to6" path="res://assets/art/backgrounds/tx_bg_room01.png" id="3_qpgkj"]
 [ext_resource type="Texture2D" uid="uid://bjj4gt5w22o8q" path="res://assets/art/spritesAquarium/tx_Aquarium01_Floor.png" id="3_u5h5d"]
 [ext_resource type="Script" path="res://scenes/levels/water_end.gd" id="4_hs60a"]
-[ext_resource type="Texture2D" uid="uid://bbxov0wtae6fc" path="res://assets/art/spritesFX/blub_01.png" id="5_hj5fl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dhkxt"]
 size = Vector2(23, 944)
@@ -17,24 +16,6 @@ size = Vector2(8820, 22.375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_66qwc"]
 size = Vector2(55.1296, 20)
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qs8j0"]
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(200, 1, 1)
-gravity = Vector3(0, -98, 0)
-scale_min = 0.1
-scale_max = 0.1
-turbulence_enabled = true
-
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_vx63k"]
-frames = 6
-frame_0/texture = ExtResource("5_hj5fl")
-frame_1/duration = 1.0
-frame_2/duration = 1.0
-frame_3/duration = 1.0
-frame_4/duration = 1.0
-frame_5/duration = 1.0
 
 [node name="groundBase" type="Node2D"]
 position = Vector2(-1, 0)
@@ -94,13 +75,5 @@ script = ExtResource("4_hs60a")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WaterEnd"]
 position = Vector2(17.6643, 0)
 shape = SubResource("RectangleShape2D_66qwc")
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-position = Vector2(515, -329)
-amount = 3
-amount_ratio = 0.3912
-process_material = SubResource("ParticleProcessMaterial_qs8j0")
-texture = SubResource("AnimatedTexture_vx63k")
-lifetime = 12.05
 
 [connection signal="body_entered" from="WaterEnd" to="WaterEnd" method="_on_body_entered"]
