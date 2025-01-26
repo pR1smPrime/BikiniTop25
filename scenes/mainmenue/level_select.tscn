@@ -63,6 +63,10 @@ layout_mode = 2
 theme_override_constants/separation = 18
 alignment = 1
 
+[node name="Tutorial" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Tutorial Level"
+
 [node name="Level 1" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Level 1"
@@ -116,6 +120,7 @@ text = "Back to Main Menu"
 stream = ExtResource("3_qf6q0")
 autoplay = true
 
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Level 1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Level 2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Level 3" to="." method="_on_level_3_pressed"]
