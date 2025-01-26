@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://4h0ltwgm81fw"]
 
 [ext_resource type="Texture2D" uid="uid://hve608cft84n" path="res://assets/art/spritesEnvironment/tx_obstacle_shell.png" id="1_ucofo"]
-[ext_resource type="PackedScene" path="res://scenes/bubble_beam/bubble_oyster.tscn" id="2_34s0n"]
+[ext_resource type="PackedScene" uid="uid://ctdlmu4udssmc" path="res://scenes/bubble_beam/bubble_oyster.tscn" id="2_34s0n"]
 [ext_resource type="Texture2D" uid="uid://mpnm8gw84xdp" path="res://assets/art/spritesEnvironment/aggro oyster/Untitled_Artwork-1.png" id="2_gwkso"]
 [ext_resource type="Texture2D" uid="uid://lc6tssn2npyj" path="res://assets/art/spritesEnvironment/aggro oyster/Untitled_Artwork-2.png" id="3_qrfcu"]
 [ext_resource type="Texture2D" uid="uid://eu6b4lk2eefa" path="res://assets/art/spritesEnvironment/aggro oyster/Untitled_Artwork-3.png" id="4_t6inv"]
