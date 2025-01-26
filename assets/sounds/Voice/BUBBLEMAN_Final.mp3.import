@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/BUBBLEMAN_Final.mp3-96e2ef935b078efcf967f5116
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0.0
 bpm=0.0
 beat_count=0
