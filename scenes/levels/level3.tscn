@@ -84,13 +84,13 @@ scale = Vector2(0.2, 0.2)
 
 [node name="LabelLevel" type="Label" parent="."]
 z_index = 1
-offset_left = 31.0
+offset_left = 1.0
 offset_top = -994.0
-offset_right = 265.0
-offset_bottom = -898.0
+offset_right = 340.0
+offset_bottom = -884.0
 theme_override_fonts/font = SubResource("SystemFont_twkxo")
 theme_override_font_sizes/font_size = 80
-text = "Level 3"
+text = "Columns"
 
 [node name="CustomerCircle" parent="." instance=ExtResource("13_ie7es")]
 z_index = 1

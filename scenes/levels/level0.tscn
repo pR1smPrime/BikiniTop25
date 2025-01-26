@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://t1qapbdlfqnh" path="res://assets/objects/staticNoCollision/staNoCo_algae2.tscn" id="8_ipijq"]
 [ext_resource type="PackedScene" uid="uid://d2xyedecm45dw" path="res://scenes/pausemenue/pause_menu.tscn" id="10_43p76"]
 
-[node name="Level1" type="Node2D"]
+[node name="Level0" type="Node2D"]
 
 [node name="groundBase" parent="." instance=ExtResource("1_dcoy7")]
 

@@ -106,13 +106,16 @@ scale = Vector2(0.7, 0.7)
 
 [node name="LabelLevel" type="Label" parent="."]
 z_index = 1
-offset_left = 32.0
-offset_top = -994.0
-offset_right = 266.0
-offset_bottom = -898.0
+offset_left = 53.0
+offset_top = -1064.0
+offset_right = 249.0
+offset_bottom = -615.0
 theme_override_fonts/font = SubResource("SystemFont_hdi2w")
 theme_override_font_sizes/font_size = 80
-text = "Level 4"
+text = "High 
+like
+a 
+kite"
 
 [node name="CustomerCircle" parent="." instance=ExtResource("12_7ctlb")]
 z_index = 1
