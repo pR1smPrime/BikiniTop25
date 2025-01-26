@@ -1,10 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://t1qapbdlfqnh"]
+[gd_scene load_steps=4 format=3 uid="uid://t1qapbdlfqnh"]
 
 [ext_resource type="Texture2D" uid="uid://dgtu4u2hrgjeo" path="res://assets/art/spritesEnvironment/tx_environment_plant02.png" id="1_pwh32"]
+[ext_resource type="Shader" path="res://assets/objects/staticNoCollision/waveywavey.gdshader" id="1_qwvan"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gn5yf"]
+shader = ExtResource("1_qwvan")
+shader_parameter/speed = 1.0
+shader_parameter/amplitude = 10.0
 
 [node name="staNoCo_algae2" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+material = SubResource("ShaderMaterial_gn5yf")
 texture = ExtResource("1_pwh32")

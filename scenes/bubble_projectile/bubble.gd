@@ -3,13 +3,12 @@ class_name Bubble
 
 @export var time_to_pop := 1.5
 
-func init(bubble_velocity : Vector2) -> void:
+func init(bubble_velocity : Vector2, time_to_pop : float = 1.5) -> void:
 	linear_velocity = bubble_velocity
-	$TimeToPop.wait_time = time_to_pop
+	$TimeToPop.start(time_to_pop)
 
 func _ready() -> void:
 	$Bubble.play()
-	$TimeToPop.wait_time = time_to_pop
 
 func pop_bubble() -> void:
 	# pop animation

@@ -1,6 +1,9 @@
 extends Moveable
 
+@onready var fail_screen = preload("res://scenes/fail_screen/fail_screen.tscn")
 @export var max_health = 4
+
+
 var current_health = max_health
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,8 +25,7 @@ func breakMoveable() -> void:
 		1:
 			$Sprite2D.texture = load("res://assets/art/spritesObjects/tx_object_vase_dmg3.png")
 		0:
-			print("fail")
-		
+			get_tree().change_scene_to_file("res://scenes/fail_screen/fail_screen.tscn") 
 
 func _on_body_entered(body: Node) -> void:
 	print(body.get_class())

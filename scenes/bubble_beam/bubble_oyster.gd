@@ -3,7 +3,7 @@ class_name CombatOyster
 
 @export var force := 1000.0
 @export var bubble_node := preload("res://scenes/bubble_projectile/bubble.tscn")
-@export var oyster_frequency := 0.007
+@export var oyster_frequency := 0.05
 
 @onready var shoot_timer := $Timer
 

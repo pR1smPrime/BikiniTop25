@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://p3rbvt1dap4d"]
+[gd_scene load_steps=3 format=3 uid="uid://p3rbvt1dap4d"]
 
 [ext_resource type="Script" path="res://scenes/bubble_beam/bubble_beamer.gd" id="1_3gvbx"]
+[ext_resource type="Texture2D" uid="uid://dd21u8s2ljpb0" path="res://assets/art/spritesPlayer/tx_bubblegun.png" id="2_daprb"]
 
 [node name="BubbleBeamer" type="Node2D"]
 script = ExtResource("1_3gvbx")
 
 [node name="ShootFrequence" type="Timer" parent="."]
 one_shot = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_daprb")

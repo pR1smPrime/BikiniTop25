@@ -4,6 +4,7 @@ class_name BubbleBeamer
 @export var force := 1500.0
 @export var bubble_node := preload("res://scenes/bubble_projectile/bubble.tscn")
 @export var shoot_frequence := 0.005
+@export var time_to_pop := 1.5
 
 @onready var shoot_timer := $ShootFrequence
 
@@ -13,7 +14,7 @@ func spawn_bubble():
 		var bubble := bubble_node.instantiate()
 		add_child(bubble)
 		direction = direction.rotated(randf_range(-0.2, 0.2))
-		bubble.init(direction * force)
+		bubble.init(direction * force, time_to_pop)
 		shoot_timer.start(shoot_frequence)
 
 func _process(_delta: float) -> void:

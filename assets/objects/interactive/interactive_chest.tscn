@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu1s6s5u054wt"]
+
+[ext_resource type="Texture2D" uid="uid://cb45sx3622me" path="res://assets/art/spritesEnvironment/tx_obstacle_chest.png" id="1_vlcmm"]
+[ext_resource type="PackedScene" uid="uid://shv6d7hl1nnv" path="res://scenes/bubble_beam/bubble_chest.tscn" id="2_ov2i1"]
+
+[node name="InteractiveChest" type="Node2D"]
+position = Vector2(386, 316)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_vlcmm")
+
+[node name="BubbleChest" parent="StaticBody2D/Sprite2D" instance=ExtResource("2_ov2i1")]
+
+[node name="BubbleChest2" parent="StaticBody2D/Sprite2D" instance=ExtResource("2_ov2i1")]
