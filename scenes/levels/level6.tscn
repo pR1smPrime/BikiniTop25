@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b1k68xp6vdvd3" path="res://assets/objects/statics/static_column.tscn" id="8_7tmwy"]
 [ext_resource type="PackedScene" uid="uid://d2xyedecm45dw" path="res://scenes/pausemenue/pause_menu.tscn" id="11_hcff7"]
 [ext_resource type="PackedScene" uid="uid://dxrxdcf5ld0ob" path="res://assets/objects/interactive/interactive_skull.tscn" id="11_hqmot"]
-[ext_resource type="PackedScene" path="res://scenes/Charakters/customer_circle.tscn" id="12_ttmu3"]
+[ext_resource type="PackedScene" uid="uid://bjobche7h23v4" path="res://scenes/Charakters/customer_circle.tscn" id="12_ttmu3"]
 [ext_resource type="PackedScene" uid="uid://bj253dgyyi6n" path="res://assets/objects/staticNoCollision/staNoCo_algae3.tscn" id="12_u3mlc"]
 [ext_resource type="PackedScene" uid="uid://4h0ltwgm81fw" path="res://assets/objects/interactive/interactive_oyster.tscn" id="13_xli6j"]
 [ext_resource type="AudioStream" uid="uid://bqkiebbykolmd" path="res://assets/sounds/music/BUBBLEMAN_Ukulele.mp3" id="14_76q3r"]
