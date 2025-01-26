@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://uwv874ruxu87"]
 
 [ext_resource type="Script" path="res://scenes/bubble_projectile/bubble.gd" id="1_8t61x"]
-[ext_resource type="Texture2D" uid="uid://dm0n2be4vhfgg" path="res://assets/art/spritesFX/tx_fx_bubbles_5f.png" id="1_ltcru"]
+[ext_resource type="Texture2D" uid="uid://bbxov0wtae6fc" path="res://assets/art/spritesFX/blub_01.png" id="2_wc2kg"]
 [ext_resource type="AudioStream" uid="uid://ey2kqbuefmfn" path="res://assets/sounds/SFX/Flup1.wav" id="3_8ky5m"]
 [ext_resource type="AudioStream" uid="uid://b4y27hmupm4ib" path="res://assets/sounds/SFX/Flup2.wav" id="4_8y8fe"]
 [ext_resource type="AudioStream" uid="uid://g0wehxoylmwe" path="res://assets/sounds/SFX/Flup3.wav" id="5_oaoie"]
@@ -38,7 +38,7 @@ shape = SubResource("CircleShape2D_5r884")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.52, 0.44)
-texture = ExtResource("1_ltcru")
+texture = ExtResource("2_wc2kg")
 
 [node name="TimeToPop" type="Timer" parent="."]
 wait_time = 2.277
