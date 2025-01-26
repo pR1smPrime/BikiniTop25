@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmvo53bilb8gv"]
+
+[ext_resource type="Script" path="res://scenes/levels/clock_n_score/score.gd" id="1_mgv0i"]
+
+[node name="Score" type="Label"]
+offset_left = 878.0
+offset_top = -923.0
+offset_right = 965.0
+offset_bottom = -890.0
+text = "0 €"
+horizontal_alignment = 2
+script = ExtResource("1_mgv0i")

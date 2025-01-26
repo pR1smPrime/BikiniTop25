@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://diud7kw0rfwfc"]
+[gd_scene load_steps=18 format=3 uid="uid://diud7kw0rfwfc"]
 
+[ext_resource type="Script" path="res://scenes/levels/level_5.gd" id="1_26yj2"]
 [ext_resource type="PackedScene" uid="uid://t1qapbdlfqnh" path="res://assets/objects/staticNoCollision/staNoCo_algae2.tscn" id="1_byvas"]
 [ext_resource type="PackedScene" uid="uid://bb7t2rtlp7sku" path="res://scenes/levels/groundBase.tscn" id="1_ow8i4"]
 [ext_resource type="PackedScene" uid="uid://hph0vdl7puii" path="res://scenes/player/player.tscn" id="3_jqsr4"]
@@ -11,13 +12,16 @@
 [ext_resource type="PackedScene" uid="uid://b1k68xp6vdvd3" path="res://assets/objects/statics/static_column.tscn" id="9_0fgv0"]
 [ext_resource type="PackedScene" uid="uid://dbba0xayt6m1u" path="res://assets/objects/staticNoCollision/staNoCo_algae1.tscn" id="9_xjbni"]
 [ext_resource type="PackedScene" uid="uid://d2xyedecm45dw" path="res://scenes/pausemenue/pause_menu.tscn" id="11_6ltb0"]
-[ext_resource type="PackedScene" path="res://scenes/Charakters/customer_circle.tscn" id="12_x45wr"]
+[ext_resource type="PackedScene" uid="uid://bjobche7h23v4" path="res://scenes/Charakters/customer_circle.tscn" id="12_x45wr"]
 [ext_resource type="PackedScene" uid="uid://dnwe61pi7nkh0" path="res://assets/objects/statics/static_beam.tscn" id="13_d20pe"]
+[ext_resource type="PackedScene" uid="uid://br3gofdtli8gj" path="res://scenes/levels/clock_n_score/clock.tscn" id="15_8njm6"]
+[ext_resource type="PackedScene" uid="uid://bmvo53bilb8gv" path="res://scenes/levels/clock_n_score/score.tscn" id="16_dd7uq"]
 
 [sub_resource type="SystemFont" id="SystemFont_fmwn4"]
 font_names = PackedStringArray("Frank Ruehl CLM")
 
 [node name="Level5" type="Node2D"]
+script = ExtResource("1_26yj2")
 
 [node name="staNoCo_algae4" parent="." instance=ExtResource("1_byvas")]
 position = Vector2(1567, -501)
@@ -102,3 +106,7 @@ position = Vector2(1754, -159)
 z_index = -1
 position = Vector2(1534, -813)
 scale = Vector2(0.5, 1)
+
+[node name="Clock" parent="." instance=ExtResource("15_8njm6")]
+
+[node name="Score" parent="." instance=ExtResource("16_dd7uq")]

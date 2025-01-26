@@ -1,19 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://dq54q68pmwd6u"]
+[gd_scene load_steps=4 format=3 uid="uid://dq54q68pmwd6u"]
 
+[ext_resource type="Script" path="res://assets/objects/moveables/movable_box.gd" id="1_2n4uh"]
 [ext_resource type="Texture2D" uid="uid://dox3lojsuus8g" path="res://assets/art/spritesObjects/texture_object_box.png" id="1_y4hlj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4unfi"]
 size = Vector2(244, 244)
 
-[node name="MoveableBox" type="Node2D"]
+[node name="RigidBody2D" type="RigidBody2D"]
+script = ExtResource("1_2n4uh")
+value = 25000
+dmg_force_threshold = 5.0
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 2)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_4unfi")
 
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_y4hlj")

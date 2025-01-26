@@ -1,28 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqj4xx323uc7y"]
+[gd_scene load_steps=3 format=3 uid="uid://cqj4xx323uc7y"]
 
-[ext_resource type="Script" path="res://assets/objects/moveables/rigid_body_2d.gd" id="1_t0cfi"]
+[ext_resource type="Script" path="res://assets/objects/moveables/movable_vase.gd" id="1_v5jiw"]
 [ext_resource type="Texture2D" uid="uid://52c0mdxjk28k" path="res://assets/art/spritesObjects/tx_object_vase.png" id="2_27wfs"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0odn"]
-size = Vector2(238, 294)
-
-[node name="MoveableVase" type="Node2D"]
-
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="MoveableVase" type="RigidBody2D"]
 collision_layer = 3
 collision_mask = 3
 contact_monitor = true
 max_contacts_reported = 1
-script = ExtResource("1_t0cfi")
+linear_damp = 3.0
+script = ExtResource("1_v5jiw")
+value = 1000000
+dmg_force_threshold = 3.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-visibility_layer = 3
-position = Vector2(0.5, -0.5)
-scale = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_f0odn")
-
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_27wfs")
 
-[connection signal="body_entered" from="RigidBody2D" to="RigidBody2D" method="_on_body_entered"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-33, -73, 35, -73, 36, -60, 30, -59, 28, -48, 36, -42, 40, -39, 45, -35, 50, -29, 53, -23, 56, -14, 56, -4, 57, 7, 55, 15, 54, 23, 51, 33, 44, 42, 41, 49, 38, 54, 38, 60, 36, 63, 28, 63, 27, 66, 22, 69, 14, 72, 4, 70, -15, 70, -23, 70, -28, 66, -37, 66, -43, 62, -45, 59, -41, 52, -48, 48, -52, 42, -58, 18, -56, -9, -48, -34, -24, -46, -25, -56, -33, -56)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

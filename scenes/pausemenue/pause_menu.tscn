@@ -6,12 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://gh6vpad0gqj7" path="res://assets/art/spritesObjects/tx_goal_truck.png" id="3_ju436"]
 [ext_resource type="Texture2D" uid="uid://dox3lojsuus8g" path="res://assets/art/spritesObjects/texture_object_box.png" id="4_mftib"]
 [ext_resource type="Texture2D" uid="uid://c04ls4ykmvj34" path="res://assets/art/userInterface/tx_UserInterface_Arrow.png" id="4_ogjbq"]
-[ext_resource type="PackedScene" path="res://scenes/Charakters/customer_circle.tscn" id="5_3w8rr"]
+[ext_resource type="PackedScene" uid="uid://bjobche7h23v4" path="res://scenes/Charakters/customer_circle.tscn" id="5_3w8rr"]
 [ext_resource type="Texture2D" uid="uid://br0gdcuyiv2uk" path="res://assets/art/userInterface/Inputs/keyboard_arrows.png" id="7_s8p87"]
 [ext_resource type="Texture2D" uid="uid://d1k4qcplwgi35" path="res://assets/art/userInterface/Inputs/mouse_left.png" id="8_yxpvb"]
 [ext_resource type="Texture2D" uid="uid://jadpl2lyfe23" path="res://assets/art/userInterface/Inputs/mouse_move.png" id="9_x37ij"]
 [ext_resource type="Texture2D" uid="uid://c3bgw8rpm7dj4" path="res://assets/art/spritesPlayer/ninja_Frog/Run (32x32).png" id="10_bbj7d"]
-[ext_resource type="PackedScene" path="res://assets/art/spritesFX/animated_bubble.tscn" id="11_p6y8d"]
+[ext_resource type="PackedScene" uid="uid://cuquxv7d5wirf" path="res://assets/art/spritesFX/animated_bubble.tscn" id="11_p6y8d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4nbv6"]
 atlas = ExtResource("10_bbj7d")

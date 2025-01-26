@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://br3gofdtli8gj"]
+
+[ext_resource type="Script" path="res://scenes/levels/clock_n_score/clock.gd" id="1_wvcgr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xiqrk"]
+font_size = 33
+outline_size = 1
+
+[node name="Clock" type="Label"]
+offset_left = 879.0
+offset_top = -968.0
+offset_right = 994.0
+offset_bottom = -922.0
+text = "00:00"
+label_settings = SubResource("LabelSettings_xiqrk")
+script = ExtResource("1_wvcgr")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

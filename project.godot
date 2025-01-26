@@ -15,6 +15,10 @@ run/main_scene="res://bikini_toppem_moving_service.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://assets/art/userInterface/tx_logo.png"
 
+[autoload]
+
+GlobalGameManager="*res://global_game_manager.gd"
+
 [display]
 
 window/size/viewport_width=1920
