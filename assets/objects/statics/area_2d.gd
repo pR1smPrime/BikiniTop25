@@ -6,6 +6,7 @@ func _process(_delta: float) -> void:
 	if moveable != null:
 		if overlaps_body(moveable):
 			if moveable.linear_velocity.length() < 0.0001:
+				PreviousScene.scene = get_tree().current_scene.name
 				get_tree().change_scene_to_file("res://scenes/victory_screen/victory_screen.tscn")
 
 func _on_body_entered(body: Node2D) -> void:

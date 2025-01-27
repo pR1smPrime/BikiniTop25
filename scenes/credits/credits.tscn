@@ -281,7 +281,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_jvm1u")
 theme_override_font_sizes/font_size = 351
 text = "Code by:
-Niklas & Thilo & Bastian "
+Christian & Niklas & Thilo & Bastian "
 label_settings = SubResource("LabelSettings_rsrbb")
 horizontal_alignment = 1
 

@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dce5wj6gnflwn" path="res://assets/art/spritesFX/blub_04.png" id="4_4ngcj"]
 [ext_resource type="Texture2D" uid="uid://cl31e2oxmjr7u" path="res://assets/art/spritesFX/blub_05.png" id="5_m27m3"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_8xmtc"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_fwqr2"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -30,5 +30,6 @@ animations = [{
 }]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]
-sprite_frames = SubResource("SpriteFrames_8xmtc")
-frame_progress = 0.946611
+sprite_frames = SubResource("SpriteFrames_fwqr2")
+autoplay = "default"
+frame_progress = 0.691868
