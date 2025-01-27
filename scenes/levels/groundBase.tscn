@@ -1,9 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://bb7t2rtlp7sku"]
+[gd_scene load_steps=17 format=3 uid="uid://bb7t2rtlp7sku"]
 
 [ext_resource type="Texture2D" uid="uid://cfij0t8fhkfab" path="res://assets/art/spritesAquarium/tx_Aquarium01_Overlay.png" id="2_ae7t6"]
 [ext_resource type="Texture2D" uid="uid://jodkoy0q3to6" path="res://assets/art/backgrounds/tx_bg_room01.png" id="3_qpgkj"]
 [ext_resource type="Texture2D" uid="uid://bjj4gt5w22o8q" path="res://assets/art/spritesAquarium/tx_Aquarium01_Floor.png" id="3_u5h5d"]
 [ext_resource type="Script" path="res://scenes/levels/water_end.gd" id="4_hs60a"]
+[ext_resource type="Texture2D" uid="uid://d112v1tw452a7" path="res://assets/art/spritesFX/Bubble Rising/Blubble_Rise-1.png" id="5_bpx2g"]
+[ext_resource type="Texture2D" uid="uid://csnwohbixqosf" path="res://assets/art/spritesFX/Bubble Rising/Blubble_Rise-2.png" id="6_rlygt"]
+[ext_resource type="Texture2D" uid="uid://bk1g2mg5s5xkx" path="res://assets/art/spritesFX/Bubble Rising/Blubble_Rise-3.png" id="7_hdqk4"]
+[ext_resource type="Texture2D" uid="uid://dxltdrhd3lae5" path="res://assets/art/spritesFX/Bubble Rising/Blubble_Rise-4.png" id="8_pbuby"]
+[ext_resource type="Texture2D" uid="uid://cjlomeydx0s5m" path="res://assets/art/spritesFX/Bubble Rising/Blubble_Rise-5.png" id="9_y2iw5"]
+[ext_resource type="Texture2D" uid="uid://dwl4yr51mhc6e" path="res://assets/art/spritesFX/Bubble Rising/Blubble_Rise-6.png" id="10_hwubb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dhkxt"]
 size = Vector2(23, 944)
@@ -16,6 +22,31 @@ size = Vector2(8820, 22.375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_66qwc"]
 size = Vector2(55.1296, 20)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qs8j0"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(200, 1, 1)
+gravity = Vector3(0, -98, 0)
+scale_min = 0.1
+scale_max = 0.2
+turbulence_enabled = true
+turbulence_noise_scale = 1.316
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_vx63k"]
+frames = 6
+speed_scale = 8.0
+frame_0/texture = ExtResource("5_bpx2g")
+frame_1/texture = ExtResource("6_rlygt")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("7_hdqk4")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("8_pbuby")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("9_y2iw5")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("10_hwubb")
+frame_5/duration = 1.0
 
 [node name="groundBase" type="Node2D"]
 position = Vector2(-1, 0)
@@ -75,5 +106,26 @@ script = ExtResource("4_hs60a")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WaterEnd"]
 position = Vector2(17.6643, 0)
 shape = SubResource("RectangleShape2D_66qwc")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(551, -323)
+amount_ratio = 0.981
+process_material = SubResource("ParticleProcessMaterial_qs8j0")
+texture = SubResource("AnimatedTexture_vx63k")
+lifetime = 20.0
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
+position = Vector2(1042, -277)
+amount_ratio = 0.981
+process_material = SubResource("ParticleProcessMaterial_qs8j0")
+texture = SubResource("AnimatedTexture_vx63k")
+lifetime = 20.0
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="."]
+position = Vector2(1395, -280)
+amount_ratio = 0.981
+process_material = SubResource("ParticleProcessMaterial_qs8j0")
+texture = SubResource("AnimatedTexture_vx63k")
+lifetime = 20.0
 
 [connection signal="body_entered" from="WaterEnd" to="WaterEnd" method="_on_body_entered"]

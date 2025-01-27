@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dtoh8s6t2s5xi" path="res://assets/objects/statics/static_oyster.tscn" id="8_g52rs"]
 [ext_resource type="PackedScene" uid="uid://t1qapbdlfqnh" path="res://assets/objects/staticNoCollision/staNoCo_algae2.tscn" id="9_18xhb"]
 [ext_resource type="PackedScene" uid="uid://d2xyedecm45dw" path="res://scenes/pausemenue/pause_menu.tscn" id="11_tuqnh"]
-[ext_resource type="PackedScene" path="res://scenes/Charakters/customer_circle.tscn" id="12_7ctlb"]
+[ext_resource type="PackedScene" uid="uid://bjobche7h23v4" path="res://scenes/Charakters/customer_circle.tscn" id="12_7ctlb"]
 [ext_resource type="AudioStream" uid="uid://bqkiebbykolmd" path="res://assets/sounds/music/BUBBLEMAN_Ukulele.mp3" id="13_7r1s5"]
 
 [sub_resource type="SystemFont" id="SystemFont_hdi2w"]
