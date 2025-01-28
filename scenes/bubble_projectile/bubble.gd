@@ -1,7 +1,6 @@
 extends RigidBody2D
 class_name Bubble
 
-@export var time_to_pop := 1.5
 
 func init(bubble_velocity : Vector2, time_to_pop : float = 1.5) -> void:
 	linear_velocity = bubble_velocity

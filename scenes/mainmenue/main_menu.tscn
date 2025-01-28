@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://btlnrnt8tpns1"]
+[gd_scene load_steps=16 format=3 uid="uid://btlnrnt8tpns1"]
 
 [ext_resource type="Script" path="res://scenes/mainmenue/main_menu.gd" id="1_3cofa"]
 [ext_resource type="Texture2D" uid="uid://dpfu6qn0f6g81" path="res://assets/art/backgrounds/tx_bg_klemmbrett.png" id="2_e18te"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://dn87jmownj1qt" path="res://assets/sounds/Voice/BUBBLEMAN_Final.mp3" id="4_acq2j"]
 [ext_resource type="Theme" uid="uid://d2egigf8uvin0" path="res://scenes/mainmenue/main_menu.tres" id="4_adjp0"]
 [ext_resource type="AudioStream" uid="uid://jm0nskd33x83" path="res://assets/sounds/Voice/BayerischFluchend.wav" id="4_vdexq"]
+[ext_resource type="Script" path="res://scenes/mainmenue/play.gd" id="5_md3qq"]
 [ext_resource type="Texture2D" uid="uid://v2u5kkqigypy" path="res://assets/art/userInterface/tx_logo01.png" id="7_hdisu"]
 [ext_resource type="Texture2D" uid="uid://bn45cwn33nr4a" path="res://assets/art/userInterface/tx_logo02.png" id="8_3364v"]
 [ext_resource type="Texture2D" uid="uid://bf4j5m7yrgv0" path="res://assets/art/userInterface/tx_logo03.png" id="9_j6sft"]
@@ -163,6 +164,7 @@ layout_mode = 2
 theme = ExtResource("4_adjp0")
 theme_override_font_sizes/font_size = 24
 text = "Play"
+script = ExtResource("5_md3qq")
 
 [node name="Seperator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
