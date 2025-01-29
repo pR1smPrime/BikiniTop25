@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://crxb0iuw721ke"]
+[gd_scene load_steps=18 format=3 uid="uid://crxb0iuw721ke"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_3.gd" id="1_2n23g"]
 [ext_resource type="PackedScene" uid="uid://bb7t2rtlp7sku" path="res://scenes/levels/groundBase.tscn" id="1_hc18r"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://bj253dgyyi6n" path="res://assets/objects/staticNoCollision/staNoCo_algae3.tscn" id="10_vvm2v"]
 [ext_resource type="PackedScene" uid="uid://dbba0xayt6m1u" path="res://assets/objects/staticNoCollision/staNoCo_algae1.tscn" id="11_a7gad"]
 [ext_resource type="PackedScene" uid="uid://d2xyedecm45dw" path="res://scenes/pausemenue/pause_menu.tscn" id="12_x5t3h"]
-[ext_resource type="PackedScene" uid="uid://c0k1t4mfutkco" path="res://scenes/pausemenue/intro_menu.tscn" id="13_f7fcr"]
 [ext_resource type="PackedScene" uid="uid://bjobche7h23v4" path="res://scenes/Charakters/customer_circle.tscn" id="13_ie7es"]
 [ext_resource type="AudioStream" uid="uid://bqkiebbykolmd" path="res://assets/sounds/music/BUBBLEMAN_Ukulele.mp3" id="14_iv6fb"]
 [ext_resource type="PackedScene" uid="uid://br3gofdtli8gj" path="res://scenes/levels/clock_n_score/clock.tscn" id="15_d8nol"]
@@ -84,8 +83,6 @@ scale = Vector2(0.2, 0.2)
 
 [node name="Pause_Menu" parent="." instance=ExtResource("12_x5t3h")]
 
-[node name="IntroMenu" parent="." instance=ExtResource("13_f7fcr")]
-
 [node name="LabelLevel" type="Label" parent="."]
 z_index = 1
 offset_left = 1.0
@@ -114,4 +111,4 @@ stream = ExtResource("14_iv6fb")
 
 [connection signal="dmg_taken" from="MoveableBox" to="Score" method="_on_moveable_box_dmg_taken"]
 [connection signal="win" from="TargetTruck" to="." method="_on_target_truck_win"]
-[connection signal="game_start" from="IntroMenu" to="Clock" method="_on_intro_menu_game_start"]
+[connection signal="game_start" from="Pause_Menu" to="Clock" method="_on_pause_menu_game_start"]

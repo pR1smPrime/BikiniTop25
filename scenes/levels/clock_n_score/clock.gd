@@ -22,5 +22,5 @@ func _on_timer_timeout() -> void:
 	time_text = str(time_min).pad_zeros(2) + ":" + str(time_sec).pad_zeros(2) + ":" + str(int(time_m_sec / 10)).pad_zeros(2)
 	text = time_text
 
-func _on_intro_menu_game_start() -> void:
+func _on_pause_menu_game_start() -> void:
 	$Timer.start()
