@@ -1,10 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://diud7kw0rfwfc"]
+[gd_scene load_steps=18 format=3 uid="uid://diud7kw0rfwfc"]
 
 [ext_resource type="PackedScene" uid="uid://t1qapbdlfqnh" path="res://assets/objects/staticNoCollision/staNoCo_algae2.tscn" id="1_byvas"]
 [ext_resource type="PackedScene" uid="uid://bb7t2rtlp7sku" path="res://scenes/levels/groundBase.tscn" id="1_ow8i4"]
+[ext_resource type="Script" path="res://scenes/levels/level_5.gd" id="1_xyvkm"]
 [ext_resource type="PackedScene" uid="uid://hph0vdl7puii" path="res://scenes/player/player.tscn" id="3_jqsr4"]
-[ext_resource type="PackedScene" uid="uid://wio4kqqfaasv" path="res://scenes/movable/movable.tscn" id="4_bk8s2"]
-[ext_resource type="Script" path="res://scenes/movable/movable.gd" id="5_85kg1"]
+[ext_resource type="PackedScene" uid="uid://dq54q68pmwd6u" path="res://assets/objects/moveables/moveable_box.tscn" id="4_a4uii"]
 [ext_resource type="PackedScene" uid="uid://bofqt6oyryhyo" path="res://assets/objects/statics/target_truck.tscn" id="6_5hbby"]
 [ext_resource type="PackedScene" uid="uid://cibr5e7jyyld6" path="res://assets/art/spritesAquarium/waves.tscn" id="7_42tgh"]
 [ext_resource type="PackedScene" uid="uid://cf618ai8wa2sn" path="res://assets/objects/statics/static_skull.tscn" id="8_rna0v"]
@@ -14,11 +14,14 @@
 [ext_resource type="PackedScene" uid="uid://bjobche7h23v4" path="res://scenes/Charakters/customer_circle.tscn" id="12_x45wr"]
 [ext_resource type="PackedScene" uid="uid://dnwe61pi7nkh0" path="res://assets/objects/statics/static_beam.tscn" id="13_d20pe"]
 [ext_resource type="AudioStream" uid="uid://bqkiebbykolmd" path="res://assets/sounds/music/BUBBLEMAN_Ukulele.mp3" id="14_n8jip"]
+[ext_resource type="PackedScene" uid="uid://br3gofdtli8gj" path="res://scenes/levels/clock_n_score/clock.tscn" id="15_7x6w2"]
+[ext_resource type="PackedScene" uid="uid://bmvo53bilb8gv" path="res://scenes/levels/clock_n_score/score.tscn" id="16_ept1r"]
 
 [sub_resource type="SystemFont" id="SystemFont_fmwn4"]
 font_names = PackedStringArray("Frank Ruehl CLM")
 
 [node name="Level5" type="Node2D"]
+script = ExtResource("1_xyvkm")
 
 [node name="staNoCo_algae4" parent="." instance=ExtResource("1_byvas")]
 position = Vector2(1567, -501)
@@ -33,11 +36,8 @@ position = Vector2(418, -428)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(952, -524)
 
-[node name="MovableObj" parent="." instance=ExtResource("4_bk8s2")]
-position = Vector2(497, -879)
-collision_layer = 3
-collision_mask = 3
-script = ExtResource("5_85kg1")
+[node name="MoveableBox" parent="." instance=ExtResource("4_a4uii")]
+position = Vector2(499, -962)
 
 [node name="TargetTruck" parent="." instance=ExtResource("6_5hbby")]
 position = Vector2(1521, -901)
@@ -111,3 +111,11 @@ autoplay = true
 
 [node name="BubblemanUkulele" type="AudioStreamPlayer" parent="AudioStreamPlayer2D"]
 stream = ExtResource("14_n8jip")
+
+[node name="Clock" parent="." instance=ExtResource("15_7x6w2")]
+
+[node name="Score" parent="." instance=ExtResource("16_ept1r")]
+
+[connection signal="dmg_taken" from="MoveableBox" to="Score" method="_on_moveable_box_dmg_taken"]
+[connection signal="win" from="TargetTruck" to="." method="_on_target_truck_win"]
+[connection signal="game_start" from="Pause_Menu" to="Clock" method="_on_pause_menu_game_start"]

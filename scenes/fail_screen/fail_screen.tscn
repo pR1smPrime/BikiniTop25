@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://bsmwax7td4mle"]
+[gd_scene load_steps=9 format=3 uid="uid://bsmwax7td4mle"]
 
 [ext_resource type="Script" path="res://scenes/fail_screen/fail_screen.gd" id="1_85bjp"]
 [ext_resource type="Texture2D" uid="uid://cgaiycj7cjis8" path="res://assets/art/backgrounds/tx_bg_room4.png" id="2_ijgmb"]
 [ext_resource type="Theme" uid="uid://d2egigf8uvin0" path="res://scenes/mainmenue/main_menu.tres" id="2_m6e3b"]
 [ext_resource type="AudioStream" uid="uid://dey55r530na2k" path="res://assets/sounds/Voice/Wuetend2.wav" id="2_w14f1"]
 [ext_resource type="FontFile" uid="uid://cxeusgfinjh7w" path="res://assets/art/fonts/Atma-Bold.ttf" id="3_evo7t"]
-[ext_resource type="PackedScene" path="res://scenes/Charakters/customer_angry_circle.tscn" id="3_j4utt"]
+[ext_resource type="PackedScene" uid="uid://b5a88lnpme3rm" path="res://scenes/Charakters/customer_angry_circle.tscn" id="3_j4utt"]
+[ext_resource type="Script" path="res://scenes/fail_screen/back_to_level_selector.gd" id="5_3fkts"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2sv82"]
 font = ExtResource("3_evo7t")
@@ -64,6 +65,7 @@ custom_minimum_size = Vector2(300, 90)
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Level Select"
+script = ExtResource("5_3fkts")
 
 [node name="BackMainMenu" type="Button" parent="CenterContainer/VBox/HBoxContainer"]
 custom_minimum_size = Vector2(300, 90)

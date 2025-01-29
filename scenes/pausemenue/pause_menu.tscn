@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://d2xyedecm45dw"]
+[gd_scene load_steps=25 format=3 uid="uid://d2xyedecm45dw"]
 
 [ext_resource type="Script" path="res://scenes/pausemenue/pause_menu.gd" id="1_h7r06"]
 [ext_resource type="Theme" uid="uid://d2egigf8uvin0" path="res://scenes/mainmenue/main_menu.tres" id="2_jai5y"]
@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://jadpl2lyfe23" path="res://assets/art/userInterface/Inputs/mouse_move.png" id="9_x37ij"]
 [ext_resource type="Texture2D" uid="uid://c3bgw8rpm7dj4" path="res://assets/art/spritesPlayer/ninja_Frog/Run (32x32).png" id="10_bbj7d"]
 [ext_resource type="PackedScene" uid="uid://cuquxv7d5wirf" path="res://assets/art/spritesFX/animated_bubble.tscn" id="11_p6y8d"]
-[ext_resource type="FontFile" uid="uid://cxeusgfinjh7w" path="res://assets/art/fonts/Atma-Bold.ttf" id="13_oiny1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4nbv6"]
 atlas = ExtResource("10_bbj7d")
@@ -98,9 +97,6 @@ animations = [{
 "name": &"default",
 "speed": 15.0
 }]
-
-[sub_resource type="LabelSettings" id="LabelSettings_5va86"]
-font_size = 80
 
 [node name="Pause_Menu" type="Node"]
 process_mode = 3
@@ -254,39 +250,23 @@ frame_progress = 0.477876
 
 [node name="Bubble" parent="Intro" instance=ExtResource("11_p6y8d")]
 position = Vector2(818, 654)
-autoplay = "default"
 frame_progress = 0.363181
 
 [node name="Bubble2" parent="Intro" instance=ExtResource("11_p6y8d")]
 position = Vector2(844, 779)
-autoplay = "default"
 frame_progress = 0.501965
 
 [node name="Bubble3" parent="Intro" instance=ExtResource("11_p6y8d")]
 position = Vector2(880, 706)
-autoplay = "default"
 frame_progress = 0.501965
 
 [node name="Bubble4" parent="Intro" instance=ExtResource("11_p6y8d")]
 position = Vector2(814, 734)
-autoplay = "default"
 frame_progress = 0.501965
 
 [node name="Bubble5" parent="Intro" instance=ExtResource("11_p6y8d")]
 position = Vector2(870, 634)
-autoplay = "default"
 frame_progress = 0.501965
-
-[node name="Label" type="Label" parent="Intro"]
-layout_mode = 0
-offset_left = 554.0
-offset_top = 66.0
-offset_right = 1393.0
-offset_bottom = 197.0
-theme = ExtResource("2_jai5y")
-theme_override_fonts/font = ExtResource("13_oiny1")
-text = "Make Customer happy"
-label_settings = SubResource("LabelSettings_5va86")
 
 [connection signal="pressed" from="PausePanel/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="PausePanel/VBoxContainer/Retry" to="." method="_on_retry_pressed"]

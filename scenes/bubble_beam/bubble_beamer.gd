@@ -8,9 +8,8 @@ class_name BubbleBeamer
 
 @onready var shoot_timer := $ShootFrequence
 
-func spawn_bubble():
+func spawn_bubble(direction: Vector2):
 	if shoot_timer.is_stopped():
-		var direction := position.direction_to(get_local_mouse_position())
 		var bubble := bubble_node.instantiate()
 		add_child(bubble)
 		direction = direction.rotated(randf_range(-0.2, 0.2))
@@ -19,4 +18,9 @@ func spawn_bubble():
 
 func _process(_delta: float) -> void:
 	if Input.is_action_pressed("LeftMouse"):
-		spawn_bubble()
+		var direction := position.direction_to(get_local_mouse_position())
+		spawn_bubble(direction)
+	if Input.get_vector("aim_left_gamepad", "aim_right_gamepad", "aim_up_gamepad", "aim_down_gamepad"):
+		var direction := Input.get_vector("aim_left_gamepad", "aim_right_gamepad", "aim_up_gamepad", "aim_down_gamepad")
+		spawn_bubble(direction)
+	

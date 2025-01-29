@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c7kegqgu0ylkc"]
+[gd_scene load_steps=7 format=3 uid="uid://c7kegqgu0ylkc"]
 
 [ext_resource type="Script" path="res://scenes/mainmenue/level_select.gd" id="1_3glp3"]
 [ext_resource type="Texture2D" uid="uid://jodkoy0q3to6" path="res://assets/art/backgrounds/tx_bg_room01.png" id="2_x5hs6"]
 [ext_resource type="Theme" uid="uid://d2egigf8uvin0" path="res://scenes/mainmenue/main_menu.tres" id="3_xsfdl"]
 [ext_resource type="AudioStream" uid="uid://c3gdgnx1jpq4i" path="res://assets/sounds/music/BUBBLEMAN_Ukulele_3_short.wav" id="4_8yhx0"]
+[ext_resource type="Script" path="res://scenes/mainmenue/tutorial.gd" id="4_puy8l"]
 
 [sub_resource type="SystemFont" id="SystemFont_okf44"]
 font_names = PackedStringArray("Impact")
@@ -68,6 +69,7 @@ alignment = 1
 [node name="Tutorial" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Tutorial Level"
+script = ExtResource("4_puy8l")
 
 [node name="Level 1" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
