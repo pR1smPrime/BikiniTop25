@@ -9,3 +9,5 @@
 [node name="Menu" type="CanvasLayer" parent="."]
 
 [node name="Main_Menu" parent="Menu" instance=ExtResource("1_esof6")]
+
+[connection signal="tree_entered" from="Menu/Main_Menu" to="Menu/Main_Menu" method="_on_tree_entered"]

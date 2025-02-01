@@ -73,6 +73,7 @@ script = ExtResource("4_puy8l")
 
 [node name="Level 1" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+disabled = true
 text = "EZPZ"
 
 [node name="Seperator" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
@@ -80,6 +81,7 @@ layout_mode = 2
 
 [node name="Level 2" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+disabled = true
 text = "Jump 2 Win"
 
 [node name="Seperator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
@@ -87,6 +89,7 @@ layout_mode = 2
 
 [node name="Level 3" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+disabled = true
 text = "Columns"
 
 [node name="Seperator3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
@@ -94,6 +97,7 @@ layout_mode = 2
 
 [node name="Level 4" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+disabled = true
 text = "High like a kite"
 
 [node name="Seperator4" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
@@ -101,6 +105,7 @@ layout_mode = 2
 
 [node name="Level 5" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+disabled = true
 text = "Tricky"
 
 [node name="Seperator5" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
@@ -108,6 +113,7 @@ layout_mode = 2
 
 [node name="Level 6" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+disabled = true
 text = "Skull Stare"
 
 [node name="Seperator6" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
@@ -124,6 +130,7 @@ autoplay = true
 stream = ExtResource("4_8yhx0")
 autoplay = true
 
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Level 1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Level 2" to="." method="_on_level_2_pressed"]
