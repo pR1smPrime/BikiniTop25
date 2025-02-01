@@ -4,7 +4,6 @@ var SAVEPATH := "user://BTMS_scores.res"
 
 # storing for each lvl best_time_ms, best left value, best score
 @onready var save_data : SaveGame = SaveGame.new()
-@onready var highscores_for_each_level := save_data.highscores_for_each_level
 
 func set_highscore(lvl_nr: int, time_ms: int, item_value: int) -> void:
 	if save_data.highscores_for_each_level.size() <= lvl_nr:
@@ -28,7 +27,6 @@ func save() -> void:
 func load() -> void:
 	if ResourceLoader.exists(SAVEPATH):
 		save_data = ResourceLoader.load(SAVEPATH)
-		highscores_for_each_level = save_data.highscores_for_each_level
 
 	
 	

@@ -12,7 +12,7 @@ func check_level_available() -> void:
 		$"MarginContainer/HBoxContainer/VBoxContainer/Level 5",
 		$"MarginContainer/HBoxContainer/VBoxContainer/Level 6",
 		]
-	for i in GlobalGameManager.highscores_for_each_level.size():
+	for i in GlobalGameManager.save_data.highscores_for_each_level.size():
 		if i < level_button_array.size():
 			level_button_array[i].disabled = false
 			

@@ -6,7 +6,7 @@ func _ready() -> void:
 	#$AnimationPlayer.play("logo_Wiggle")
 
 func _on_play_pressed() -> void:
-	var next_level_to_beat := GlobalGameManager.highscores_for_each_level.size()
+	var next_level_to_beat := GlobalGameManager.save_data.highscores_for_each_level.size()
 	get_tree().change_scene_to_file("res://scenes/levels/level" + str(next_level_to_beat) + ".tscn")
 	
 func _on_level_select_pressed() -> void:
