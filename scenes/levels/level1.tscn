@@ -35,6 +35,7 @@ theme_override_font_sizes/font_size = 80
 text = "\"EZPZ\""
 
 [node name="CustomerCircle" parent="." instance=ExtResource("2_rrrs5")]
+z_index = 1
 position = Vector2(1728, -202)
 
 [node name="groundBase" parent="." instance=ExtResource("1_vw74y")]

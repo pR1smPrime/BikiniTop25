@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://i8770j51kvb8"]
+
+[ext_resource type="Script" path="res://scenes/bubble_beam/bubble_spawner.gd" id="1_1cfuo"]
+
+[node name="BubbleSpawner" type="Node2D"]
+script = ExtResource("1_1cfuo")
+
+[node name="ShootFrequency" type="Timer" parent="."]

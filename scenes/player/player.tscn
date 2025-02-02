@@ -192,8 +192,9 @@ animations = [{
 "speed": 18.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rpo5k"]
-size = Vector2(69, 69)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onxrw"]
+radius = 22.0
+height = 52.0
 
 [node name="Player" type="Node2D"]
 
@@ -206,11 +207,10 @@ scale = Vector2(2.15625, 2.125)
 sprite_frames = SubResource("SpriteFrames_rcw0d")
 animation = &"running"
 autoplay = "default"
-frame_progress = 0.764193
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(-2, -6)
-shape = SubResource("RectangleShape2D_rpo5k")
+position = Vector2(0, -5)
+shape = SubResource("CapsuleShape2D_onxrw")
 
 [node name="BubbleBeamer" parent="CharacterBody2D" instance=ExtResource("3_q75h1")]
 position = Vector2(30, -6)

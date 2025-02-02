@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm1pmytwjhh82"]
+
+[ext_resource type="Script" path="res://assets/objects/interactive/bubble_oister_new.gd" id="1_0xjlb"]
+[ext_resource type="PackedScene" uid="uid://i8770j51kvb8" path="res://scenes/bubble_beam/BubbleSpawner.tscn" id="2_c06kh"]
+
+[node name="BubbleOisterNew" type="Node2D"]
+script = ExtResource("1_0xjlb")
+
+[node name="BubbleSpawner" parent="." instance=ExtResource("2_c06kh")]
+direction = Vector2(1, 0)
