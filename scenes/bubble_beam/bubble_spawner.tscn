@@ -6,3 +6,4 @@
 script = ExtResource("1_1cfuo")
 
 [node name="ShootFrequency" type="Timer" parent="."]
+one_shot = true

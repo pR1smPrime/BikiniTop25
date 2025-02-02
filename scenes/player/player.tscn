@@ -194,23 +194,21 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onxrw"]
 radius = 22.0
-height = 52.0
+height = 58.0
 
-[node name="Player" type="Node2D"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_7055o")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1.5, -6)
 scale = Vector2(2.15625, 2.125)
 sprite_frames = SubResource("SpriteFrames_rcw0d")
 animation = &"running"
 autoplay = "default"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0, -5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
 shape = SubResource("CapsuleShape2D_onxrw")
 
-[node name="BubbleBeamer" parent="CharacterBody2D" instance=ExtResource("3_q75h1")]
-position = Vector2(30, -6)
+[node name="BubbleBeamer" parent="." instance=ExtResource("3_q75h1")]
+position = Vector2(34, -5)

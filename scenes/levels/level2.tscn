@@ -21,6 +21,7 @@ font_names = PackedStringArray("Frank Ruehl CLM")
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_idwax")
+level_number = 2
 
 [node name="LabelLevel" type="Label" parent="."]
 z_index = 1

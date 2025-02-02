@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://4h0ltwgm81fw"]
 
-[ext_resource type="Texture2D" uid="uid://hve608cft84n" path="res://assets/art/spritesEnvironment/tx_obstacle_shell.png" id="1_ucofo"]
-[ext_resource type="PackedScene" uid="uid://ctdlmu4udssmc" path="res://scenes/bubble_beam/bubble_oyster.tscn" id="2_34s0n"]
+[ext_resource type="Script" path="res://assets/objects/interactive/bubble_object.gd" id="1_xjfid"]
+[ext_resource type="PackedScene" uid="uid://i8770j51kvb8" path="res://scenes/bubble_beam/bubble_spawner.tscn" id="2_ehx22"]
 [ext_resource type="Texture2D" uid="uid://mpnm8gw84xdp" path="res://assets/art/spritesEnvironment/aggro oyster/Untitled_Artwork-1.png" id="2_gwkso"]
 [ext_resource type="Texture2D" uid="uid://lc6tssn2npyj" path="res://assets/art/spritesEnvironment/aggro oyster/Untitled_Artwork-2.png" id="3_qrfcu"]
 [ext_resource type="Texture2D" uid="uid://eu6b4lk2eefa" path="res://assets/art/spritesEnvironment/aggro oyster/Untitled_Artwork-3.png" id="4_t6inv"]
@@ -56,26 +56,29 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 12.0
 }]
 
-[node name="InteractiveOyster" type="Node2D"]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(880, -535)
+[node name="InteractiveOyster" type="StaticBody2D"]
 scale = Vector2(0.5, 0.5)
+script = ExtResource("1_xjfid")
+direction = Vector2(0, -1)
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-visible = false
-texture = ExtResource("1_ucofo")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-290, 64, -230, -12, -100, -90, 44, -458, 126, -452, 218, -366, 262, -284, 284, -54, 256, -4, 246, 96, 102, 158, -58, 186, -162, 172, -250, 128)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D/Sprite2D"]
-position = Vector2(26, 48)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(32, -106)
 scale = Vector2(3.03125, 3.03125)
 sprite_frames = SubResource("SpriteFrames_npdqr")
 autoplay = "default"
-frame_progress = 0.221394
+frame_progress = 0.337328
 
-[node name="BubbleOyster" parent="StaticBody2D" instance=ExtResource("2_34s0n")]
-position = Vector2(0, 156)
-scale = Vector2(2, 2)
+[node name="BubbleSpawner" type="Node2D" parent="."]
+position = Vector2(-2, -40)
+
+[node name="BubbleSpawner" parent="BubbleSpawner" instance=ExtResource("2_ehx22")]
+position = Vector2(12, -6)
+scale = Vector2(0.5, 0.5)
+force = 1000.0
+shoot_frequence = 0.05

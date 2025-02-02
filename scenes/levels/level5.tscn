@@ -22,6 +22,7 @@ font_names = PackedStringArray("Frank Ruehl CLM")
 
 [node name="Level5" type="Node2D"]
 script = ExtResource("1_xyvkm")
+level_number = 5
 
 [node name="staNoCo_algae4" parent="." instance=ExtResource("1_byvas")]
 position = Vector2(1567, -501)

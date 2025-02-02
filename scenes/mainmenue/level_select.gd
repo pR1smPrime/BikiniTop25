@@ -1,7 +1,27 @@
 extends Control
 
+var list_of_level_res : Array[LevelData]
+
 func _ready() -> void:
+	load_levels()
+	create_level_start_buttons()
 	check_level_available()
+
+func load_levels() -> void:
+	var level_resources_path := "res://scenes/levels/level_resources/"
+	var dir = DirAccess.open(level_resources_path)
+	if dir:
+		dir.list_dir_begin()
+		var file_name = dir.get_next()
+		while file_name != "":
+			if not dir.current_is_dir():
+				list_of_level_res.append(load(level_resources_path + file_name) as LevelData)
+			file_name = dir.get_next()
+	list_of_level_res.sort_custom(func(a: LevelData, b: LevelData): return a.level_number > b.level_number)
+
+
+func create_level_start_buttons() -> void:
+	pass
 
 func check_level_available() -> void:
 	var level_button_array : Array[Button]= [

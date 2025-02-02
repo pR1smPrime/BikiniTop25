@@ -1,18 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxrxdcf5ld0ob"]
+[gd_scene load_steps=4 format=3 uid="uid://dxrxdcf5ld0ob"]
 
 [ext_resource type="Texture2D" uid="uid://by6wqsr7c6si" path="res://assets/art/spritesEnvironment/tx_obstacle_skull.png" id="1_bjmrd"]
-[ext_resource type="PackedScene" uid="uid://c0yncexav6sql" path="res://scenes/bubble_beam/bubble_skull.tscn" id="1_e0h8r"]
+[ext_resource type="Script" path="res://assets/objects/interactive/bubble_object.gd" id="1_p24bk"]
+[ext_resource type="PackedScene" uid="uid://i8770j51kvb8" path="res://scenes/bubble_beam/bubble_spawner.tscn" id="3_wh8bm"]
 
-[node name="InteractiveSkull" type="Node2D"]
+[node name="InteractiveSkull" type="StaticBody2D"]
+script = ExtResource("1_p24bk")
+direction = Vector2(-1, 0)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-214, 20, -206, -13, -190, -19, -205, -170, -157, -286, -86, -353, 2, -409, 105, -455, 168, -448, 195, -443, 242, -407, 284, -367, 306, -346, 320, -310, 347, -239, 359, -191, 357, -140, 311, 51, 288, 66, 234, 180, 132, 200, 92, 228, 65, 230, 35, 230, -139, 242, -152, 203, -179, 186, -190, 140, -185, 113, -146, 77, -158, 59, -200, 60)
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(72, -93)
 texture = ExtResource("1_bjmrd")
 
-[node name="BubbleSkull" parent="StaticBody2D" instance=ExtResource("1_e0h8r")]
-position = Vector2(46, 3)
+[node name="BubbleSpawner" type="Node2D" parent="."]
 
-[node name="BubbleSkull2" parent="StaticBody2D" instance=ExtResource("1_e0h8r")]
-position = Vector2(49, 1)
+[node name="BubbleSpawner" parent="BubbleSpawner" instance=ExtResource("3_wh8bm")]
+position = Vector2(-75, -18)
+
+[node name="BubbleSpawner2" parent="BubbleSpawner" instance=ExtResource("3_wh8bm")]
+position = Vector2(97, 13)

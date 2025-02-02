@@ -22,6 +22,7 @@ font_names = PackedStringArray("Frank Ruehl CLM")
 
 [node name="Level6" type="Node2D"]
 script = ExtResource("1_3s2g7")
+level_number = 6
 
 [node name="groundBase" parent="." instance=ExtResource("2_hr6dy")]
 
@@ -77,12 +78,16 @@ z_index = 1
 position = Vector2(1754, -159)
 
 [node name="InteractiveOyster" parent="." instance=ExtResource("13_xli6j")]
-position = Vector2(239, -121)
-scale = Vector2(0.5, 0.5)
+position = Vector2(696, -353)
+scale = Vector2(-0.185, 0.228)
+force = 1000.0
+shoot_frequence = 0.05
 
 [node name="InteractiveSkull" parent="." instance=ExtResource("11_hqmot")]
 position = Vector2(1424, -349)
 scale = Vector2(0.6, 0.6)
+shoot_frequence = 0.01
+time_to_pop = 0.3
 
 [node name="StaNoCo_algae3" parent="." instance=ExtResource("12_u3mlc")]
 z_index = -1

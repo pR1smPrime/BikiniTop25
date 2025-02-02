@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0yncexav6sql"]
-
-[ext_resource type="Script" path="res://scenes/bubble_beam/bubble_skull.gd" id="1_e0t70"]
-
-[node name="BubbleSkull" type="Node2D"]
-script = ExtResource("1_e0t70")
-
-[node name="Timer" type="Timer" parent="."]
-one_shot = true

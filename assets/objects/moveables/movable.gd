@@ -1,7 +1,11 @@
 class_name Moveable
 extends RigidBody2D
 
+# connected in level
+@warning_ignore("unused_signal")
 signal level_failed
+# connected in level
+@warning_ignore("unused_signal")
 signal dmg_taken(new_value: int)
 
 @export var value : int

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://cfv5geptd8nbw"]
+
+[ext_resource type="Script" path="res://scenes/levels/level_data.gd" id="1_dgpef"]
+
+[resource]
+script = ExtResource("1_dgpef")
+level_name = "Tutorial"
+level_number = 0
+level_scene_path = "res://scenes/levels/level0.tscn"
+time_ms = 0
+value_score = 0
+total_score = 0

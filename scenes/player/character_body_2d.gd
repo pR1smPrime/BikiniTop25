@@ -1,11 +1,23 @@
 extends CharacterBody2D
 
-const SPEED = 250.0
-const JUMP_VELOCITY = -900.0
-@onready var sprite_2d: AnimatedSprite2D = $Sprite2D
+@export_category("Character Movement")
+@export var SPEED := 250.0
+@export var JUMP_VELOCITY := -900.0
+
+@export_category("Bubblegun Behavior")
+@export var force := 1500.0
+@export var shoot_frequence := 0.005
+@export var time_to_pop := 1.5
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+@onready var sprite_2d: AnimatedSprite2D = $Sprite2D
+
+func _ready() -> void:
+	$BubbleBeamer.force = force
+	$BubbleBeamer.shoot_frequence = shoot_frequence
+	$BubbleBeamer.time_to_pop = time_to_pop
+	
 func _physics_process(delta: float) -> void:
 	#Animations
 	if (velocity.x > 1 || velocity.x < -1):

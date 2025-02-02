@@ -1,9 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctdlmu4udssmc"]
+[gd_scene load_steps=2 format=3 uid="uid://bffhw6xvily5x"]
 
-[ext_resource type="Script" path="res://scenes/bubble_beam/bubble_oyster.gd" id="1_2wf32"]
+[sub_resource type="GDScript" id="GDScript_5afab"]
+script/source = "extends Node2D
+class_name CombatOyster
+
+@export var force := 1000.0
+@export var bubble_node := preload(\"res://scenes/bubble_projectile/bubble.tscn\")
+@export var oyster_frequency := 0.05
+
+@onready var shoot_timer := $Timer
+
+func spawn_bubble():
+	if shoot_timer.is_stopped():
+		var direction := position.direction_to(Vector2.UP)
+		var bubble := bubble_node.instantiate()
+		add_child(bubble)
+		direction = direction.rotated(randf_range(-0.2, 0.2))
+		bubble.init(direction * force)
+		shoot_timer.start(oyster_frequency)
+
+func _process(_delta: float) -> void:
+		spawn_bubble()
+"
 
 [node name="BubbleOyster" type="Node2D"]
-script = ExtResource("1_2wf32")
+script = SubResource("GDScript_5afab")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true

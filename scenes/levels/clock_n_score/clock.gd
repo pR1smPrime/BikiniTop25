@@ -19,6 +19,7 @@ func _on_timer_timeout() -> void:
 	if time_sec == 60:
 		time_min += 1
 		time_sec = 0
+	@warning_ignore("integer_division")
 	time_text = str(time_min).pad_zeros(2) + ":" + str(time_sec).pad_zeros(2) + ":" + str(int(time_m_sec / 10)).pad_zeros(2)
 	text = time_text
 

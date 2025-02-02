@@ -1,17 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://bu1s6s5u054wt"]
+[gd_scene load_steps=4 format=3 uid="uid://bu1s6s5u054wt"]
 
+[ext_resource type="Script" path="res://assets/objects/interactive/bubble_object.gd" id="1_2h05v"]
 [ext_resource type="Texture2D" uid="uid://cb45sx3622me" path="res://assets/art/spritesEnvironment/tx_obstacle_chest.png" id="1_vlcmm"]
-[ext_resource type="PackedScene" uid="uid://shv6d7hl1nnv" path="res://scenes/bubble_beam/bubble_chest.tscn" id="2_ov2i1"]
+[ext_resource type="PackedScene" uid="uid://i8770j51kvb8" path="res://scenes/bubble_beam/bubble_spawner.tscn" id="3_vijxp"]
 
-[node name="InteractiveChest" type="Node2D"]
-position = Vector2(386, 316)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="InteractiveChest" type="StaticBody2D"]
 scale = Vector2(0.5, 0.5)
+script = ExtResource("1_2h05v")
+direction = Vector2(0, -1)
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-276, -34, -162, -60, -170, -194, -136, -246, 208, -258, 260, -188, 280, -136, 202, -4, 200, 166, 144, 258, -276, 256)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_vlcmm")
 
-[node name="BubbleChest" parent="StaticBody2D/Sprite2D" instance=ExtResource("2_ov2i1")]
+[node name="BubbleSpawner" type="Node2D" parent="."]
 
-[node name="BubbleChest2" parent="StaticBody2D/Sprite2D" instance=ExtResource("2_ov2i1")]
+[node name="BubbleSpawner" parent="BubbleSpawner" instance=ExtResource("3_vijxp")]
+position = Vector2(-50, 3)
+scale = Vector2(0.5, 0.5)
+
+[node name="BubbleSpawner2" parent="BubbleSpawner" instance=ExtResource("3_vijxp")]
+position = Vector2(36, -1)
+scale = Vector2(0.5, 0.5)
